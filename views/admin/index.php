@@ -2,6 +2,7 @@
 include "../../models/pdo.php";
 include "../../models/danh_muc.php";
 include "../../models/san_pham.php";
+include "../../models/khach_hang.php";
 include "../admin/layout/header.php";
 include "../admin/layout/box_left.php";
 
@@ -40,8 +41,18 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'cap_nhat_san_pham':
             include "../../controllers/admin/san_pham/c_cap_nhat_san_pham.php";
             break;
+            // Điều hướng khách hàng
         case 'danh_sach_khach_hang':
             include "../../controllers/admin/khach_hang/c_danh_sach_khach_hang.php";
+            break;
+        case 'xoakh':
+            include "../../controllers/admin/khach_hang/c_xoa_khach_hang.php";
+            break;
+        case 'suakh':
+            include "../../controllers/admin/khach_hang/c_sua_khach_hang.php";
+            break;
+        case 'cap_nhat_khach_hang':
+            include "../../controllers/admin/khach_hang/c_cap_nhat_khach_hang.php";
             break;
         default:
             include "../admin/home/home.php";

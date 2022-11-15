@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="col-sm-auto">
-                    <a class="btn btn-primary" href="index.php?act=them_danh_muc">Thêm sản phẩm</a>
+                    <a class="btn btn-primary" href="index.php?act=them_san_pham">Thêm sản phẩm</a>
                 </div>
             </div>
             <!-- End Row -->
@@ -93,34 +93,47 @@
                    }'>
                     <thead class="thead-light">
                         <tr>
-                            <th scope="col" class="table-column-pr-0">
+                            <!-- <th scope="col" class="table-column-pr-0">
                                 <div class="custom-control custom-checkbox">
                                     <input id="datatableCheckAll" type="checkbox" class="custom-control-input">
                                     <label class="custom-control-label" for="datatableCheckAll"></label>
                                 </div>
-                            </th>
+                            </th> -->
                             <th>Id</th>
-                            <th>Tên danh mục</th>
+                            <th>Ảnh</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Mô tả ngắn</th>
+
+                            <th>Giá</th>
+                            <th>Ngày tạo</th>
+
                             <th style="padding-left:48px;">Điều khiển</th>
                         </tr>
                     </thead>
-
                     <tbody>
                         <?php
-                        foreach ($listdanhmuc as $danhmuc) {
-                            extract($danhmuc);
-                            $suadm = "index.php?act=suadm&id=" . $id_dm;
-                            $xoadm = "index.php?act=xoadm&id=" . $id_dm;
+                        foreach ($listsanpham as $sanpam) {
+                            extract($sanpam);
+                            $suasp = "index.php?act=suasp&id=" . $id_sp;
+                            $xoasp = "index.php?act=xoasp&id=" . $id_sp;
+                            $hinhpath = "../../assets/uploads/" . $hinh;
+                            if (is_file($hinhpath)) {
+                                $anh = "<img src='" . $hinhpath . "'>";
+                            } else {
+                                $anh = "no photo";
+                            }
                             echo '<tr>
-                  <td class="table-column-pr-0">
-                    <div class="custom-control custom-checkbox">
-                      <input type="checkbox" class="custom-control-input" id="productsCheck1">
-                      <label class="custom-control-label" for="productsCheck1"></label>
-                    </div>
-                  </td>
                  
-                  <td>' . $id_dm . '</td>
-                  <td>' . $ten_dm . '</td>
+                 
+                  <td>' . $id_sp . '</td>
+                  <td>' . $anh . '</td>
+                  
+                  <td>' . $ten_sp . '</td>
+                  <td>' . $mo_ta_ngan . '</td>
+                
+                  <td>' . $don_gia . '</td>
+                  <td>' . $ngay_tao . '</td>
+                 
                   
                   <td>
                     <div class="btn-group" role="group">
@@ -131,10 +144,10 @@
                         
 
     <div style="display: flex">
-                        <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $suadm . '">
+                        <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $suasp . '">
                         <i class="fa-solid fa-screwdriver-wrench dropdown-item-icon"></i>Sửa
                         </a>
-                          <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $xoadm . '">
+                          <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $xoasp . '">
                           <i class="fa-solid fa-trash dropdown-item-icon"></i>Xóa
                           </a>
                         </div>
