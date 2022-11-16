@@ -117,21 +117,17 @@
                             extract($sanpham);
                             $suasp = "index.php?act=suasp&id=" . $id_sp;
                             $xoasp = "index.php?act=xoasp&id=" . $id_sp;
-                            $hinhpath = "../../assets/upload/" . $hinh;
+                            $hinhpath = "../../assets/uploads/" . $hinh;
                             if (is_file($hinhpath)) {
-<<<<<<< HEAD
                                 $anh = "<img style='max-width: 60px;' src='" . $hinhpath . "'>";
-=======
-                                $hinh = "<img src='" . $hinhpath . "'width='50px' height='50px';>";
->>>>>>> 70f021ea03958174a64b4451a29f3d49f27e0852
                             } else {
-                                $hinh = "no photo";
+                                $anh = "no photo";
                             }
                             echo '<tr>
                  
                  
                   <td>' . $id_sp . '</td>
-                  <td>' . $hinh . '</td>
+                  <td>' . $anh . '</td>
                   
                   <td>' . $ten_sp . '</td>
                   <td>' . $mo_ta_ngan . '</td>

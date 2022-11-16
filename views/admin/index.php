@@ -55,10 +55,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "../../controllers/admin/khach_hang/c_cap_nhat_khach_hang.php";
             break;
         default:
-            include "../admin/home/home.php";
+            include "../admin/layout/home.php";
             break;
     }
 } else {
-    include "../admin/home/home.php";
+    include "../admin/layout/home.php";
 }
 include "../admin/layout/footer.php";

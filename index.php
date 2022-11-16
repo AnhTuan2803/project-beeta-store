@@ -1,9 +1,8 @@
 <?php
 session_start();
 ob_start();
-include "view/header.php";
-include "model/pdo.php";
-include "model/nguoi_dung.php";
+include "./models/pdo.php";
+include "./views/client/layout/header.php";
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
@@ -12,10 +11,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             header('Location: dang_nhap.php');
             break;
         default:
-            include "view/home.php";
+        include "./views/client/layout/home.php";
     }
 }else{
-    include "view/home.php";
+    include "./views/client/layout/home.php";
 }
-include "view/footer.php";
+include "./views/client/layout/footer.php";
 ?>
