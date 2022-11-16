@@ -118,7 +118,7 @@
                             $xoasp = "index.php?act=xoasp&id=" . $id_sp;
                             $hinhpath = "../../assets/uploads/" . $hinh;
                             if (is_file($hinhpath)) {
-                                $anh = "<img src='" . $hinhpath . "'>";
+                                $anh = "<img style='max-width: 60px;' src='" . $hinhpath . "'>";
                             } else {
                                 $anh = "no photo";
                             }

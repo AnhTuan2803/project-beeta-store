@@ -43,7 +43,7 @@
                     <select name="iddm" class="js-select2-custom custom-select" size="1" data-hs-select2-options='{
                                     "minimumResultsForSearch": "Infinity"
                                   }'>
-                      <option value="0">Danh mục</option>
+                      <option value="0" selected>Danh mục</option>
                       <?php
                       foreach ($listdanhmuc as $danhmuc) {
                         extract($danhmuc);
@@ -64,7 +64,7 @@
                   <div class="form-group">
                     <label for="SKULabel" class="input-label">Tên sản phẩm</label>
 
-                    <input type="text" class="form-control" name="SKU" id="SKULabel" placeholder="Tên sản phẩm..." aria-label="eg. 348121032">
+                    <input type="text" class="form-control" name="tensp" id="SKULabel" placeholder="Tên sản phẩm..." aria-label="eg. 348121032">
                   </div>
                   <!-- End Form Group -->
                 </div>
@@ -75,7 +75,7 @@
                     <label for="weightLabel" class="input-label">Đơn giá</label>
 
 
-                    <input type="text" class="form-control" name="weightName" id="weightLabel" placeholder="Đơn giá..." aria-label="0.0">
+                    <input type="text" class="form-control" name="giasp" id="weightLabel" placeholder="Đơn giá..." aria-label="0.0">
 
 
                   </div>
@@ -89,12 +89,12 @@
               <!-- Quill -->
               <div class="quill-custom">
                 <label class="input-label">Mô tả ngắn</label>
-                <textarea class="form-control" style="height:120px;" placeholder="Mô tả ngắn..."></textarea>
+                <textarea name="motangansp" class="form-control" style="height:120px;" placeholder="Mô tả ngắn..."></textarea>
               </div>
               <!-- End Quill -->
               <div class="quill-custom mt-4">
                 <label class="input-label">Mô tả chi tiết</label>
-                <textarea class="form-control" style="height:220px;" placeholder="Mô tả chi tiết..."></textarea>
+                <textarea name="motachitietsp" class="form-control" style="height:220px;" placeholder="Mô tả chi tiết..."></textarea>
               </div>
             </div>
             <!-- Body -->
@@ -137,7 +137,7 @@
                   <img class="avatar avatar-xl avatar-4by3 mb-3" src="..\..\assets\admin\svg\illustrations\browse.svg" alt="Image Description">
                   <h5 class="mb-1">Choose files to upload</h5>
                   <p class="mb-2">or</p>
-                  <input type="file" style="max-width:200px;" class="btn btn-sm btn-primary">
+                  <input type="file" name="anhsp" style="max-width:200px;" class="btn btn-sm btn-primary">
                 </div>
               </div>
               <!-- End Dropzone -->
@@ -151,11 +151,7 @@
           <!-- End Card -->
         </form>
       </div>
-      <div class="mt-3">
-        <h5> <?php
-              if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
-              ?></h5>
-      </div>
+      
     </div>
     <!-- End Row -->
 
