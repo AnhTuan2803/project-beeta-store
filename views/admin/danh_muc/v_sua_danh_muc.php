@@ -65,14 +65,7 @@
 
                         </div>
                         <!-- End Row -->
-                        <div class="mt-3">
-                            <h5> <?php
-                                    if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
-                                    ?></h5>
-                        </div>
-
-
-
+                      
                     </div>
                     <!-- Body -->
                 </div>
