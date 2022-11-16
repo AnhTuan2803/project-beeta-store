@@ -8,7 +8,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
     switch ($act) {
         case 'dang_xuat':
             session_unset();
-            header('Location: dang_nhap.php');
+            header('Location: ./views/login.php');
             break;
         default:
         include "./views/client/layout/home.php";
