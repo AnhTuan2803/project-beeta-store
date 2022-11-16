@@ -126,11 +126,7 @@ if (is_array($kh)) {
                         </form>
                     </div>
                     <!-- Body -->
-                    <div class="mt-3">
-                        <h5> <?php
-                                if (isset($thongbao) && ($thongbao != "")) echo $thongbao;
-                                ?></h5>
-                    </div>
+                  
                 </div>
                 <!-- End Card -->
             </div>
