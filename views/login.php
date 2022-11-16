@@ -1,3 +1,21 @@
+<?php
+  session_start();
+  ob_start();
+  include "../models/pdo.php";
+  include "../models/nguoi_dung.php";
+  if(isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
+      $email = $_POST['email'];
+      $password = $_POST['password'];
+      $checkuser = checkuser($email, $password);
+
+      if (is_array($checkuser)){
+        $_SESSION['user'] = $checkuser;
+        header('Location: index.php');
+      }else{
+        $thongbao = "Thông tin tài khoản mật khẩu không chính xác";
+      }
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,17 +34,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
   <!-- CSS Implementing Plugins -->
-  <link rel="stylesheet" href="..\..\assets\admin\css\vendor.min.css">
-  <link rel="stylesheet" href="..\..\assets\admin\vendor\icon-set\style.css">
+  <link rel="stylesheet" href="..\assets\admin\css\vendor.min.css">
+  <link rel="stylesheet" href="..\assets\admin\vendor\icon-set\style.css">
 
   <!-- CSS Front Template -->
-  <link rel="stylesheet" href="..\..\assets\admin\css\theme.min.css?v=1.0">
+  <link rel="stylesheet" href="..\assets\admin\css\theme.min.css?v=1.0">
 </head>
 
 <body>
   <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main" class="main">
-    <div class="position-fixed top-0 right-0 left-0 bg-img-hero" style="height: 32rem; background-image: url(../../assets/admin/svg/components/abstract-bg-4.svg);">
+    <div class="position-fixed top-0 right-0 left-0 bg-img-hero" style="height: 32rem; background-image: url(../assets/admin/svg/components/abstract-bg-4.svg);">
       <!-- SVG Bottom Shape -->
       <figure class="position-absolute right-0 bottom-0 left-0">
         <svg preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 1921 273">
@@ -39,7 +57,7 @@
     <!-- Content -->
     <div class="container py-5 py-sm-7">
       <a class="d-flex justify-content-center mb-5" href="index.html">
-        <img class="z-index-2" src="..\..\assets\admin\img\logo.png" alt="Image Description" style="width: 11rem;">
+        <img class="z-index-2" src="..\assets\admin\img\logo.png" alt="Image Description" style="width: 11rem;">
       </a>
 
       <div class="row justify-content-center">
@@ -48,16 +66,16 @@
           <div class="card card-lg mb-5">
             <div class="card-body">
               <!-- Form -->
-              <form class="js-validate">
+              <form class="js-validate" method="POST" action="index.php?act=login">
                 <div class="text-center">
                   <div class="mb-5">
                     <h1 class="display-4">Sign in</h1>
-                    <p>Don't have an account yet? <a href="authentication-signup-basic.html">Sign up here</a></p>
+                    <p>Don't have an account yet? <a href="./dang_ky_tai_khoan.php">Sign up here</a></p>
                   </div>
                   <!-- 
                       <a class="btn btn-lg btn-block btn-white mb-4" href="#">
                         <span class="d-flex justify-content-center align-items-center">
-                          <img class="avatar avatar-xss mr-2" src="..\..\assets\admin\svg\brands\google.svg" alt="Image Description">
+                          <img class="avatar avatar-xss mr-2" src="..\assets\admin\svg\brands\google.svg" alt="Image Description">
                           Sign in with Google
                         </span>
                       </a>
@@ -107,7 +125,7 @@
                 </div>
                 <!-- End Checkbox -->
 
-                <button type="submit" class="btn btn-lg btn-block btn-primary">Sign in</button>
+                <button type="submit" class="btn btn-lg btn-block btn-primary" name="dangnhap">Sign in</button>
               </form>
               <!-- End Form -->
             </div>
@@ -121,16 +139,16 @@
             <div class="w-85 mx-auto">
               <div class="row justify-content-between">
                 <div class="col">
-                  <img class="img-fluid" src="..\..\assets\admin\svg\brands\gitlab-gray.svg" alt="Image Description">
+                  <img class="img-fluid" src="..\assets\admin\svg\brands\gitlab-gray.svg" alt="Image Description">
                 </div>
                 <div class="col">
-                  <img class="img-fluid" src="..\..\assets\admin\svg\brands\fitbit-gray.svg" alt="Image Description">
+                  <img class="img-fluid" src="..\assets\admin\svg\brands\fitbit-gray.svg" alt="Image Description">
                 </div>
                 <div class="col">
-                  <img class="img-fluid" src="..\..\assets\admin\svg\brands\flow-xo-gray.svg" alt="Image Description">
+                  <img class="img-fluid" src="..\assets\admin\svg\brands\flow-xo-gray.svg" alt="Image Description">
                 </div>
                 <div class="col">
-                  <img class="img-fluid" src="..\..\assets\admin\svg\brands\layar-gray.svg" alt="Image Description">
+                  <img class="img-fluid" src="..\assets\admin\svg\brands\layar-gray.svg" alt="Image Description">
                 </div>
               </div>
             </div>
@@ -145,10 +163,10 @@
 
 
   <!-- JS Implementing Plugins -->
-  <script src="..\..\assets\admin\js\vendor.min.js"></script>
+  <script src="..\assets\admin\js\vendor.min.js"></script>
 
   <!-- JS Front -->
-  <script src="..\..\assets\admin\js\theme.min.js"></script>
+  <script src="..\assets\admin\js\theme.min.js"></script>
 
   <!-- JS Plugins Init. -->
   <script>

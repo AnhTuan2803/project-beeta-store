@@ -6,22 +6,22 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../../assets/client/images/logoicon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/client/images/logoicon.png"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/animate.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/chosen.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/font-awesome.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/jquery.scrollbar.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/lightbox.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/magnific-popup.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/fonts/flaticon.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/megamenu.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/dreaming-attribute.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/client/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/animate.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/chosen.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/jquery.scrollbar.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/lightbox.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/magnific-popup.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/fonts/flaticon.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/megamenu.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/dreaming-attribute.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/client/css/style.css"/>
     <title>Beeta Store</title>
 </head>
 <body>
@@ -42,7 +42,7 @@
                     </div>
                     <div class="header-logo-nav">
                         <div class="header-logo col-lg-2">
-                            <a href="index.html"><img alt="Beeta" src="../../assets/client/images/logo.png"
+                            <a href="index.html"><img alt="Beeta" src="./assets/client/images/logo.png"
                                                       class="logo"></a></div>
                         <div class="box-header-nav menu-nocenter">
                             <ul id="menu-primary-menu"
@@ -76,7 +76,7 @@
                                                             <li>
                                                                 <a href="shop-list.html" target="_self">
                                                                     <span class="image">
-                                                                        <img src="../../assets/client/images/label-new.jpg"
+                                                                        <img src="./assets/client/images/label-new.jpg"
                                                                              class="attachment-full size-full" alt="img">
                                                                     </span>
                                                                     Shop List
@@ -108,7 +108,7 @@
                                                                 <a href="single-product-policy.html"
                                                                    target="_self">
                                                                     <span class="image">
-                                                                        <img src="../../assets/client/images/label-new.jpg"
+                                                                        <img src="./assets/client/images/label-new.jpg"
                                                                              class="attachment-full size-full" alt="img">
                                                                     </span>
                                                                     Extra Sidebar
@@ -138,7 +138,7 @@
                                                                 <a href="single-product-bundle.html"
                                                                    target="_self">
                                                                             <span class="image">
-                                                                                <img src="../../assets/client/images/label-new.jpg"
+                                                                                <img src="./assets/client/images/label-new.jpg"
                                                                                      class="attachment-full size-full"
                                                                                      alt="img">
                                                                             </span>
@@ -149,7 +149,7 @@
                                                                 <a href="single-product-360deg.html"
                                                                    target="_self">
                                                                     <span class="image">
-                                                                        <img src="../../assets/client/images/label-hot.jpg"
+                                                                        <img src="./assets/client/images/label-hot.jpg"
                                                                              class="attachment-full size-full" alt="img">
                                                                     </span>
                                                                     Product 360 Deg </a>
@@ -202,7 +202,7 @@
                                                                 <a href="single-product.html"
                                                                    target="_self">
                                                                             <span class="image"><img
-                                                                                    src="../../assets/client/images/label-hot.jpg"
+                                                                                    src="./assets/client/images/label-hot.jpg"
                                                                                     class="attachment-full size-full"
                                                                                     alt="img"></span>
                                                                     Variable </a>
@@ -385,7 +385,7 @@
                                                             <li>
                                                                 <a href="single-post-instagram.html" target="_self">
                                                                     <span class="image">
-                                                                        <img src="../../assets/client/images/label-hot.jpg"
+                                                                        <img src="./assets/client/images/label-hot.jpg"
                                                                              class="attachment-full size-full" alt="img">
                                                                     </span>
                                                                     Instagram In Post
@@ -395,7 +395,7 @@
                                                                 <a href="single-post-product.html"
                                                                    target="_self">
                                                                     <span class="image">
-                                                                        <img src="../../assets/client/images/label-new.jpg"
+                                                                        <img src="./assets/client/images/label-new.jpg"
                                                                              class="attachment-full size-full" alt="img">
                                                                     </span>
                                                                     Product In Post
@@ -419,7 +419,7 @@
                                                                 <a href="single-post-video.html"
                                                                    target="_self">
                                                                     <span class="image">
-                                                                        <img src="../../assets/client/images/label-hot.jpg"
+                                                                        <img src="./assets/client/images/label-hot.jpg"
                                                                              class="attachment-full size-full" alt="img">
                                                                     </span>
                                                                     Video
@@ -460,7 +460,7 @@
                                 <ul class="wpml-menu">
                                     <li class="menu-item akasha-dropdown block-language">
                                         <a href="#" data-akasha="akasha-dropdown">
-                                            <img src="../../assets/client/images/en.png"
+                                            <img src="./assets/client/images/en.png"
                                                  alt="en" width="18" height="12">
                                             English
                                         </a>
@@ -468,14 +468,14 @@
                                         <ul class="sub-menu">
                                             <li class="menu-item">
                                                 <a href="#">
-                                                    <img src="../../assets/client/images/it.png"
+                                                    <img src="./assets/client/images/it.png"
                                                          alt="it" width="18" height="12">
                                                     Italiano
                                                 </a>
                                             </li>
                                             <li class="menu-item">
                                                 <a href="#">
-                                                    <img src="../../assets/client/images/vn.png"
+                                                    <img src="./assets/client/images/vn.png"
                                                          alt="it" width="18" height="12">
                                                     VietNam
                                                 </a>
@@ -578,7 +578,7 @@
                                                 <li class="akasha-mini-cart-item mini_cart_item">
                                                     <a href="#" class="remove remove_from_cart_button">×</a>
                                                     <a href="#">
-                                                        <img src="../../assets/client/images/apro134-1-600x778.jpg"
+                                                        <img src="./assets/client/images/apro134-1-600x778.jpg"
                                                              class="attachment-akasha_thumbnail size-akasha_thumbnail"
                                                              alt="img" width="600" height="778">T-shirt with skirt – Pink&nbsp;
                                                     </a>
@@ -589,7 +589,7 @@
                                                 <li class="akasha-mini-cart-item mini_cart_item">
                                                     <a href="#" class="remove remove_from_cart_button">×</a>
                                                     <a href="#">
-                                                        <img src="../../assets/client/images/apro1113-600x778.jpg"
+                                                        <img src="./assets/client/images/apro1113-600x778.jpg"
                                                              class="attachment-akasha_thumbnail size-akasha_thumbnail"
                                                              alt="img" width="600" height="778">Abstract Sweatshirt&nbsp;
                                                     </a>
@@ -600,7 +600,7 @@
                                                 <li class="akasha-mini-cart-item mini_cart_item">
                                                     <a href="#" class="remove remove_from_cart_button">×</a>
                                                     <a href="#">
-                                                        <img src="../../assets/client/images/apro201-1-600x778.jpg"
+                                                        <img src="./assets/client/images/apro201-1-600x778.jpg"
                                                              class="attachment-akasha_thumbnail size-akasha_thumbnail"
                                                              alt="img" width="600" height="778">Mini Dress&nbsp;
                                                     </a>
@@ -677,7 +677,7 @@
             <ul class="wpml-menu">
                 <li class="menu-item akasha-dropdown block-language">
                     <a href="#" data-akasha="akasha-dropdown">
-                        <img src="../../assets/client/images/en.png"
+                        <img src="./assets/client/images/en.png"
                              alt="en" width="18" height="12">
                         English
                     </a>
@@ -685,7 +685,7 @@
                     <ul class="sub-menu">
                         <li class="menu-item">
                             <a href="#">
-                                <img src="../../assets/client/images/it.png"
+                                <img src="./assets/client/images/it.png"
                                      alt="it" width="18" height="12">
                                 Italiano
                             </a>
@@ -710,7 +710,7 @@
         </div>
         <div class="header-mobile-mid">
             <div class="header-logo">
-                <a href="index.html"><img alt="Akasha" src="../../assets/client/images/logo.png" class="logo"></a>
+                <a href="index.html"><img alt="Akasha" src="./assets/client/images/logo.png" class="logo"></a>
             </div>
         </div>
         <div class="header-mobile-right">
@@ -755,7 +755,7 @@
                                     <li class="akasha-mini-cart-item mini_cart_item">
                                         <a href="#" class="remove remove_from_cart_button">×</a>
                                         <a href="#">
-                                            <img src="../../assets/client/images/apro134-1-600x778.jpg"
+                                            <img src="./assets/client/images/apro134-1-600x778.jpg"
                                                  class="attachment-akasha_thumbnail size-akasha_thumbnail"
                                                  alt="img" width="600" height="778">T-shirt with skirt – Pink&nbsp;
                                         </a>
@@ -766,7 +766,7 @@
                                     <li class="akasha-mini-cart-item mini_cart_item">
                                         <a href="#" class="remove remove_from_cart_button">×</a>
                                         <a href="#">
-                                            <img src="../../assets/client/images/apro1113-600x778.jpg"
+                                            <img src="./assets/client/images/apro1113-600x778.jpg"
                                                  class="attachment-akasha_thumbnail size-akasha_thumbnail"
                                                  alt="img" width="600" height="778">Abstract Sweatshirt&nbsp;
                                         </a>
@@ -777,7 +777,7 @@
                                     <li class="akasha-mini-cart-item mini_cart_item">
                                         <a href="#" class="remove remove_from_cart_button">×</a>
                                         <a href="#">
-                                            <img src="../../assets/client/images/apro201-1-600x778.jpg"
+                                            <img src="./assets/client/images/apro201-1-600x778.jpg"
                                                  class="attachment-akasha_thumbnail size-akasha_thumbnail"
                                                  alt="img" width="600" height="778">Mini Dress&nbsp;
                                         </a>
@@ -808,7 +808,7 @@
              data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:0,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:1,&quot;rows&quot;:1}"
              data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:1,&quot;slidesMargin&quot;:&quot;0&quot;}}]">
             <div class="slide-wrap">
-                <img src="../../assets/client/images/slide2222.jpg" alt="image">
+                <img src="./assets/client/images/slide2222.jpg" alt="image">
                 <div class="slide-info">
                     <div class="container">
                         <div class="slide-inner">
@@ -821,7 +821,7 @@
                 </div>
             </div>
             <div class="slide-wrap">
-                <img src="../../assets/client/images/slide11new.jpg" alt="image">
+                <img src="./assets/client/images/slide11new.jpg" alt="image">
                 <div class="slide-info">
                     <div class="container">
                         <div class="slide-inner">
@@ -834,7 +834,7 @@
                 </div>
             </div>
             <div class="slide-wrap">
-                <img src="../../assets/client/images/slide333.jpg" alt="image">
+                <img src="./assets/client/images/slide333.jpg" alt="image">
                 <div class="slide-info">
                     <div class="container">
                         <div class="slide-inner">

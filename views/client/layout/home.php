@@ -5,7 +5,7 @@
                     <div class="akasha-banner style-01 left-center">
                         <div class="banner-inner">
                             <figure class="banner-thumb">
-                                <img src="assets/images/banner11.jpg"
+                                <img src="./assets/client/images/banner11.jpg"
                                      class="attachment-full size-full" alt="img"></figure>
                             <div class="banner-info ">
                                 <div class="banner-content">
@@ -25,7 +25,7 @@
                     <div class="akasha-banner style-01 right-top">
                         <div class="banner-inner">
                             <figure class="banner-thumb">
-                                <img src="assets/images/banner12.jpg"
+                                <img src="./assets/client/images/banner12.jpg"
                                      class="attachment-full size-full" alt="img"></figure>
                             <div class="banner-info ">
                                 <div class="banner-content">
@@ -43,7 +43,7 @@
                     <div class="akasha-banner style-01 left-bottom">
                         <div class="banner-inner">
                             <figure class="banner-thumb">
-                                <img src="assets/images/banner13.jpg"
+                                <img src="./assets/client/images/banner13.jpg"
                                      class="attachment-full size-full" alt="img"></figure>
                             <div class="banner-info ">
                                 <div class="banner-content">
@@ -83,7 +83,7 @@
                                 <a class="thumb-link"
                                    href="single-product-bundle.html" tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro61-1-270x350.jpg"
+                                         src="./assets/client/images/apro61-1-270x350.jpg"
                                          alt="Maternity Shoulder" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -124,7 +124,7 @@
                                    href="#"
                                    tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro71-1-270x350.jpg"
+                                         src="./assets/client/images/apro71-1-270x350.jpg"
                                          alt="Women Bags" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -166,7 +166,7 @@
                                    href="#"
                                    tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro101-1-270x350.jpg"
+                                         src="./assets/client/images/apro101-1-270x350.jpg"
                                          alt="Long Oversized" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -206,7 +206,7 @@
                                    href="#"
                                    tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro91-1-270x350.jpg"
+                                         src="./assets/client/images/apro91-1-270x350.jpg"
                                          alt="Swing Dress" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -247,7 +247,7 @@
                                    href="#"
                                    tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro1113-270x350.jpg"
+                                         src="./assets/client/images/apro1113-270x350.jpg"
                                          alt="Abstract Sweatshirt" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -286,7 +286,7 @@
                                    href="#"
                                    tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro1211-2-270x350.jpg"
+                                         src="./assets/client/images/apro1211-2-270x350.jpg"
                                          alt="Classic Shirt" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -329,7 +329,7 @@
                                    href="#"
                                    tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro141-1-270x350.jpg"
+                                         src="./assets/client/images/apro141-1-270x350.jpg"
                                          alt="Mini Dress" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -368,7 +368,7 @@
                                    href="#"
                                    tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro151-1-270x350.jpg"
+                                         src="./assets/client/images/apro151-1-270x350.jpg"
                                          alt="Utility Pockets" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -411,7 +411,7 @@
                                 <a class="thumb-link"
                                    href="#" tabindex="-1">
                                     <img class="img-responsive"
-                                         src="assets/images/apro161-1-270x350.jpg"
+                                         src="./assets/client/images/apro161-1-270x350.jpg"
                                          alt="Women Bags" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -495,7 +495,7 @@
                                    href="#"
                                    tabindex="-1">
                                     <img class="img-responsive"
-                                         src="assets/images/apro181-2-270x350.jpg"
+                                         src="./assets/client/images/apro181-2-270x350.jpg"
                                          alt="Floral Stripe" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -536,7 +536,7 @@
         <div class="akasha-banner style-02 left-center">
             <div class="banner-inner">
                 <figure class="banner-thumb">
-                    <img src="assets/images/banner101.jpg"
+                    <img src="./assets/client/images/banner101.jpg"
                          class="attachment-full size-full" alt="img"></figure>
                 <div class="banner-info container">
                     <div class="banner-content">
@@ -578,7 +578,7 @@
                                 <a class="thumb-link"
                                    href="#" tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro13-1-270x350.jpg"
+                                         src="./assets/client/images/apro13-1-270x350.jpg"
                                          alt="Black Shirt" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -618,7 +618,7 @@
                                 <a class="thumb-link"
                                    href="#" tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro302-270x350.jpg"
+                                         src="./assets/client/images/apro302-270x350.jpg"
                                          alt="Smock Dress" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -658,7 +658,7 @@
                                 <a class="thumb-link" href="#"
                                    tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro31-1-270x350.jpg"
+                                         src="./assets/client/images/apro31-1-270x350.jpg"
                                          alt="Shirred Front" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -697,7 +697,7 @@
                                 <a class="thumb-link" href="#"
                                    tabindex="0">
                                     <img class="img-responsive"
-                                         src="assets/images/apro41-1-270x350.jpg"
+                                         src="./assets/client/images/apro41-1-270x350.jpg"
                                          alt="Brown Shirt" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -736,7 +736,7 @@
                                 <a class="thumb-link" href="#"
                                    tabindex="-1">
                                     <img class="img-responsive"
-                                         src="assets/images/apro51012-1-270x350.jpg"
+                                         src="./assets/client/images/apro51012-1-270x350.jpg"
                                          alt="Print In White" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -778,7 +778,7 @@
                                 <a class="thumb-link" href="#"
                                    tabindex="-1">
                                     <img class="img-responsive"
-                                         src="assets/images/apro61-1-270x350.jpg"
+                                         src="./assets/client/images/apro61-1-270x350.jpg"
                                          alt="Maternity Shoulder" width="270" height="350">
                                 </a>
                                 <div class="flash">
@@ -822,7 +822,7 @@
         <div class="akasha-banner style-07 left-center">
             <div class="banner-inner">
                 <figure class="banner-thumb">
-                    <img src="assets/images/banner28.jpg"
+                    <img src="./assets/client/images/banner28.jpg"
                          class="attachment-full size-full" alt="img"></figure>
                 <div class="banner-info container">
                     <div class="banner-content">
@@ -868,7 +868,7 @@
                         <div class="post-inner blog-grid">
                             <div class="post-thumb">
                                 <a href="#" tabindex="0">
-                                    <img src="assets/images/blogpost1-370x330.jpg"
+                                    <img src="./assets/client/images/blogpost1-370x330.jpg"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
                                 <a class="datebox" href="#" tabindex="0">
@@ -904,7 +904,7 @@
                             <div class="post-thumb">
                                 <a href="#"
                                    tabindex="0">
-                                    <img src="assets/images/blogpost5-370x330.jpg"
+                                    <img src="./assets/client/images/blogpost5-370x330.jpg"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
                                 <a class="datebox" href="#" tabindex="0">
@@ -940,7 +940,7 @@
                             <div class="post-thumb">
                                 <a href="#"
                                    tabindex="0">
-                                    <img src="assets/images/blogpost9-370x330.jpg"
+                                    <img src="./assets/client/images/blogpost9-370x330.jpg"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
                                 <a class="datebox" href="#" tabindex="0">
@@ -976,7 +976,7 @@
                             <div class="post-thumb">
                                 <a href="#"
                                    tabindex="-1">
-                                    <img src="assets/images/blogpost4-370x330.jpg"
+                                    <img src="./assets/client/images/blogpost4-370x330.jpg"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
                                 <a class="datebox" href="#" tabindex="-1">
@@ -1011,7 +1011,7 @@
                         <div class="post-inner blog-grid">
                             <div class="post-thumb">
                                 <a href="#" tabindex="-1">
-                                    <img src="assets/images/blogpost2-370x330.jpg"
+                                    <img src="./assets/client/images/blogpost2-370x330.jpg"
                                          class="img-responsive attachment-370x330 size-370x330" alt="img"
                                          width="370" height="330"> </a>
                                 <a class="datebox" href="#" tabindex="-1">
@@ -1114,7 +1114,7 @@
                 <div class="rows-space-0">
                     <a target="_blank" href="#" class="item"
                        tabindex="0">
-                        <img class="img-responsive lazy" src="assets/images/insta1.jpg" alt="Home 01">
+                        <img class="img-responsive lazy" src="./assets/client/images/insta1.jpg" alt="Home 01">
                         <span class="instagram-info">
                                  <span class="social-wrap">
                                     <span class="social-info">1
@@ -1129,7 +1129,7 @@
                 </div>
                 <div class="rows-space-0">
                     <a target="_blank" href="#" class="item" tabindex="0">
-                        <img class="img-responsive lazy" src="assets/images/insta2.jpg" alt="Home 01">
+                        <img class="img-responsive lazy" src="./assets/client/images/insta2.jpg" alt="Home 01">
                         <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">0
@@ -1145,7 +1145,7 @@
                 <div class="rows-space-0">
                     <a target="_blank" href="#" class="item"
                        tabindex="0">
-                        <img class="img-responsive lazy" src="assets/images/insta3.jpg" alt="Home 01">
+                        <img class="img-responsive lazy" src="./assets/client/images/insta3.jpg" alt="Home 01">
                         <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">0
@@ -1160,7 +1160,7 @@
                 </div>
                 <div class="rows-space-0">
                     <a target="_blank" href="#" class="item" tabindex="0">
-                        <img class="img-responsive lazy" src="assets/images/insta4.jpg" alt="Home 01">
+                        <img class="img-responsive lazy" src="./assets/client/images/insta4.jpg" alt="Home 01">
                         <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">0
@@ -1175,7 +1175,7 @@
                 </div>
                 <div class="rows-space-0">
                     <a target="_blank" href="#" class="item" tabindex="0">
-                        <img class="img-responsive lazy" src="assets/images/insta5.jpg" alt="Home 01">
+                        <img class="img-responsive lazy" src="./assets/client/images/insta5.jpg" alt="Home 01">
                         <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">0
@@ -1191,7 +1191,7 @@
                 <div class="rows-space-0">
                     <a target="_blank" href="#" class="item"
                        tabindex="-1">
-                        <img class="img-responsive lazy" src="assets/images/insta6.jpg" alt="Home 01">
+                        <img class="img-responsive lazy" src="./assets/client/images/insta6.jpg" alt="Home 01">
                         <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">0
@@ -1207,7 +1207,7 @@
                 <div class="rows-space-0">
                     <a target="_blank" href="#" class="item"
                        tabindex="-1">
-                        <img class="img-responsive lazy" src="assets/images/insta7.jpg" alt="Home 01">
+                        <img class="img-responsive lazy" src="./assets/client/images/insta7.jpg" alt="Home 01">
                         <span class="instagram-info">
                                          <span class="social-wrap">
                                             <span class="social-info">0
@@ -1223,7 +1223,7 @@
                 <div class="rows-space-0">
                     <a target="_blank" href="#" class="item"
                        tabindex="-1">
-                        <img class="img-responsive lazy" src="assets/images/insta8.jpg" alt="Home 01">
+                        <img class="img-responsive lazy" src="./assets/client/images/insta8.jpg" alt="Home 01">
                         <span class="instagram-info">
                                      <span class="social-wrap">
                                         <span class="social-info">0

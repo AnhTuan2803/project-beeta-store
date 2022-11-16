@@ -15,17 +15,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="..\..\assets\admin\css\vendor.min.css">
-    <link rel="stylesheet" href="..\..\assets\admin\vendor\icon-set\style.css">
+    <link rel="stylesheet" href="..\assets\admin\css\vendor.min.css">
+    <link rel="stylesheet" href="..\assets\admin\vendor\icon-set\style.css">
 
     <!-- CSS Front Template -->
-    <link rel="stylesheet" href="..\..\assets\admin\css\theme.min.css?v=1.0">
+    <link rel="stylesheet" href="..\assets\admin\css\theme.min.css?v=1.0">
   </head>
 
   <body>
     <!-- ========== MAIN CONTENT ========== -->
     <main id="content" role="main" class="main">
-      <div class="position-fixed top-0 right-0 left-0 bg-img-hero" style="height: 32rem; background-image: url(../../assets/admin/svg/components/abstract-bg-4.svg);">
+      <div class="position-fixed top-0 right-0 left-0 bg-img-hero" style="height: 32rem; background-image: url(../assets/admin/svg/components/abstract-bg-4.svg);">
         <!-- SVG Bottom Shape -->
         <figure class="position-absolute right-0 bottom-0 left-0">
           <svg preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewbox="0 0 1921 273">
@@ -39,7 +39,7 @@
       <!-- Content -->
       <div class="container py-5 py-sm-7">
         <a class="d-flex justify-content-center mb-5" href="index.html">
-          <img class="z-index-2" src="..\..\assets\admin\img\logo.png" alt="Image Description" style="width: 11rem;">
+          <img class="z-index-2" src="..\assets\admin\img\logo.png" alt="Image Description" style="width: 11rem;">
         </a>
 
         <div class="row justify-content-center">
@@ -52,12 +52,12 @@
                   <div class="text-center">
                     <div class="mb-5">
                       <h1 class="display-4">Create your account</h1>
-                      <p>Already have an account? <a href="authentication-signin-basic.html">Sign in here</a></p>
+                      <p>Already have an account? <a href="./login.php">Sign in here</a></p>
                     </div>
 
                     <!-- <a class="btn btn-lg btn-block btn-white mb-4" href="#">
                       <span class="d-flex justify-content-center align-items-center">
-                        <img class="avatar avatar-xss mr-2" src="..\..\assets\admin\svg\brands\google.svg" alt="Image Description">
+                        <img class="avatar avatar-xss mr-2" src="..\assets\admin\svg\brands\google.svg" alt="Image Description">
                         Sign up with Google
                       </span>
                     </a>
@@ -71,13 +71,13 @@
                   <div class="form-row">
                     <div class="col-sm-6">
                       <div class="js-form-message form-group">
-                        <input type="text" class="form-control form-control-lg" name="fullName" id="fullNameSrEmail" placeholder="Mark" aria-label="Mark" required="" data-msg="Please enter your first name.">
+                        <input type="text" class="form-control form-control-lg" name="name" id="fullNameSrEmail" placeholder="Tên" aria-label="Mark" required="" data-msg="Please enter your first name.">
                       </div>
                     </div>
 
                     <div class="col-sm-6">
                       <div class="js-form-message form-group">
-                        <input type="text" class="form-control form-control-lg" placeholder="Williams" aria-label="Williams" required="" data-msg="Please enter your last name.">
+                        <input type="text" class="form-control form-control-lg" placeholder="Họ" aria-label="Williams" required="" data-msg="Please enter your last name.">
                       </div>
                     </div>
                   </div>
@@ -87,7 +87,7 @@
                   <div class="js-form-message form-group">
                     <label class="input-label" for="signupSrEmail">Your email</label>
 
-                    <input type="email" class="form-control form-control-lg" name="email" id="signupSrEmail" placeholder="Markwilliams@example.com" aria-label="Markwilliams@example.com" required="" data-msg="Please enter a valid email address.">
+                    <input type="email" class="form-control form-control-lg" name="email" id="signupSrEmail" placeholder="email@example.com" aria-label="Markwilliams@example.com" required="" data-msg="Please enter a valid email address.">
                   </div>
                   <!-- End Form Group -->
 
@@ -154,16 +154,16 @@
               <div class="w-85 mx-auto">
                 <div class="row justify-content-between">
                   <div class="col">
-                    <img class="img-fluid" src="..\..\assets\admin\svg\brands\gitlab-gray.svg" alt="Image Description">
+                    <img class="img-fluid" src="..\assets\admin\svg\brands\gitlab-gray.svg" alt="Image Description">
                   </div>
                   <div class="col">
-                    <img class="img-fluid" src="..\..\assets\admin\svg\brands\fitbit-gray.svg" alt="Image Description">
+                    <img class="img-fluid" src="..\assets\admin\svg\brands\fitbit-gray.svg" alt="Image Description">
                   </div>
                   <div class="col">
-                    <img class="img-fluid" src="..\..\assets\admin\svg\brands\flow-xo-gray.svg" alt="Image Description">
+                    <img class="img-fluid" src="..\assets\admin\svg\brands\flow-xo-gray.svg" alt="Image Description">
                   </div>
                   <div class="col">
-                    <img class="img-fluid" src="..\..\assets\admin\svg\brands\layar-gray.svg" alt="Image Description">
+                    <img class="img-fluid" src="..\assets\admin\svg\brands\layar-gray.svg" alt="Image Description">
                   </div>
                 </div>
               </div>
