@@ -92,6 +92,7 @@
                      "pagination": "datatablePagination"
                    }'>
                     <thead class="thead-light">
+
                         <tr>
                             <!-- <th scope="col" class="table-column-pr-0">
                                 <div class="custom-control custom-checkbox">
@@ -112,21 +113,25 @@
                     </thead>
                     <tbody>
                         <?php
-                        foreach ($listsanpham as $sanpam) {
-                            extract($sanpam);
+                        foreach ($listsanpham as $sanpham) {
+                            extract($sanpham);
                             $suasp = "index.php?act=suasp&id=" . $id_sp;
                             $xoasp = "index.php?act=xoasp&id=" . $id_sp;
-                            $hinhpath = "../../assets/uploads/" . $hinh;
+                            $hinhpath = "../../assets/upload/" . $hinh;
                             if (is_file($hinhpath)) {
+<<<<<<< HEAD
                                 $anh = "<img style='max-width: 60px;' src='" . $hinhpath . "'>";
+=======
+                                $hinh = "<img src='" . $hinhpath . "'width='50px' height='50px';>";
+>>>>>>> 70f021ea03958174a64b4451a29f3d49f27e0852
                             } else {
-                                $anh = "no photo";
+                                $hinh = "no photo";
                             }
                             echo '<tr>
                  
                  
                   <td>' . $id_sp . '</td>
-                  <td>' . $anh . '</td>
+                  <td>' . $hinh . '</td>
                   
                   <td>' . $ten_sp . '</td>
                   <td>' . $mo_ta_ngan . '</td>
