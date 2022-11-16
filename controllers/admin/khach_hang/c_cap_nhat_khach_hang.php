@@ -9,7 +9,7 @@ if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
     $sdtkh = $_POST['sdtkh'];
     $ghichukh = $_POST['ghichukh'];
     update_khachhang($id, $tenkh, $emailkh, $gioitinhkh, $ngaysinhkh, $diachikh, $sdtkh, $ghichukh);
-    // $thongbao = "Cập nhật thành công!";
+
     echo '<script>alert("Cập nhật khách hàng thành công!")</script>';
 }
 $listkhachhang = loadall_khachhang();

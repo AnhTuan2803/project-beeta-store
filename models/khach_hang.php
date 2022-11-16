@@ -17,7 +17,7 @@
     }
 
     function update_khachhang($id, $tenkh, $emailkh, $gioitinhkh, $ngaysinhkh, $diachikh, $sdtkh, $ghichukh){
-        $sql = "update khach_hang set ten_kh='" . $tenkh . "',gioi_tinh='" . $gioitinhkh . "',ngay_sinh='" . $ngaysinhkh . "',dia_chi='" . $diachikh . "',sdt='" . $sdtkh . "',ghi_chu='" . $ghichukh . "',email='" . $emailkh . "', where id_kh=" . $id;
+        $sql = "update khach_hang set ten_kh='" . $tenkh . "',gioi_tinh='" . $gioitinhkh . "',ngay_sinh='" . $ngaysinhkh . "',dia_chi='" . $diachikh . "',sdt='" . $sdtkh . "',ghi_chu='" . $ghichukh . "',email='" . $emailkh . "' where id_kh=" . $id;
         pdo_execute($sql);
     }
 ?>
