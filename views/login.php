@@ -4,17 +4,18 @@
   include "../models/pdo.php";
   include "../models/nguoi_dung.php";
   if(isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
-      $email = $_POST['email'];
-      $password = $_POST['password'];
-      $checkuser = checkuser($email, $password);
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $checkuser = checkuser($email, $password);
 
-      if (is_array($checkuser)){
-        $_SESSION['user'] = $checkuser;
-        header('Location: index.php');
-      }else{
-        $thongbao = "Thông tin tài khoản mật khẩu không chính xác";
-      }
-  }
+    if (!is_array($_SESSION['user'])){
+      $_SESSION['user'] = $checkuser;
+      // header('Location: ../index.php');
+    }else{
+      $thongbao = "Thông tin tài khoản mật khẩu không chính xác";
+    }
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -66,7 +67,7 @@
           <div class="card card-lg mb-5">
             <div class="card-body">
               <!-- Form -->
-              <form class="js-validate" method="POST" action="index.php?act=login">
+              <form class="js-validate" method="POST" action="../index.php?act=login">
                 <div class="text-center">
                   <div class="mb-5">
                     <h1 class="display-4">Sign in</h1>

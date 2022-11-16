@@ -1,3 +1,14 @@
+<?php
+    include "../models/pdo.php";
+    include "../models/nguoi_dung.php";
+    if(isset($_POST['dang_ky'])){
+        $name = $_POST['name'];
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        dang_ky_tk($name,$username,$email, $password, $ngay_dang_ky);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +59,7 @@
             <div class="card card-lg mb-5">
               <div class="card-body">
                 <!-- Form -->
-                <form class="js-validate">
+                <form class="js-validate" method="POST" action="#">
                   <div class="text-center">
                     <div class="mb-5">
                       <h1 class="display-4">Create your account</h1>
@@ -77,13 +88,18 @@
 
                     <div class="col-sm-6">
                       <div class="js-form-message form-group">
-                        <input type="text" class="form-control form-control-lg" placeholder="Họ" aria-label="Williams" required="" data-msg="Please enter your last name.">
+                        <input type="text" class="form-control form-control-lg" name="name" placeholder="Họ" aria-label="Williams" required="" data-msg="Please enter your last name.">
                       </div>
                     </div>
                   </div>
                   <!-- End Form Group -->
 
                   <!-- Form Group -->
+                  <div class="js-form-message form-group">
+                    <label class="input-label" for="signupSrEmail">Username</label>
+
+                    <input type="text" class="form-control form-control-lg" name="username" id="signupSrEmail" placeholder="username" aria-label="" required="" data-msg="Please enter a valid username.">
+                  </div>
                   <div class="js-form-message form-group">
                     <label class="input-label" for="signupSrEmail">Your email</label>
 
@@ -140,7 +156,7 @@
                   </div>
                   <!-- End Checkbox -->
 
-                  <button type="submit" class="btn btn-lg btn-block btn-primary mb-2">Create an account</button>
+                  <button type="submit" class="btn btn-lg btn-block btn-primary mb-2" name="dang_ky">Create an account</button>
                 </form>
                 <!-- End Form -->
               </div>
@@ -178,10 +194,10 @@
 
 
     <!-- JS Implementing Plugins -->
-    <script src="assets\js\vendor.min.js"></script>
+    <script src="..\assets\js\vendor.min.js"></script>
 
     <!-- JS Front -->
-    <script src="assets\js\theme.min.js"></script>
+    <script src="..\assets\js\theme.min.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>
@@ -209,7 +225,7 @@
 
     <!-- IE Support -->
     <script>
-      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="./assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
+      if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) document.write('<script src="../assets/vendor/babel-polyfill/polyfill.min.js"><\/script>');
     </script>
   </body>
 </html>

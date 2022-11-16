@@ -540,27 +540,21 @@
                                 </div>
                                 <div class="akasha-dropdown-close">x</div>
                                 <div class="menu-item block-user block-dreaming akasha-dropdown">
-                                    <a class="block-link" href="my-account.html">
+                                    <a class="block-link" href="#">
                                         <span class="flaticon-profile"></span>
                                     </a>
                                     <ul class="sub-menu">
                                         <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--dashboard is-active">
-                                            <a href="#">Dashboard</a>
+                                            <a href="#">Cá nhân</a>
                                         </li>
                                         <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
-                                            <a href="#">Orders</a>
-                                        </li>
-                                        <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--downloads">
-                                            <a href="#">Downloads</a>
-                                        </li>
-                                        <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--edit-adchair">
-                                            <a href="#">Addresses</a>
+                                            <a href="">Đăng ký  mới</a>
                                         </li>
                                         <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--edit-account">
                                             <a href="#">Account details</a>
                                         </li>
                                         <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--customer-logout">
-                                            <a href="#">Logout</a>
+                                            <a href="index.php?act=logout">Logout</a>
                                         </li>
                                     </ul>
                                 </div>
