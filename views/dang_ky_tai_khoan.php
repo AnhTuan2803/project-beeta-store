@@ -1,6 +1,6 @@
 <?php
-    include "../models/pdo.php";
-    include "../models/nguoi_dung.php";
+    include "../models/M_pdo.php";
+    include "../models/m_nguoi_dung.php";
     if(isset($_POST['dang_ky'])){
         $name = $_POST['name'];
         $username = $_POST['username'];

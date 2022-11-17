@@ -1,8 +1,8 @@
 <?php
   session_start();
   ob_start();
-  include "../models/pdo.php";
-  include "../models/nguoi_dung.php";
+  include "../models/m_pdo.php";
+  include "../models/m_nguoi_dung.php";
   if(isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
     $email = $_POST['email'];
     $password = $_POST['password'];

@@ -1,7 +1,7 @@
 <?php
 session_start();
 ob_start();
-include "./models/pdo.php";
+include "./models/m_pdo.php";
 include "./views/client/layout/header.php";
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];

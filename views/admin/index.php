@@ -1,10 +1,10 @@
 <?php
-include "../../models/pdo.php";
-include "../../models/danh_muc.php";
-include "../../models/san_pham.php";
-include "../../models/khach_hang.php";
-include "../../models/hoa_don.php";
-include "../../models/nguoi_dung.php";
+include "../../models/m_pdo.php";
+include "../../models/m_danh_muc.php";
+include "../../models/m_san_pham.php";
+include "../../models/m_khach_hang.php";
+include "../../models/m_hoa_don.php";
+include "../../models/m_nguoi_dung.php";
 include "../admin/layout/header.php";
 include "../admin/layout/box_left.php";
 
