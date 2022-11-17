@@ -6,6 +6,7 @@
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $ngay_dang_ky = date('Y/m/d');
         dang_ky_tk($name,$username,$email, $password, $ngay_dang_ky);
     }
 ?>

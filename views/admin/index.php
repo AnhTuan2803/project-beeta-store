@@ -3,6 +3,8 @@ include "../../models/pdo.php";
 include "../../models/danh_muc.php";
 include "../../models/san_pham.php";
 include "../../models/khach_hang.php";
+include "../../models/hoa_don.php";
+include "../../models/nguoi_dung.php";
 include "../admin/layout/header.php";
 include "../admin/layout/box_left.php";
 
@@ -53,6 +55,31 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
         case 'cap_nhat_khach_hang':
             include "../../controllers/admin/khach_hang/c_cap_nhat_khach_hang.php";
+            break;
+
+            // Điều hướng hóa đơn
+        case 'danh_sach_hoa_don':
+            include "../../controllers/admin/hoa_don/c_danh_sach_hoa_don.php";
+            break;
+        case 'xoa_hd':
+            include "../../controllers/admin/hoa_don/c_xoa_hoa_don.php";
+            break;
+        case 'xem_ct_hoa_don':
+            include "../../controllers/admin/hoa_don/c_chi_tiet_hoa_don.php";
+            break;
+
+        // Điều hướng tài khoản
+        case 'danh_sach_nguoi_dung':
+            include "../../controllers/admin/nguoi_dung/c_danh_sach_nguoi_dung.php";
+            break;
+        case 'xoa_nd':
+            include "../../controllers/admin/nguoi_dung/c_xoa_nguoi_dung.php";
+            break;
+        case 'sua_nd':
+            include "../../controllers/admin/nguoi_dung/c_sua_nguoi_dung.php";
+            break;
+        case 'cap_nhat_nguoi_dung':
+            include "../../controllers/admin/nguoi_dung/c_cap_nhat_nguoi_dung.php";
             break;
         default:
             include "../admin/layout/home.php";

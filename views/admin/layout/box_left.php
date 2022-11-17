@@ -79,7 +79,7 @@
 
               <ul class="js-navbar-vertical-aside-submenu nav nav-sub">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.php?act=danh_sach_tai_khoan" title="Default">
+                  <a class="nav-link" href="index.php?act=danh_sach_nguoi_dung" title="Default">
                     <span class="tio-circle nav-indicator-icon"></span>
                     <span class="text-truncate">Danh sách tài khoản</span>
                   </a>
