@@ -1,22 +1,3 @@
-<?php
-  session_start();
-  ob_start();
-  include "../models/m_pdo.php";
-  include "../models/m_nguoi_dung.php";
-  if(isset($_POST['dangnhap']) && ($_POST['dangnhap'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $checkuser = checkuser($email, $password);
-
-    if (!is_array($_SESSION['user'])){
-      $_SESSION['user'] = $checkuser;
-      // header('Location: ../index.php');
-    }else{
-      $thongbao = "Thông tin tài khoản mật khẩu không chính xác";
-    }
-
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,7 +38,7 @@
 
     <!-- Content -->
     <div class="container py-5 py-sm-7">
-      <a class="d-flex justify-content-center mb-5" href="index.html">
+      <a class="d-flex justify-content-center mb-5" href="../index.php">
         <img class="z-index-2" src="..\assets\admin\img\logo.png" alt="Image Description" style="width: 11rem;">
       </a>
 
@@ -66,14 +47,12 @@
           <!-- Card -->
           <div class="card card-lg mb-5">
             <div class="card-body">
-              <!-- Form -->
-              <form class="js-validate" method="POST" action="../index.php?act=login">
-                <div class="text-center">
-                  <div class="mb-5">
-                    <h1 class="display-4">Sign in</h1>
-                    <p>Don't have an account yet? <a href="./dang_ky_tai_khoan.php">Sign up here</a></p>
-                  </div>
-                  <!-- 
+              <div class="text-center">
+                <div class="mb-5">
+                  <h1 class="display-4">Sign in</h1>
+                  <p>Don't have an account yet? <a href="./v_dang_ky_tai_khoan.php">Sign up here</a></p>
+                </div>
+                <!-- 
                       <a class="btn btn-lg btn-block btn-white mb-4" href="#">
                         <span class="d-flex justify-content-center align-items-center">
                           <img class="avatar avatar-xss mr-2" src="..\assets\admin\svg\brands\google.svg" alt="Image Description">
@@ -82,7 +61,10 @@
                       </a>
 
                       <span class="divider text-muted mb-4">OR</span> -->
-                </div>
+              </div>
+              <!-- Form -->
+              <form class="js-validate" action="../index.php?act=dangnhap" method="POST">
+
 
                 <!-- Form Group -->
                 <div class="js-form-message form-group">
@@ -97,7 +79,7 @@
                   <label class="input-label" for="signupSrPassword" tabindex="0">
                     <span class="d-flex justify-content-between align-items-center">
                       Password
-                      <a class="input-label-secondary" href="authentication-reset-password-basic.html">Forgot Password?</a>
+                      <a class="input-label-secondary" href="#">Forgot Password?</a>
                     </span>
                   </label>
 
@@ -126,9 +108,14 @@
                 </div>
                 <!-- End Checkbox -->
 
-                <button type="submit" class="btn btn-lg btn-block btn-primary" name="dangnhap">Sign in</button>
+                <input type="submit" name="dangnhap" value="Đăng nhập" class="btn btn-lg btn-block btn-primary"></input>
               </form>
               <!-- End Form -->
+              <?php
+              if (isset($thongbao) && ($thongbao != "")) {
+                echo $thongbao;
+              }
+              ?>
             </div>
           </div>
           <!-- End Card -->

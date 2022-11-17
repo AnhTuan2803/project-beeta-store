@@ -37,12 +37,12 @@
     <header id="header" class="navbar navbar-expand-lg navbar-fixed navbar-height navbar-flush navbar-container navbar-bordered">
       <div class="navbar-nav-wrap">
         <div class="navbar-nav-wrap-content-left">
-           <!-- Navbar Vertical Toggle -->
-      <button type="button" class="js-navbar-vertical-aside-toggle-invoker close mr-3">
-        <i class="tio-first-page navbar-vertical-aside-toggle-short-align" data-toggle="tooltip" data-placement="right" title="Collapse"></i>
-        <i class="tio-last-page navbar-vertical-aside-toggle-full-align" data-template='<div class="tooltip d-none d-sm-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-toggle="tooltip" data-placement="right" title="Expand"></i>
-      </button>
-      <!-- End Navbar Vertical Toggle -->
+          <!-- Navbar Vertical Toggle -->
+          <button type="button" class="js-navbar-vertical-aside-toggle-invoker close mr-3">
+            <i class="tio-first-page navbar-vertical-aside-toggle-short-align" data-toggle="tooltip" data-placement="right" title="Collapse"></i>
+            <i class="tio-last-page navbar-vertical-aside-toggle-full-align" data-template='<div class="tooltip d-none d-sm-block" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>' data-toggle="tooltip" data-placement="right" title="Expand"></i>
+          </button>
+          <!-- End Navbar Vertical Toggle -->
           <!-- Search Form -->
           <div class="d-none d-md-block">
             <form class="position-relative m-0">
@@ -80,7 +80,9 @@
             <li class="nav-item">
               <!-- Account -->
               <div class="hs-unfold">
-                <div style="display:flex; align-items: center;"><span style="font-size: 14px; font-weight: 600; color: #000;" class="mr-2">Xin chào: <span style="color: #E68441;">Admin</span></span><a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:;" data-hs-unfold-options='{
+
+                <div style="display:flex; align-items: center;"><span style="font-size: 14px; font-weight: 600; color: #000;" class="mr-2">Xin chào: <span style="color: #E68441;"><?php session_start();
+                                                                                                                                                                                    echo $_SESSION['showuser'] ?></span></span><a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:;" data-hs-unfold-options='{
                  "target": "#accountNavbarDropdown",
                  "type": "css-animation"
                }'>
@@ -98,8 +100,10 @@
                         <img class="avatar-img" src="..\..\assets\admin\img\160x160\img6.jpg" alt="Image Description">
                       </div>
                       <div class="media-body">
-                        <span class="card-title h5">Mark Williams</span>
-                        <span class="card-text">mark@example.com</span>
+                        <span class="card-title h5"><?php
+                                                    echo $_SESSION['showten'] ?></span>
+                        <span class="card-text"><?php
+                                                echo $_SESSION['showemail'] ?></span>
                       </div>
                     </div>
                   </div>
