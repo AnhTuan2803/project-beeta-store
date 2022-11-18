@@ -17,7 +17,7 @@ if (is_array($nd)) {
                 </ol>
               </nav> -->
 
-                    <h1 class="page-header-title">Chỉnh Sửa tài khoản khách hàng</h1>
+                    <h1 class="page-header-title">Chỉnh Sửa Tài Khoản</h1>
                 </div>
             </div>
         </div>
@@ -61,17 +61,25 @@ if (is_array($nd)) {
 
                                     <!-- Select -->
 
-                                    <select  class="js-select2-custom form-control" size="1" style="border-color: #e7eaf3;" name="vai_tro" data-hs-select2-options='{
+                                    <select class="js-select2-custom form-control" size="1" style="border-color: #e7eaf3;" name="vai_tro" data-hs-select2-options='{
                                 "minimumResultsForSearch": "Infinity",
                                 "dropdownAutoWidth": true,
                                 "width": "6rem"
                               }'>
-                                        <option  selected=""><?php if (isset($id_vai_tro) && ($id_vai_tro != "")) echo $id_vai_tro ?></option>
-                                        <option value="0">Admin</option>
-                                        <option value="1">Nhân viên</option>
+                                        <?php
+                                        if ($id_vai_tro == 1) {
+                                            $vaitro = "Admin";
+                                        } else if ($id_vai_tro == 0) {
+                                            $vaitro = "Khách hàng";
+                                        } ?>
+                                        <option selected value="<?= $id_vai_tro ?>"><?= $vaitro ?></option>
+                                        <?php
+                                        foreach ($listvaitro as $vaitro) {
+                                            extract($vaitro);
+                                            echo '<option value="' . $id_vai_tro . '" >' . $vai_tro . '</option>';
+                                        }
+                                        ?>
 
-                                        <option value="2">Khách hàng</option>
-                                        
                                     </select>
                                     <!-- End Select -->
 
@@ -115,7 +123,7 @@ if (is_array($nd)) {
                         </form>
                     </div>
                     <!-- Body -->
-                  
+
                 </div>
                 <!-- End Card -->
             </div>

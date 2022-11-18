@@ -113,10 +113,10 @@
                   <div class="dropdown-divider"></div>
 
 
-                  <a class="dropdown-item" href="#">
-                    <span class="text-truncate pr-2" title="Manage team">Manage team</span>
+                  <a class="dropdown-item" href="../.././index.php">
+                    <span class="text-truncate pr-2" title="Manage team">Client</span>
                   </a>
-                  <a class="dropdown-item" href="#">
+                  <a class="dropdown-item" href="../.././index.php?act=logout">
                     <span class="text-truncate pr-2" title="Sign out">Sign out</span>
                   </a>
                 </div>

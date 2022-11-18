@@ -43,7 +43,7 @@
                         </div>
                         <div class="header-logo-nav">
                             <div class="header-logo col-lg-2">
-                                <a href="index.html"><img alt="Beeta" src="./assets/client/images/logo.png" class="logo"></a>
+                                <a href="./index.php"><img alt="Beeta" src="./assets/client/images/logo.png" class="logo"></a>
                             </div>
                             <div class="box-header-nav menu-nocenter">
                                 <ul id="menu-primary-menu" class="clone-main-menu akasha-clone-mobile-menu akasha-nav main-menu">
@@ -497,15 +497,26 @@
                                                 $_SESSION['showten'] = $_SESSION['email']['ho_ten'];
                                                 $_SESSION['showemail'] = $_SESSION['email']['email'];
                                             ?>
-                                                <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
-                                                    <a href="./views/admin/index.php">Quản trị</a>
-                                                </li>
-                                                <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
-                                                    <a href="index.php?act=dangky">Đăng ký</a>
+                                                <?php
+                                                if ($_SESSION['email']['id_vai_tro'] == 0) {
+                                                    echo '<li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
+                                                    <a href="#">Sửa tài khoản</a>
                                                 </li>
                                                 <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--customer-logout">
                                                     <a href="index.php?act=logout">Logout</a>
+                                                </li>';
+                                                } else if ($_SESSION['email']['id_vai_tro'] == 1) {
+                                                    echo ' <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
+                                                    <a href="./views/admin/index.php">Quản trị</a>
                                                 </li>
+                                                <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
+                                                    <a href="#">Sửa tài khoản</a>
+                                                </li>
+                                                <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--customer-logout">
+                                                    <a href="index.php?act=logout">Logout</a>
+                                                </li>';
+                                                }
+                                                ?>
                                             <?php
                                             } else {
                                             ?>
@@ -514,6 +525,9 @@
                                                 </li>
                                                 <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
                                                     <a href="index.php?act=dangky">Đăng ký</a>
+                                                </li>
+                                                <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
+                                                    <a href="#">Quên mật khẩu</a>
                                                 </li>
                                             <?php
                                             }

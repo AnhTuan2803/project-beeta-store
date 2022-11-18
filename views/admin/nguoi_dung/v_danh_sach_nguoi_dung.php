@@ -5,7 +5,7 @@
         <div class="page-header">
             <div class="row align-items-center mb-3">
                 <div class="col-sm mb-2 mb-sm-0">
-                    <h1 class="page-header-title">Danh sách khách hàng</h1>
+                    <h1 class="page-header-title">Danh sách Tài Khoản</h1>
 
                 </div>
 
@@ -114,12 +114,10 @@
                         <?php
                         foreach ($listnguoidung as $nguoidung) {
                             extract($nguoidung);
-                            if ($id_vai_tro == 0) {
+                            if ($id_vai_tro == 1) {
                                 $vai_tro = "Admin";
-                            }else if($id_vai_tro == 1){
-                                $vai_tro = "Nhân viên";
-                            }else{
-                                $vai_tro = "khách hàng";
+                            }else if($id_vai_tro == 0){
+                                $vai_tro = "Khách hàng";
                             }
                             $sua_nd = "index.php?act=sua_nd&id=" . $id_nd;
                             $xoa_nd = "index.php?act=xoa_nd&id=" . $id_nd;

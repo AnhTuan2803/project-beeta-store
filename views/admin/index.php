@@ -56,7 +56,6 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'cap_nhat_khach_hang':
             include "../../controllers/admin/khach_hang/c_cap_nhat_khach_hang.php";
             break;
-
             // Điều hướng hóa đơn
         case 'danh_sach_hoa_don':
             include "../../controllers/admin/hoa_don/c_danh_sach_hoa_don.php";
@@ -67,8 +66,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'xem_ct_hoa_don':
             include "../../controllers/admin/hoa_don/c_chi_tiet_hoa_don.php";
             break;
-
-        // Điều hướng tài khoản
+            // Điều hướng tài khoản
         case 'danh_sach_nguoi_dung':
             include "../../controllers/admin/nguoi_dung/c_danh_sach_nguoi_dung.php";
             break;
@@ -80,6 +78,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
         case 'cap_nhat_nguoi_dung':
             include "../../controllers/admin/nguoi_dung/c_cap_nhat_nguoi_dung.php";
+            break;
+            // 
+        case 'logout':
+            session_unset();
             break;
         default:
             include "../admin/layout/home.php";

@@ -9,7 +9,7 @@
     <title>Forgot Password</title>
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../../assets/admin/img/logoicon.png" />
+    <link rel="shortcut icon" href="../assets/client/images/logoicon.png" />
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">

@@ -10,7 +10,7 @@
   <title>Sign In</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="../../assets/admin/img/logoicon.png" />
+  <link rel="shortcut icon" href="../assets/client/images/logoicon.png" />
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@
                 <div class="js-form-message form-group">
                   <label class="input-label" for="signinSrEmail">Your email</label>
 
-                  <input type="email" class="form-control form-control-lg" name="email" id="signinSrEmail" tabindex="1" placeholder="email@address.com" aria-label="email@address.com" required="" data-msg="Please enter a valid email address.">
+                  <input type="text" class="form-control form-control-lg" name="email" id="signinSrEmail" tabindex="1" placeholder="email@address.com" aria-label="email@address.com" required="" data-msg="Please enter a valid email address.">
                 </div>
                 <!-- End Form Group -->
 
@@ -111,11 +111,6 @@
                 <input type="submit" name="dangnhap" value="Đăng nhập" class="btn btn-lg btn-block btn-primary"></input>
               </form>
               <!-- End Form -->
-              <?php
-              if (isset($thongbao) && ($thongbao != "")) {
-                echo $thongbao;
-              }
-              ?>
             </div>
           </div>
           <!-- End Card -->

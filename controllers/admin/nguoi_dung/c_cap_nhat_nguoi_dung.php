@@ -6,10 +6,11 @@ if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
     $ten_dang_nhap = $_POST['ten_dang_nhap'];
     $mat_khau = $_POST['mat_khau'];
     $email = $_POST['email'];
-    update_nguoidung($id,$vai_tro, $ho_ten, $ten_dang_nhap, $mat_khau, $email);
+    update_taikhoan($id,$vai_tro, $ho_ten, $ten_dang_nhap, $mat_khau, $email);
 
     echo '<script>alert("Cập nhật khách hàng thành công!")</script>';
 }
-$listnguoidung = loadall_nguoidung();
+$listnguoidung = loadall_taikhoan();
+$listvaitro = loadall_vaitro();
 include "../../views/admin/nguoi_dung/v_danh_sach_nguoi_dung.php";
 ?>
