@@ -13,6 +13,13 @@ function loadall_sanpham()
     return $listsanpham;
 }
 
+function loadall_sanpham_home()
+{
+    $sql = "select * from san_pham where 1 order by id_sp desc limit 10";
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
+
 function loadone_sanpham($id)
 {
     $sql = "select * from san_pham where id_sp=" . $id;
@@ -36,3 +43,9 @@ function update_sanpham($id, $tensp, $giasp, $motangansp, $motachitietsp, $hinh,
     pdo_execute($sql);
 }
 
+function load_sanpham_cungloai($id_sp, $id_dm)
+{
+    $sql = "select * from san_pham where id_dm=" . $id_dm . " AND id_sp <>" . $id_sp;
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}

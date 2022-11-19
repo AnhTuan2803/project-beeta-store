@@ -134,7 +134,7 @@
                         <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $suadm . '">
                         <i class="fa-solid fa-screwdriver-wrench dropdown-item-icon"></i>Sửa
                         </a>
-                          <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $xoadm . '">
+                          <a style="padding-left:10px; padding-right:10px" class="dropdown-item" onclick="return confirm("Bạn muốn xóa danh mục này?")" href="' . $xoadm . '">
                           <i class="fa-solid fa-trash dropdown-item-icon"></i>Xóa
                           </a>
                         </div>

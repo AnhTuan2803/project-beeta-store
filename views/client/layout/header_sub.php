@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <header id="header" class="header style-02 header-dark header-transparent header-sticky">
+    <header id="header" class="header style-02 header-dark header-transparent">
         <div class="header-wrap-stick">
             <div class="header-position">
                 <div class="header-middle">

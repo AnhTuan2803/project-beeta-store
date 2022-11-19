@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 12, 2022 lúc 01:45 AM
+-- Thời gian đã tạo: Th10 19, 2022 lúc 03:30 PM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 7.4.29
 
@@ -64,9 +64,9 @@ CREATE TABLE `danh_muc` (
 --
 
 INSERT INTO `danh_muc` (`id_dm`, `ten_dm`) VALUES
-(1, 'Thời trang nam'),
+(1, 'Phụ kiện'),
 (2, 'Thời trang nữ'),
-(13, 'ádvasv');
+(3, 'Thời trang nam');
 
 -- --------------------------------------------------------
 
@@ -100,6 +100,13 @@ CREATE TABLE `khach_hang` (
   `ghi_chu` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `khach_hang`
+--
+
+INSERT INTO `khach_hang` (`id_kh`, `ten_kh`, `gioi_tinh`, `ngay_sinh`, `dia_chi`, `sdt`, `email`, `ghi_chu`) VALUES
+(3, 'Phạm Anh Tuấn', 0, '2003-03-28', 'Hà Nội', '0987957355', 'tuanpaph20520@fpt.edu.vn', 'tuanpaph20520@fpt.edu.vn');
+
 -- --------------------------------------------------------
 
 --
@@ -116,6 +123,14 @@ CREATE TABLE `nguoi_dung` (
   `ngay_dang_ky` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `nguoi_dung`
+--
+
+INSERT INTO `nguoi_dung` (`id_nd`, `id_vai_tro`, `ho_ten`, `ten_dang_nhap`, `mat_khau`, `email`, `ngay_dang_ky`) VALUES
+(1, 1, 'Phạm Anh Tuấn', 'Tuấn cute', 'admin', 'tuanpa@fpt.edu.vn', '2022-11-17'),
+(2, 0, 'Tuấn', 'admin', 'admin', 'tuan@gmail.com', '2022-11-18');
+
 -- --------------------------------------------------------
 
 --
@@ -125,13 +140,20 @@ CREATE TABLE `nguoi_dung` (
 CREATE TABLE `san_pham` (
   `id_sp` int(11) NOT NULL,
   `ten_sp` varchar(100) NOT NULL,
-  `mo_ta_ngan` text DEFAULT NULL,
-  `mo_ta_chi_tiet` text DEFAULT NULL,
+  `mo_ta` text DEFAULT NULL,
   `don_gia` int(11) NOT NULL DEFAULT 0,
   `hinh` varchar(200) DEFAULT NULL,
+  `san_pham_moi` tinyint(1) NOT NULL DEFAULT 0,
   `ngay_tao` date NOT NULL,
   `id_dm` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `san_pham`
+--
+
+INSERT INTO `san_pham` (`id_sp`, `ten_sp`, `mo_ta`, `don_gia`, `hinh`, `san_pham_moi`, `ngay_tao`, `id_dm`) VALUES
+(4, 'Áo đen', 'Áo này đẹp lắm kkk', 500000, 'apro13-1-270x350.jpg', 0, '2022-11-16', 2);
 
 -- --------------------------------------------------------
 
@@ -143,6 +165,14 @@ CREATE TABLE `vai_tro` (
   `id_vai_tro` tinyint(3) NOT NULL,
   `vai_tro` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `vai_tro`
+--
+
+INSERT INTO `vai_tro` (`id_vai_tro`, `vai_tro`) VALUES
+(0, 'Khách hàng'),
+(1, 'Admin');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -216,37 +246,37 @@ ALTER TABLE `ct_hoa_don`
 -- AUTO_INCREMENT cho bảng `danh_muc`
 --
 ALTER TABLE `danh_muc`
-  MODIFY `id_dm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_dm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT cho bảng `hoa_don`
 --
 ALTER TABLE `hoa_don`
-  MODIFY `id_hd` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_hd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT cho bảng `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `id_kh` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `nguoi_dung`
 --
 ALTER TABLE `nguoi_dung`
-  MODIFY `id_nd` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_nd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT cho bảng `san_pham`
 --
 ALTER TABLE `san_pham`
-  MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `vai_tro`
 --
 ALTER TABLE `vai_tro`
-  MODIFY `id_vai_tro` tinyint(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_vai_tro` tinyint(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
