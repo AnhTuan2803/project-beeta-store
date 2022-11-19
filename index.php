@@ -6,6 +6,8 @@ include "./models/m_nguoi_dung.php";
 include "./models/m_san_pham.php";
 include "./models/m_danh_muc.php";
 
+if (!isset($_SESSION['myCart'])) $_SESSION['myCart'] = [];
+
 $sphome = loadall_sanpham_home();
 $listsanpham = loadall_sanpham();
 
@@ -33,6 +35,18 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             break;
         case 'dangnhap':
             include "./controllers/client/tai_khoan/c_dang_nhap.php";
+            break;
+        case 'add_cart':
+            include "./views/client/layout/header_sub.php";
+            include "./controllers/client/gio_hang/c_add_card.php";
+            break;
+        case 'del_cart':
+            include "./views/client/layout/header_sub.php";
+            include "./controllers/client/gio_hang/c_del_cart.php";
+            break;
+        case 'view_cart':
+            include "./views/client/layout/header_sub.php";
+            include "./views/client/gio_hang/v_gio_hang.php";
             break;
         case 'logout':
             session_unset();

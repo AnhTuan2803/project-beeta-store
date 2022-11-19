@@ -8,7 +8,6 @@ if (is_file($hinhpath)) {
     $anh = "<img style='height: 100%;' class='avatar avatar-xxl avatar-4by3 mb-3' alt='Image Description' src='" . $hinhpath . "' height='120px'>";
 } else {
     $anh = "No photo";
-
 }
 ?>
 <main id="content" role="main" class="main">
@@ -56,19 +55,14 @@ if (is_file($hinhpath)) {
                                     <div class="input-group-prepend">
                                         <!-- Select -->
 
-                                        <select name="iddm" class="js-select2-custom custom-select" size="1" data-hs-select2-options='{
+                                        <select name="id_dm" class="js-select2-custom custom-select" size="1" data-hs-select2-options='{
                                     "minimumResultsForSearch": "Infinity"
                                   }'>
-                                            <!-- <option value="0" selected>Danh mục</option> -->
+                                            <option value="<?= $id_dm ?>" selected>Danh mục</option>
                                             <?php
                                             foreach ($listdanhmuc as $danhmuc) {
                                                 extract($danhmuc);
-                                                if ($id_dm == $id_dm) {
-                                                    echo '<option value="' . $id_dm . '"selected >' . $ten_dm . '</option>';
-                                                } else {
-                                                    echo '<option value="' . $id_dm . '" >' . $ten_dm . '</option>';
-                                                }
-
+                                                echo '<option value="' . $id_dm . '">' . $ten_dm . '</option>';
                                             }
                                             ?>
                                         </select>
@@ -112,16 +106,16 @@ if (is_file($hinhpath)) {
 
 
                             <!-- Quill -->
-                            <div class="quill-custom">
+                            <!-- <div class="quill-custom">
                                 <label class="input-label">Mô tả ngắn</label>
-                                <textarea name="motangansp" class="form-control" style="height:120px;" placeholder="Mô tả ngắn..."><?= $mo_ta_ngan ?></textarea>
+                                <textarea name="motangansp" class="form-control" style="height:120px;" placeholder="Mô tả ngắn..."></textarea>
 
-                            </div>
+                            </div> -->
                             <!-- End Quill -->
                             <div class="quill-custom mt-4">
-                                <label class="input-label">Mô tả chi tiết</label>
+                                <label class="input-label">Mô tả</label>
 
-                                <textarea name="motachitietsp" class="form-control" style="height:220px;" placeholder="Mô tả chi tiết..."><?= $mo_ta_chi_tiet ?></textarea>
+                                <textarea name="motasp" class="form-control" style="height:220px;" placeholder="Mô tả..."><?= $mo_ta ?></textarea>
 
                             </div>
                         </div>

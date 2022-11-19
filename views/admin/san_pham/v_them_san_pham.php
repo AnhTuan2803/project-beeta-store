@@ -86,15 +86,11 @@
 
               <!-- Quill -->
               <div class="quill-custom">
-                <label class="input-label">Mô tả ngắn</label>
-                <textarea name="motangansp" class="form-control" style="height:120px;" placeholder="Mô tả ngắn..."></textarea>
+                <label class="input-label">Mô tả</label>
+                <textarea name="motasp" class="form-control" style="height:170px;" placeholder="Mô tả..."></textarea>
               </div>
               <!-- End Quill -->
-              <div class="quill-custom mt-4">
-                <label class="input-label">Mô tả chi tiết</label>
-                <textarea name="motachitietsp" class="form-control" style="height:220px;" placeholder="Mô tả chi tiết..."></textarea>
-
-              </div>
+             
             </div>
             <!-- Body -->
           </div>

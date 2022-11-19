@@ -103,7 +103,7 @@
                             <th>Id</th>
                             <th>Ảnh</th>
                             <th>Tên sản phẩm</th>
-                            <th>Mô tả ngắn</th>
+                            <th>Mô tả</th>
 
                             <th>Giá</th>
                             <th>Ngày tạo</th>
@@ -130,7 +130,7 @@
                   <td>' . $anh . '</td>
                   
                   <td>' . $ten_sp . '</td>
-                  <td>' . $mo_ta_ngan . '</td>
+                  <td>' . $mo_ta . '</td>
                 
                   <td>' . $don_gia . '</td>
                   <td>' . $ngay_tao . '</td>

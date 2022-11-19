@@ -71,7 +71,7 @@ $linkimg = "./assets/uploads/" . $hinh;
                                         <li>Subtle branding and diagonal panel detail</li>
                                     </ul>
                                 </div>
-                                <form class="variations_form cart">
+                                <form action="index.php?act=add_cart" method="POST" class="variations_form cart">
                                     <table class="variations">
                                         <tbody>
                                             <tr>
@@ -104,13 +104,18 @@ $linkimg = "./assets/uploads/" . $hinh;
                                                 <span class="qty-label">Quantiy:</span>
                                                 <div class="control">
                                                     <a class="btn-number qtyminus quantity-minus" href="#">-</a>
-                                                    <input type="text" data-step="1" min="0" max="" name="quantity[25]" value="0" title="Qty" class="input-qty input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric">
+                                                    <input type="text" data-step="1" min="1" max="" name="so_luong" value="1" title="Qty" class="input-qty input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric">
                                                     <a class="btn-number qtyplus quantity-plus" href="#">+</a>
                                                 </div>
                                             </div>
+                                            <input type="hidden" name="id" value="<?= $id_sp ?>">
+                                            <input type="hidden" name="ten_sp" value="<?= $ten_sp ?>">
+                                            <input type="hidden" name="gia_sp" value="<?= $don_gia ?>">
+                                     
                                             <button type="submit" class="single_add_to_cart_button button alt disabled akasha-variation-selection-needed">
                                                 Add to cart
                                             </button>
+                                            <input type="submit" name="add_cart" value="Thêm">
                                             <input name="add-to-cart" value="27" type="hidden">
                                             <input name="product_id" value="27" type="hidden">
                                             <input name="variation_id" class="variation_id" value="0" type="hidden">

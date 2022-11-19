@@ -1,8 +1,8 @@
 <?php
 
-function insert_sanpham($tensp, $giasp, $motangansp, $motachitietsp, $hinh, $ngaytaosp, $iddm)
+function insert_sanpham($tensp, $giasp, $motasp, $hinh, $ngaytaosp, $iddm)
 {
-    $sql = "insert into san_pham(ten_sp,mo_ta_ngan,mo_ta_chi_tiet,don_gia,hinh,ngay_tao,id_dm) values('$tensp','$motangansp','$motachitietsp','$giasp','$hinh','$ngaytaosp','$iddm')";
+    $sql = "insert into san_pham(ten_sp,mo_ta,don_gia,hinh,ngay_tao,id_dm) values('$tensp','$motasp','$giasp','$hinh','$ngaytaosp','$iddm')";
     pdo_execute($sql);
 }
 
@@ -33,12 +33,12 @@ function delete_sanpham($id)
     pdo_execute($sql);
 }
 
-function update_sanpham($id, $tensp, $giasp, $motangansp, $motachitietsp, $hinh, $iddm)
+function update_sanpham($id, $tensp, $giasp, $motasp, $hinh, $iddm)
 {
     if ($hinh != "") {
-        $sql = "update san_pham set id_dm='" . $iddm . "', ten_sp='" . $tensp . "',mo_ta_ngan='" . $motangansp . "',mo_ta_chi_tiet='" . $motachitietsp . "',don_gia='" . $giasp . "',hinh='" . $hinh . "'where id_sp=" . $id;
+        $sql = "update san_pham set id_dm='" . $iddm . "', ten_sp='" . $tensp . "',mo_ta='" . $motasp . "',don_gia='" . $giasp . "',hinh='" . $hinh . "'where id_sp=" . $id;
     } else {
-        $sql = "update san_pham set id_dm='" . $iddm . "', ten_sp='" . $tensp . "',mo_ta_ngan='" . $motangansp . "',mo_ta_chi_tiet='" . $motachitietsp . "',don_gia='" . $giasp . "' where id_sp=" . $id;
+        $sql = "update san_pham set id_dm='" . $iddm . "', ten_sp='" . $tensp . "',mo_ta='" . $motasp . "',don_gia='" . $giasp . "' where id_sp=" . $id;
     }
     pdo_execute($sql);
 }
