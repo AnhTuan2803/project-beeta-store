@@ -13,7 +13,7 @@
               </nav>
               
               <div class="d-sm-flex align-items-sm-center">
-                <h1 class="page-header-title">Hóa đơn #32543</h1>
+                <h1 class="page-header-title">Hóa đơn #ID HOA DON</h1>
                 <span class="badge badge-soft-success ml-sm-3">
                   <span class="legend-indicator bg-success"></span>Paid
                 </span>
@@ -96,19 +96,6 @@
                     <div class="row">
                       <div class="col-md-6 mb-3 mb-md-0">
                         <a class="h5 d-block" href="ecommerce-product-details.html">Topman shoe in green</a>
-
-                        <div class="font-size-sm text-body">
-                          <span>Gender:</span>
-                          <span class="font-weight-bold">Women</span>
-                        </div>
-                        <div class="font-size-sm text-body">
-                          <span>Color:</span>
-                          <span class="font-weight-bold">Green</span>
-                        </div>
-                        <div class="font-size-sm text-body">
-                          <span>Size:</span>
-                          <span class="font-weight-bold">UK 7</span>
-                        </div>
                       </div>
 
                       <div class="col col-md-2 align-self-center">
@@ -130,90 +117,14 @@
                 <hr>
 
                 <!-- Media -->
-                <div class="media">
-                  <div class="avatar avatar-xl mr-3">
-                    <img class="img-fluid" src="..\..\assets\admin\img\400x400\img22.jpg" alt="Image Description">
-                  </div>
-
-                  <div class="media-body">
-                    <div class="row">
-                      <div class="col-md-6 mb-3 mb-md-0">
-                        <a class="h5 d-block" href="ecommerce-product-details.html">Office Notebook</a>
-
-                        <div class="font-size-sm text-body">
-                          <span>Color:</span>
-                          <span class="font-weight-bold">Gray</span>
-                        </div>
-                      </div>
-
-                      <div class="col col-md-2 align-self-center">
-                        <h5>$9</h5>
-                      </div>
-
-                      <div class="col col-md-2 align-self-center">
-                        <h5>1</h5>
-                      </div>
-
-                      <div class="col col-md-2 align-self-center text-right">
-                        <h5>$9.00</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        
                 <!-- End Media -->
-
-                <hr>
-
-                <!-- Media -->
-                <div class="media">
-                  <div class="avatar avatar-xl mr-3">
-                    <img class="img-fluid" src="..\..\assets\admin\img\400x400\img15.jpg" alt="Image Description">
-                  </div>
-
-                  <div class="media-body">
-                    <div class="row">
-                      <div class="col-md-6 mb-3 mb-md-0">
-                        <a class="h5 d-block" href="ecommerce-product-details.html">RayBan sunglasses</a>
-
-                        <div class="font-size-sm text-body">
-                          <span>Gender:</span>
-                          <span class="font-weight-bold">Unisex</span>
-                        </div>
-                        <div class="font-size-sm text-body">
-                          <span>Color:</span>
-                          <span class="font-weight-bold">Black</span>
-                        </div>
-                        <div class="font-size-sm text-body">
-                          <span>Size:</span>
-                          <span class="font-weight-bold">One size</span>
-                        </div>
-                      </div>
-
-                      <div class="col col-md-2 align-self-center">
-                        <h5>$14.00</h5>
-                      </div>
-
-                      <div class="col col-md-2 align-self-center">
-                        <h5>1</h5>
-                      </div>
-
-                      <div class="col col-md-2 align-self-center text-right">
-                        <h5>$14.00</h5>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Media -->
-
-                <hr>
 
                 <div class="row justify-content-md-end mb-3">
                   <div class="col-md-8 col-lg-7">
                     <dl class="row text-sm-right">
-                      <dt class="col-sm-6">Đơn giá:</dt>
-                      <dd class="col-sm-6">$65.00</dd>
-                      <dt class="col-sm-6">Shipping fee:</dt>
-                      <dd class="col-sm-6">$0.00</dd>
+                      <dt class="col-sm-6">Số lượng sản phẩm:</dt>
+                      <dd class="col-sm-6">2</dd>
                       <dt class="col-sm-6">Tổng tiền:</dt>
                       <dd class="col-sm-6">$65.00</dd>
                       <dt class="col-sm-6">Thanh toán:</dt>
@@ -352,7 +263,7 @@
                           <a class="text-dark" href="#">Order was placed</a>
                         </h5>
 
-                        <p class="font-size-sm mb-0">Hóa đơn #32543</p>
+                        <p class="font-size-sm mb-0">Hóa đơn *ID HOA DON</p>
                       </div>
                     </div>
                   </li>
@@ -390,20 +301,6 @@
                   </div>
                 </a>
                 
-                <hr>
-
-                <a class="media align-items-center" href="ecommerce-customer-details.html">
-                  <div class="icon icon-soft-info icon-circle mr-3">
-                    <i class="tio-shopping-basket-outlined"></i>
-                  </div>
-                  <div class="media-body">
-                    <span class="text-body text-hover-primary">7 orders</span>
-                  </div>
-                  <div class="media-body text-right">
-                    <i class="tio-chevron-right text-body"></i>
-                  </div>
-                </a>
-
                 <hr>
                 
                 <div class="d-flex justify-content-between align-items-center">

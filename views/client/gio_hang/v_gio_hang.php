@@ -48,7 +48,6 @@ foreach ($listsanpham as $sanpham) {
                                         if ($id_sp == $cart[0]) {
                                             $img = './assets/uploads/' . $hinh;
                                         }
-                                        echo $img;
                                     ?>
                                         <tr class="akasha-cart-form__cart-item cart_item">
 
