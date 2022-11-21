@@ -37,7 +37,6 @@
                                     foreach ($_SESSION['myCart'] as $key => $cart) {
                                         $ttien = $cart[2] * $cart[3];
                                         $tong += $ttien;
-
                                     ?>
                                         <tr class="akasha-cart-form__cart-item cart_item">
 
