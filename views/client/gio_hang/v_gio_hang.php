@@ -1,10 +1,3 @@
-<?php
-
-foreach ($listsanpham as $sanpham) {
-    extract($sanpham);
-}
-
-?>
 <div class="banner-wrapper has_background">
     <img src="./assets/client/images/banner-for-all2.jpg" class="img-responsive attachment-1920x447 size-1920x447" alt="img">
     <div class="banner-wrapper-inner">
@@ -25,7 +18,7 @@ foreach ($listsanpham as $sanpham) {
                 <div class="page-main-content">
                     <div class="akasha">
                         <div class="akasha-notices-wrapper"></div>
-                        <form class="akasha-cart-form">
+                        <form action="index.php?act=update_cart" method="POST" class="akasha-cart-form">
                             <table class="shop_table shop_table_responsive cart akasha-cart-form__contents" cellspacing="0">
                                 <thead>
                                     <tr>
@@ -41,14 +34,10 @@ foreach ($listsanpham as $sanpham) {
                                     <?php
                                     $tong = 0;
                                     $i = 0;
-
                                     foreach ($_SESSION['myCart'] as $key => $cart) {
                                         $ttien = $cart[2] * $cart[3];
                                         $tong += $ttien;
-                                        if ($id_sp == $cart[0]) {
-                                            $img = './assets/uploads/' . $hinh;
-                                        }
-                                        echo $img;
+
                                     ?>
                                         <tr class="akasha-cart-form__cart-item cart_item">
 
@@ -56,7 +45,7 @@ foreach ($listsanpham as $sanpham) {
                                                 <a href="index.php?act=del_cart&idcart=<?= $i ?>" class="remove" aria-label="Remove this item" data-product_id="27" data-product_sku="885B712">×</a>
                                             </td>
                                             <td class="product-thumbnail">
-                                                <a href="index.php?act=sanphamct&idsp=<?= $cart[0] ?>"><img src="<?= $img ?>" class="attachment-akasha_thumbnail size-akasha_thumbnail" alt="img" width="600" height="778"></a>
+                                                <a href="index.php?act=sanphamct&idsp=<?= $cart[0] ?>"><img style="height: 100px;" src="./assets/uploads/<?= $cart[5] ?>" class="attachment-akasha_thumbnail size-akasha_thumbnail" alt="img" width="600" height="778"></a>
                                             </td>
                                             <td class="product-name" data-title="Product">
                                                 <a href="index.php?act=sanphamct&idsp=<?= $cart[0] ?>"><?= $cart[1] ?></a>
@@ -69,7 +58,7 @@ foreach ($listsanpham as $sanpham) {
                                                     <span class="qty-label">Quantiy:</span>
                                                     <div class="control">
                                                         <a class="btn-number qtyminus quantity-minus" href="#">-</a>
-                                                        <input type="text" value="<?= $cart[3] ?>" title="Qty" class="input-qty input-text qty text">
+                                                        <input type="text" data-step="1" name="soluong" min="1" max="" value="<?= $cart[3] ?>" title="Qty" class="input-qty input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric">
                                                         <a class="btn-number qtyplus quantity-plus" href="#">+</a>
                                                     </div>
                                                 </div>
@@ -95,8 +84,15 @@ foreach ($listsanpham as $sanpham) {
                                                     value="Apply coupon">Apply coupon
                                             </button>
                                         </div> -->
+                                            <input type="hidden" name="id" value="<?= $cart[0] ?>">
+                                            <input type="hidden" name="ten" value="<?= $cart[1] ?>">
+                                            <input type="hidden" name="gia" value="<?= $cart[2] ?>">
+                                            <input type="hidden" name="soluong" value="<?= $cart[3] ?>">
+                                            <input type="hidden" name="img" value="<?= $cart[5] ?>">
+
                                             <button type="submit" class="button" name="update_cart" value="Update cart"="">Update cart
                                             </button>
+                                            <input type="submit" class="button" name="update_cart" value="Update cart">
                                             <input type="hidden" id="akasha-cart-nonce" name="akasha-cart-nonce" value="f41b5bf554"><input type="hidden" name="_wp_http_referer" value="/akasha/cart/">
                                         </td>
                                     </tr>
@@ -120,7 +116,7 @@ foreach ($listsanpham as $sanpham) {
                                         </tbody>
                                     </table>
                                     <div class="akasha-proceed-to-checkout">
-                                        <a href="#" class="checkout-button button alt akasha-forward">
+                                        <a href="index.php?act=hoa_don" class="checkout-button button alt akasha-forward">
                                             Đặt hàng</a>
                                     </div>
                                 </div>

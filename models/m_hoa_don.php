@@ -14,4 +14,32 @@
         pdo_execute($sql);
     }
 
-?>
+    // 
+
+    function tongtien()
+{
+    $tong = 0;
+    foreach ($_SESSION['myCart'] as $key => $cart) {
+        $ttien = $cart[2] * $cart[3];
+        $tong += $ttien;
+    }
+    return $tong;
+}
+
+function insert_khachhang($ho_ten, $gioi_tinh, $ngay_sinh, $dia_chi, $sdt, $email, $ghi_chu)
+{
+    $sql = "insert into khach_hang(ten_kh,gioi_tinh,ngay_sinh,dia_chi,sdt,email,ghi_chu) values('$ho_ten', '$gioi_tinh', '$ngay_sinh', '$dia_chi', '$sdt','$email','$ghi_chu')";
+    return pdo_execute_lastinsertid($sql);
+}
+
+function insert_hoadon($ngaydathang, $id_khachhang,$gia_tien, $pttt, $tinh_trang)
+{
+    $sql = "insert into hoa_don(ngay_hd,id_kh,gia_tien,thanh_toan,tinh_trang) values('$ngaydathang', '$id_khachhang', '$gia_tien', '$pttt', '$tinh_trang')";
+    return pdo_execute_lastinsertid($sql);
+}
+
+function insert_ct_hoadon($id_hoadon, $cart0, $cart3, $cart2)
+{
+    $sql = "insert into ct_hoa_don(id_hd,id_sp,so_luong,don_gia) values('$id_hoadon', '$cart0', '$cart3', '$cart2')";
+    return pdo_execute_lastinsertid($sql);
+}

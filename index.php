@@ -3,6 +3,7 @@ session_start();
 ob_start();
 include "./models/m_pdo.php";
 include "./models/m_nguoi_dung.php";
+include "./models/m_hoa_don.php";
 include "./models/m_san_pham.php";
 include "./models/m_danh_muc.php";
 
@@ -47,6 +48,18 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'view_cart':
             include "./views/client/layout/header_sub.php";
             include "./views/client/gio_hang/v_gio_hang.php";
+            break;
+        case 'update_cart':
+            include "./views/client/layout/header_sub.php";
+            include "./controllers/client/gio_hang/c_update_cart.php";
+            break;
+        case 'hoa_don':
+            include "./views/client/layout/header_sub.php";
+            include "./controllers/client/hoa_don/c_hoa_don.php";
+            break;
+        case 'billcofirm':
+            include "./views/client/layout/header_sub.php";
+            include "./controllers/client/hoa_don/c_billcofirm.php";
             break;
         case 'logout':
             session_unset();

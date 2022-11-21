@@ -82,7 +82,7 @@
                     <div class="product-inner tooltip-left">
                         <div class="product-thumb">
                             <a class="thumb-link" href="index.php?act=sanphamct&idsp=' . $id_sp . '">
-                                <img class="img-responsive"
+                                <img style="height: 345px;" class="img-responsive"
                                      src="' . $linkimg . '"
                                      alt="Women Bags" width="600" height="778">
                             </a>

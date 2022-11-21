@@ -81,7 +81,7 @@
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="index.php?act=sanphamct&idsp=' . $id_sp . '">
-                                        <img class="img-responsive" src="' . $linkimg . '" alt="Classic Shirt" width="600" height="778">
+                                        <img style="height: 345px;" class="img-responsive" src="' . $linkimg . '" alt="Classic Shirt" width="600" height="778">
                                     </a>
                                     <div class="flash">
                                         <span class="onsale"><span class="number">-14%</span></span>

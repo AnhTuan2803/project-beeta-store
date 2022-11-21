@@ -448,32 +448,38 @@
                                             ?>
                                         </ul>
                                     </div>
+                                    <?php
+                                    $count = 0;
+                                    foreach ($_SESSION['myCart'] as $key => $cart) {
+                                        $count += 1;
+                                    }
+                                    ?>
                                     <div class="block-minicart block-dreaming akasha-mini-cart akasha-dropdown">
                                         <div class="shopcart-dropdown block-cart-link" data-akasha="akasha-dropdown">
                                             <a class="block-link link-dropdown" href="cart.html">
                                                 <span class="flaticon-bag"></span>
-                                                <span class="count">3</span>
+                                                <span class="count"><?= $count ?></span>
                                             </a>
                                         </div>
                                         <div class="widget akasha widget_shopping_cart">
                                             <div class="widget_shopping_cart_content">
-                                                <h3 class="minicart-title">Your Cart<span class="minicart-number-items">3</span></h3>
+                                                <h3 class="minicart-title">Your Cart<span class="minicart-number-items"><?= $count ?></span></h3>
                                                 <ul class="akasha-mini-cart cart_list product_list_widget">
                                                     <?php
                                                     $tong = 0;
                                                     $i = 0;
-                                                    $count = 0;
+
 
                                                     foreach ($_SESSION['myCart'] as $key => $cart) {
                                                         $ttien = $cart[2] * $cart[3];
                                                         $tong += $ttien;
-                                                        $count += 1;
+
                                                     ?>
 
                                                         <li class="akasha-mini-cart-item mini_cart_item">
                                                             <a href="index.php?act=del_cart&idcart=<?= $i ?>" class="remove remove_from_cart_button">×</a>
                                                             <a href="index.php?act=sanphamct&idsp=<?= $cart[0] ?>">
-                                                                <img src="./assets/client/images/apro134-1-600x778.jpg" class="attachment-akasha_thumbnail size-akasha_thumbnail" alt="img" width="600" height="778"><?= $cart[1] ?>&nbsp;
+                                                                <img style="height: 90px;" src="./assets/uploads/<?= $cart[5] ?>" class="attachment-akasha_thumbnail size-akasha_thumbnail" alt="img" width="600" height="778"><?= $cart[1] ?>&nbsp;
                                                             </a>
                                                             <span class="quantity"><?= $cart[3] ?> × <span class="akasha-Price-amount amount"><?= number_format($cart[2]) ?> VNĐ</span></span>
                                                         </li>
@@ -481,7 +487,7 @@
                                                         $i++;
                                                     }
                                                     ?>
-                                                    Số lượng: <?= $count ?>
+
                                                     <!-- <li class="akasha-mini-cart-item mini_cart_item">
                                                         <a href="#" class="remove remove_from_cart_button">×</a>
                                                         <a href="#">
@@ -502,7 +508,7 @@
                                                 </p>
                                                 <p class="akasha-mini-cart__buttons buttons">
                                                     <a href="index.php?act=view_cart" class="button akasha-forward">Viewcart</a>
-                                                    <a href="checkout.html" class="button checkout akasha-forward">Checkout</a>
+                                                    <a href="index.php?act=hoa_don" class="button checkout akasha-forward">Checkout</a>
                                                 </p>
                                             </div>
                                         </div>
@@ -622,16 +628,22 @@
                                 </li>
                             </ul>
                         </div>
+                        <?php
+                        $count = 0;
+                        foreach ($_SESSION['myCart'] as $key => $cart) {
+                            $count += 1;
+                        }
+                        ?>
                         <div class="block-minicart block-dreaming akasha-mini-cart akasha-dropdown">
                             <div class="shopcart-dropdown block-cart-link" data-akasha="akasha-dropdown">
                                 <a class="block-link link-dropdown" href="cart.html">
                                     <span class="flaticon-bag"></span>
-                                    <span class="count">3</span>
+                                    <span class="count"><?= $count ?></span>
                                 </a>
                             </div>
                             <div class="widget akasha widget_shopping_cart">
                                 <div class="widget_shopping_cart_content">
-                                    <h3 class="minicart-title">Your Cart<span class="minicart-number-items">3</span></h3>
+                                    <h3 class="minicart-title">Your Cart<span class="minicart-number-items"><?= $count ?></span></h3>
                                     <ul class="akasha-mini-cart cart_list product_list_widget">
                                         <li class="akasha-mini-cart-item mini_cart_item">
                                             <a href="#" class="remove remove_from_cart_button">×</a>

@@ -28,28 +28,28 @@ $linkimg = "./assets/uploads/" . $hinh;
                                                 <img style="width: 100%;" alt="img" src="<?= $linkimg ?>" />
                                             </div>
                                             <div class="akasha-product-gallery__image">
-                                                <img src="./assets/client/images/apro134-1.jpg" alt="img" />
+                                                <img style="width: 100%;" src="./assets/client/images/apro134-1.jpg" alt="img" />
                                             </div>
                                             <div class="akasha-product-gallery__image">
-                                                <img src="./assets/client/images/apro132-1.jpg" class="" alt="img" />
+                                                <img style="width: 100%;" src="./assets/client/images/apro132-1.jpg" class="" alt="img" />
                                             </div>
                                             <div class="akasha-product-gallery__image">
-                                                <img src="./assets/client/images/apro133-1.jpg" class="" alt="img" />
+                                                <img style="width: 100%;" src="./assets/client/images/apro133-1.jpg" class="" alt="img" />
                                             </div>
                                         </figure>
                                     </div>
                                     <ol class="flex-control-nav flex-control-thumbs">
                                         <li>
-                                            <img src="<?= $linkimg ?>" alt="img" />
+                                            <img style="height: 110px;" src="<?= $linkimg ?>" alt="img" />
                                         </li>
                                         <li>
-                                            <img src="./assets/client/images/apro134-1-100x100.jpg" alt="img" />
+                                            <img style="height: 110px;" src="./assets/client/images/apro134-1-100x100.jpg" alt="img" />
                                         </li>
                                         <li>
-                                            <img src="./assets/client/images/apro132-1-100x100.jpg" alt="img" />
+                                            <img style="height: 110px;" src="./assets/client/images/apro132-1-100x100.jpg" alt="img" />
                                         </li>
                                         <li>
-                                            <img src="./assets/client/images/apro133-1-100x100.jpg" alt="img" />
+                                            <img style="height: 110px;" src="./assets/client/images/apro133-1-100x100.jpg" alt="img" />
                                         </li>
                                     </ol>
                                 </div>
@@ -110,6 +110,7 @@ $linkimg = "./assets/uploads/" . $hinh;
                                             </div>
                                             <input type="hidden" name="id" value="<?= $id_sp ?>">
                                             <input type="hidden" name="ten_sp" value="<?= $ten_sp ?>">
+                                            <input type="hidden" name="img_sp" value="<?= $hinh ?>">
                                             <input type="hidden" name="gia_sp" value="<?= $don_gia ?>">
                                      
                                             <button type="submit" class="single_add_to_cart_button button alt disabled akasha-variation-selection-needed">

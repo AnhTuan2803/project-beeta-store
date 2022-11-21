@@ -95,6 +95,7 @@
                 </div>
             </div>
         </div>
+   
         <form action="index.php?act=add_cart" method="POST">
         <div class="akasha-products style-02">
             <div class="response-product product-list-owl owl-slick equal-container better-height" data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:4,&quot;rows&quot;:2}" data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
@@ -106,7 +107,7 @@
                 <div class="product-inner tooltip-top">
                     <div class="product-thumb">
                         <a class="thumb-link" href="index.php?act=sanphamct&idsp='.$id_sp.'" tabindex="0">
-                            <img class="img-responsive" src="' . $linkimg . '" alt="Maternity Shoulder" width="270" height="350">
+                            <img style="height: 345px;" class="img-responsive" src="' . $linkimg . '" alt="Maternity Shoulder" width="270" height="350">
                         </a>
                         <div class="flash">
                             <span class="onnew"><span class="text">New</span></span>
@@ -141,7 +142,7 @@
             </div>';
                 }
                 ?>
-                 <input type="submit" name="add_cart">
+                 
                
                 <div class="product-item featured_products style-02 rows-space-30 post-32 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-hat product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple">
                     <div class="product-inner tooltip-top">
