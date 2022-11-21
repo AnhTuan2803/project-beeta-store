@@ -137,7 +137,7 @@
 
     <div style="display: flex">
                         <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $xem_ct_hoa_don . '">
-                        <i class="fa-solid tio-visible-outlined dropdown-item-icon"></i>Xem chi tiêt
+                        <i class="fa-solid tio-visible-outlined dropdown-item-icon"></i>Xem chi tiết
                         </a>
                         <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $xoa_hd . '">
                         <i class="fa-solid fa-trash dropdown-item-icon"></i>Xóa

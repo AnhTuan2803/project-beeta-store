@@ -113,9 +113,9 @@ $linkimg = "./assets/uploads/" . $hinh;
                                             <input type="hidden" name="img_sp" value="<?= $hinh ?>">
                                             <input type="hidden" name="gia_sp" value="<?= $don_gia ?>">
                                      
-                                            <!-- <button type="submit" class="single_add_to_cart_button button alt  akasha-variation-selection-needed" name="add_cart">
+                                            <button type="submit" class="single_add_to_cart_button button alt  akasha-variation-selection-needed" name="add_cart">
                                                 Add to cart
-                                            </button> -->
+                                            </button>
                                             <input type="submit" class="akasha-variation-selection-needed" name="add_cart" value="Add to cart">
                                             <input name="add-to-cart" value="27" type="hidden">
                                             <input name="product_id" value="27" type="hidden">
