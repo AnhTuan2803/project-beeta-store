@@ -1,6 +1,6 @@
 <?php 
  if (isset($_GET['id']) && ($_GET['id'] > 0)) {
-    $sp = loadone_hoadon($_GET['id']);
+    $ct_hoadon = load_ct_hoadon($_GET['id']);
 }
 $listdanhmuc = loadall_danhmuc();
 $listsanpham = loadall_sanpham();

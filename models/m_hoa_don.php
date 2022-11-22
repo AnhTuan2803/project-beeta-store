@@ -1,19 +1,4 @@
 <?php
-     function loadall_hoadon(){
-        $sql = "select * from `hoa_don` order by id_hd desc";
-            $listhoadon = pdo_query($sql);
-        return $listhoadon;
-    }
-    function loadone_hoadon($id){
-        $sql = "select * from `hoa_don` where id_hd=" . $id;
-        $hd = pdo_query_one($sql);
-        return $hd;
-    }
-    function delete_hoadon($id){
-        $sql = "delete from `hoa_don` where id_hd=" . $id;
-        pdo_execute($sql);
-    }
-
     // 
 
     function tongtien()
@@ -40,6 +25,33 @@ function insert_hoadon($ngaydathang, $id_khachhang,$gia_tien, $pttt, $tinh_trang
 
 function insert_ct_hoadon($id_hoadon, $cart0, $cart3, $cart2)
 {
-    $sql = "insert into ct_hoa_don(id_hd,id_sp,so_luong,don_gia) values('$id_hoadon', '$cart0', '$cart3', '$cart2')";
+    $sql = "insert into ct_hoa_don(id_hd,id_sp, so_luong,don_gia) values('$id_hoadon', '$cart0', '$cart3', '$cart2')";
     return pdo_execute_lastinsertid($sql);
 }
+// 
+
+function loadall_hoadon(){
+    $sql = "select * from `hoa_don` order by id_hd desc";
+    $listhoadon = pdo_query($sql);
+    return $listhoadon;
+}
+function loadone_hoadon($id){
+    $sql = "select * from `hoa_don` where id_hd=" . $id;
+    $hd = pdo_query_one($sql);
+    return $hd;
+}
+function delete_hoadon($id){
+    $sql = "delete from `hoa_don` where id_hd=" . $id;
+    pdo_execute($sql);
+}
+function load_ct_hoadon($id){
+    $sql = "select san_pham.ten_sp, san_pham.don_gia, san_pham.hinh, khach_hang.ten_kh, khach_hang.dia_chi, khach_hang.sdt, khach_hang.email, ct_hoa_don.so_luong, ngay_hd, gia_tien from ct_hoa_don
+    inner join hoa_don on hoa_don.id_hd = ct_hoa_don.id_hd
+    inner join san_pham on san_pham.id_sp = ct_hoa_don.id_sp
+    inner join khach_hang on khach_hang.id_kh = hoa_don.id_kh
+    where hoa_don.id_hd =" .$id; 
+    $ct_hoadon = pdo_query($sql);
+    return $ct_hoadon;
+
+}
+?>

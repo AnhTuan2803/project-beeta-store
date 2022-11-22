@@ -113,10 +113,15 @@
                         <?php
                         foreach ($listhoadon as $hoadon) {
                             extract($hoadon);
-                            if ($tinh_trang != 0) {
-                                $tt_thanhtoan = "Đã thanh toán";
-                            } else {
+                            if($thanh_toan == 1){
+                                $tt = "Tiền mặt";
+                            }else{
+                                $tt = "Online";
+                            }
+                            if ($tinh_trang == 1) {
                                 $tt_thanhtoan = "Chưa thanh toán";
+                            } else {
+                                $tt_thanhtoan = "Đã thanh toán";
                             }
                             $xem_ct_hoa_don = "index.php?act=xem_ct_hoa_don&id=" . $id_hd;
                             $xoa_hd = "index.php?act=xoa_hd&id=" . $id_hd;
@@ -125,7 +130,7 @@
                             <td>' . $ngay_hd . '</td>
                             <th>' . $id_kh . '</th>
                             <th>' . $gia_tien  . '</th>
-                            <th>' . $thanh_toan . '</th>
+                            <th>' . $tt . '</th>
                             <th>' . $tt_thanhtoan . '</th>
                             <td>
                     <div class="btn-group" role="group">

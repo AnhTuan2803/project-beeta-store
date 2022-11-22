@@ -1,3 +1,9 @@
+<?php
+if (is_array($ct_hoadon)) {
+  extract($ct_hoadon);
+}
+
+?>
  <main id="content" role="main" class="main">
       <!-- Content -->
       <div class="content container-fluid">
@@ -13,7 +19,7 @@
               </nav>
               
               <div class="d-sm-flex align-items-sm-center">
-                <h1 class="page-header-title">Hóa đơn #ID HOA DON</h1>
+                <h1 class="page-header-title">Hóa đơn</h1>
                 <span class="badge badge-soft-success ml-sm-3">
                   <span class="legend-indicator bg-success"></span>Paid
                 </span>
@@ -83,52 +89,59 @@
                 <a class="link" href="javascript:;">Edit</a>
               </div>
               <!-- End Header -->
-          
+
               <!-- Body -->
               <div class="card-body">
                 <!-- Media -->
+                <?php
+              foreach($ct_hoadon as $hd){
+              ?>
                 <div class="media">
                   <div class="avatar avatar-xl mr-3">
-                    <img class="img-fluid" src="..\..\assets\admin\img\400x400\img26.jpg" alt="Image Description">
+                    <img src="../../assets/uploads/<?=$hd['hinh']?>" alt="Image Description" width="90px" height="115px">
                   </div>    
-
+                  
                   <div class="media-body">
                     <div class="row">
-                      <div class="col-md-6 mb-3 mb-md-0">
-                        <a class="h5 d-block" href="ecommerce-product-details.html">Topman shoe in green</a>
+                      <div class="col-md-6 mb-3 mb-md-0" name="ten_sp">
+                        <a class="h5 d-block" href="ecommerce-product-details.html"><?=$hd['ten_sp']?></a>
                       </div>
 
                       <div class="col col-md-2 align-self-center">
-                        <h5>$21.00</h5>
+                        <h5><?=number_format($hd['don_gia'])?></h5>
                       </div>
 
                       <div class="col col-md-2 align-self-center">
-                        <h5>2</h5>
+                        <h5><?=$hd['so_luong']?></h5>
                       </div>
 
                       <div class="col col-md-2 align-self-center text-right">
-                        <h5>$42.00</h5>
+                        <h5><?=number_format($hd['so_luong']*$hd['don_gia'])?></h5>
                       </div>
                     </div>
                   </div>
                 </div>
+                <br>
+                <br>
+                <hr>
+                <?php
+              }
+                ?>
                 <!-- End Media -->
-
+                <br>
                 <hr>
 
                 <!-- Media -->
         
                 <!-- End Media -->
-
+                
                 <div class="row justify-content-md-end mb-3">
                   <div class="col-md-8 col-lg-7">
                     <dl class="row text-sm-right">
-                      <dt class="col-sm-6">Số lượng sản phẩm:</dt>
-                      <dd class="col-sm-6">2</dd>
                       <dt class="col-sm-6">Tổng tiền:</dt>
-                      <dd class="col-sm-6">$65.00</dd>
+                      <dd class="col-sm-6"><?=number_format($hd['gia_tien'])?></dd>
                       <dt class="col-sm-6">Thanh toán:</dt>
-                      <dd class="col-sm-6">$65.00</dd>
+                      <dd class="col-sm-6"><?=number_format($hd['gia_tien'])?></dd>
                     </dl>
                     <!-- End Row -->
                   </div>
@@ -137,8 +150,6 @@
               </div>
               <!-- End Body -->
             </div>
-            <!-- End Card -->
-
             <!-- Card -->
             <div class="card">
               <!-- Header -->
@@ -294,7 +305,7 @@
                     <img class="avatar-img" src="..\..\assets\admin\img\160x160\img10.jpg" alt="Image Description">
                   </div>
                   <div class="media-body">
-                    <span class="text-body text-hover-primary">Amanda Harvey</span>
+                    <span class="text-body text-hover-primary"><?=$hd['ten_kh']?></span>
                   </div>
                   <div class="media-body text-right">
                     <i class="tio-chevron-right text-body"></i>
@@ -311,40 +322,23 @@
                 <ul class="list-unstyled list-unstyled-py-2">
                   <li>
                     <i class="tio-online mr-2"></i>
-                    ella@example.com
+                    <?=$hd['email']?>
                   </li>
                   <li>
                     <i class="tio-android-phone-vs mr-2"></i>
-                    +1 (609) 972-22-22
+                    <?=$hd['sdt']?>
                   </li>
                 </ul>
-
                 <hr>
 
                 <div class="d-flex justify-content-between align-items-center">
-                  <h5>Shipping address</h5>
+                  <h5>Address</h5>
                   <a class="link" href="javascript:;">Edit</a>
                 </div>
 
                 <span class="d-block">
-                  45 Roker Terrace<br>
-                  Latheronwheel<br>
-                  KW5 8NW, London<br>
-                  UK <img class="avatar avatar-xss avatar-circle ml-1" src="..\..\assets\admin\vendor\flag-icon-css\flags\1x1\gb.svg" alt="Great Britain Flag">
-                </span>
-
-                <hr>
-
-                <div class="d-flex justify-content-between align-items-center">
-                  <h5>Billing address</h5>
-                  <a class="link" href="javascript:;">Edit</a>
-                </div>
-
-                <span class="d-block">
-                  45 Roker Terrace<br>
-                  Latheronwheel<br>
-                  KW5 8NW, London<br>
-                  UK <img class="avatar avatar-xss avatar-circle ml-1" src="..\..\assets\admin\vendor\flag-icon-css\flags\1x1\gb.svg" alt="Great Britain Flag">
+                  <?=$hd['dia_chi']?><br>
+                  <img class="avatar avatar-xss avatar-circle ml-1" src="..\..\assets\admin\vendor\flag-icon-css\flags\1x1\us.svg" alt="Great Britain Flag">
                 </span>
                 
                 <div class="mt-3">
