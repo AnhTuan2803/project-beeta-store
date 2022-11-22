@@ -13,8 +13,8 @@ if (is_array($ct_hoadon)) {
             <div class="col-sm mb-2 mb-sm-0">
               <nav aria-label="breadcrumb">
                 <ol class="breadcrumb breadcrumb-no-gutter">
-                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="ecommerce-orders.html">Hóa đơn</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Hóa đơn chi tiết</li>
+                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Hóa đơn</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Chi tiết hóa đơn</li>
                 </ol>
               </nav>
               
@@ -36,45 +36,18 @@ if (is_array($ct_hoadon)) {
                   <i class="tio-print mr-1"></i> In hóa đơn
                 </a>
                 
-                <!-- Unfold -->
-                <div class="hs-unfold">
-                  <a class="js-hs-unfold-invoker text-body" href="javascript:;" data-hs-unfold-options='{
-                       "target": "#moreOptionsDropdown",
-                       "type": "css-animation"
-                     }'>
-                    More options <i class="tio-chevron-down"></i>
-                  </a>
-
-                  <div id="moreOptionsDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu mt-1">
-                    <a class="dropdown-item" href="#">
-                      <i class="tio-copy dropdown-item-icon"></i> Duplicate
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="tio-clear dropdown-item-icon"></i> Cancel order
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="tio-archive dropdown-item-icon"></i> Archive
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="tio-visible dropdown-item-icon"></i> View order status page
-                    </a>
-                    <a class="dropdown-item" href="#">
-                      <i class="tio-edit dropdown-item-icon"></i> Edit order
-                    </a>
-                  </div>
-                </div>
-                <!-- End Unfold -->
+             
               </div>
             </div>
 
-            <div class="col-sm-auto">
+            <!-- <div class="col-sm-auto">
               <a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle mr-1" href="#" data-toggle="tooltip" data-placement="top" title="Previous order">
                 <i class="tio-arrow-backward"></i>
               </a>
               <a class="btn btn-icon btn-sm btn-ghost-secondary rounded-circle" href="#" data-toggle="tooltip" data-placement="top" title="Next order">
                 <i class="tio-arrow-forward"></i>
               </a>
-            </div>
+            </div> -->
           </div>
         </div>
         <!-- End Page Header -->
@@ -85,7 +58,7 @@ if (is_array($ct_hoadon)) {
             <div class="card mb-3 mb-lg-5">
               <!-- Header -->
               <div class="card-header">
-                <h4 class="card-header-title">Chi tiết hóa đơn <span class="badge badge-soft-dark rounded-circle ml-1">4</span></h4>
+                <h4 class="card-header-title">Chi tiết hóa đơn</h4>
                 <a class="link" href="javascript:;">Edit</a>
               </div>
               <!-- End Header -->
@@ -97,7 +70,7 @@ if (is_array($ct_hoadon)) {
               foreach($ct_hoadon as $hd){
               ?>
                 <div class="media">
-                  <div class="avatar avatar-xl mr-3">
+                  <div class="avatar avatar-xl mr-6">
                     <img src="../../assets/uploads/<?=$hd['hinh']?>" alt="Image Description" width="90px" height="115px">
                   </div>    
                   
@@ -108,7 +81,7 @@ if (is_array($ct_hoadon)) {
                       </div>
 
                       <div class="col col-md-2 align-self-center">
-                        <h5><?=number_format($hd['don_gia'])?></h5>
+                        <h5><?=number_format($hd['don_gia'])?> VNĐ</h5>
                       </div>
 
                       <div class="col col-md-2 align-self-center">
@@ -116,7 +89,7 @@ if (is_array($ct_hoadon)) {
                       </div>
 
                       <div class="col col-md-2 align-self-center text-right">
-                        <h5><?=number_format($hd['so_luong']*$hd['don_gia'])?></h5>
+                        <h5><?=number_format($hd['so_luong']*$hd['don_gia'])?> VNĐ</h5>
                       </div>
                     </div>
                   </div>
@@ -139,9 +112,9 @@ if (is_array($ct_hoadon)) {
                   <div class="col-md-8 col-lg-7">
                     <dl class="row text-sm-right">
                       <dt class="col-sm-6">Tổng tiền:</dt>
-                      <dd class="col-sm-6"><?=number_format($hd['gia_tien'])?></dd>
+                      <dd class="col-sm-6"><?=number_format($hd['gia_tien'])?> VNĐ</dd>
                       <dt class="col-sm-6">Thanh toán:</dt>
-                      <dd class="col-sm-6"><?=number_format($hd['gia_tien'])?></dd>
+                      <dd class="col-sm-6"><?=number_format($hd['gia_tien'])?> VNĐ</dd>
                     </dl>
                     <!-- End Row -->
                   </div>

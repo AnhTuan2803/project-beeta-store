@@ -52,6 +52,5 @@ function load_ct_hoadon($id){
     where hoa_don.id_hd =" .$id; 
     $ct_hoadon = pdo_query($sql);
     return $ct_hoadon;
-
 }
 ?>
