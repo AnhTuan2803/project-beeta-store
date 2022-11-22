@@ -100,7 +100,7 @@
                 </div>
                             </th> -->
                             <th>Mã hóa đơn</th>
-                            <th>Thời gian</th>
+                            <th>Ngày đặt hàng</th>
                             <th>Mã khách hàng</th>
                             <th>Tổng tiền</th>
                             <th>Thanh toán</th>
