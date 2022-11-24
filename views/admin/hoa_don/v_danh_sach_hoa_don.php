@@ -1,3 +1,4 @@
+
 <main id="content" role="main" class="main">
     <!-- Content -->
     <div class="content container-fluid">
@@ -14,7 +15,6 @@
         </div> -->
             </div>
             <!-- End Row -->
-
             <!-- Nav Scroller -->
             <div class="js-nav-scroller hs-nav-scroller-horizontal">
                 <span class="hs-nav-scroller-arrow-prev" style="display: none;">
@@ -113,51 +113,58 @@
                         <?php
                         foreach ($listhoadon as $hoadon) {
                             extract($hoadon);
-                            if($thanh_toan == 1){
-                                $tt = "Tiền mặt";
-                            }else{
-                                $tt = "Online";
-                            }
-                            if ($tinh_trang == 1) {
-                                $tt_thanhtoan = "Chưa thanh toán";
-                            } else {
-                                $tt_thanhtoan = "Đã thanh toán";
-                            }
                             $xem_ct_hoa_don = "index.php?act=xem_ct_hoa_don&id=" . $id_hd;
                             $xoa_hd = "index.php?act=xoa_hd&id=" . $id_hd;
-                            echo '<tr>         
-                            <td>' . $id_hd . '</td>
-                            <td>' . $ngay_hd . '</td>
-                            <th>' . $id_kh . '</th>
-                            <th>' . $gia_tien  . '</th>
-                            <th>' . $tt . '</th>
-                            <th>' . $tt_thanhtoan . '</th>
-                            <td>
-                    <div class="btn-group" role="group">
-                    
-                   
-                      <!-- Unfold -->
-                      <div class="hs-unfold btn-group">
-                        
+                            if ($thanh_toan == 0) {
+                                $tt = "Chuyển khoản";
+                            } else if ($thanh_toan == 1) {
+                                $tt = "Tiền mặt";
+                            } else if ($thanh_toan == 2) {
+                                $tt = "Ngân hàng liên kết";
+                            }
+                        ?>
 
-    <div style="display: flex">
-                        <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $xem_ct_hoa_don . '">
-                        <i class="fa-solid tio-visible-outlined dropdown-item-icon"></i>Xem chi tiết
-                        </a>
-                        <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $xoa_hd . '">
-                        <i class="fa-solid fa-trash dropdown-item-icon"></i>Xóa
-                        </a>
-                        </div>
-                      </div>
-                      <!-- End Unfold -->
-                    </div>
-                  </td>
-                </tr>';
+                            <tr>
+                                <td><?= $id_hd ?></td>
+                                <td><?= $ngay_hd ?></td>
+                                <th><?= $id_kh ?></th>
+                                <th><?= $gia_tien ?></th>
+                                <th><?= $tt ?></th>
+                                <th>
+                                        <select name="tinh_trang" id="">
+                                            <option value="1" <?php echo ($tinh_trang == 1) ? "selected" : "" ?>>Chưa thanh toán</option>
+                                            <option value="0" <?php echo ($tinh_trang == 0) ? "selected" : "" ?>>Đã thanh toán</option>
+                                            <option value="2" <?php echo ($tinh_trang == 2) ? "selected" : "" ?>>Đơn hàng bị hủy</option>
+                                        </select>
+                                </th>
+                                <td>
+                                    <div class="btn-group" role="group">
+
+
+                                        <!-- Unfold -->
+                                        <div class="hs-unfold btn-group">
+
+
+                                            <div style="display: flex">
+                                                <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="<?= $xem_ct_hoa_don ?>">
+                                                    <i class="fa-solid tio-visible-outlined dropdown-item-icon"></i>Xem chi tiết
+                                                </a>
+                                                <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="<?= $xoa_hd ?>">
+                                                    <i class="fa-solid fa-trash dropdown-item-icon"></i>Xóa
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- End Unfold -->
+                                    </div>
+                                </td>
+                            </tr>
+                        <?php
                         }
                         ?>
 
                     </tbody>
                 </table>
+
             </div>
             <!-- End Table -->
 
@@ -165,7 +172,7 @@
         <!-- End Card -->
     </div>
     <!-- End Content -->
-
-
+    </form>
 </main>
+
 <!-- ========== END MAIN CONTENT ========== -->

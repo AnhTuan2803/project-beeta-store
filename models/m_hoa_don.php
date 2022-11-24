@@ -45,12 +45,16 @@ function delete_hoadon($id){
     pdo_execute($sql);
 }
 function load_ct_hoadon($id){
-    $sql = "select san_pham.ten_sp, san_pham.don_gia, san_pham.hinh, khach_hang.ten_kh, khach_hang.dia_chi, khach_hang.sdt, khach_hang.email, ct_hoa_don.so_luong, ngay_hd, gia_tien from ct_hoa_don
+    $sql = "select san_pham.ten_sp, san_pham.don_gia, san_pham.hinh, khach_hang.ten_kh, khach_hang.dia_chi, khach_hang.sdt, khach_hang.email, ct_hoa_don.so_luong,ct_hoa_don.id_hd, ngay_hd, gia_tien, tinh_trang  from ct_hoa_don
     inner join hoa_don on hoa_don.id_hd = ct_hoa_don.id_hd
     inner join san_pham on san_pham.id_sp = ct_hoa_don.id_sp
     inner join khach_hang on khach_hang.id_kh = hoa_don.id_kh
     where hoa_don.id_hd =" .$id; 
     $ct_hoadon = pdo_query($sql);
     return $ct_hoadon;
+}
+function update_hoadon($hd, $tinh_trang){
+    $sql = "UPDATE `hoa_don` SET `tinh_trang` = '$tinh_trang' WHERE `hoa_don`.`id_hd`= ".$hd['id_hd'];
+pdo_execute($sql);
 }
 ?>

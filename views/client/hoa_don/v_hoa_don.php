@@ -253,7 +253,7 @@
                                         <li class="wc_payment_method payment_method_cod">
                                             <input id="payment_method_cod" type="radio" class="input-radio" name="pttt" value="2" data-order_button_text="">
                                             <label for="payment_method_cod">
-                                               Chuyển khoản chực tiếp </label>
+                                               Chuyển khoản trực tiếp </label>
                                             <div class="payment_box payment_method_cod" style="display:none;">
                                                 <p>Pay with cash upon delivery.</p>
                                             </div>
