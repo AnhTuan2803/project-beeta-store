@@ -23,7 +23,25 @@
         <!-- Content -->
         <div class="navbar-vertical-content mt-3">
           <ul class="navbar-nav navbar-nav-lg nav-tabs">
-           
+            <!-- Thống kê -->
+            <li class="navbar-vertical-aside-has-menu">
+              <a class="js-navbar-vertical-aside-menu-link nav-link" href="index.php?act=thong_ke" title="Thống kê">
+                <i style="font-size: 21px; margin-left: 2px; margin-right: 2px;" class="fa-solid fa-chart-simple nav-icon"></i>
+                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Thống kê doanh thu</span>
+              </a>
+
+            </li>
+            <!-- End thống kê -->
+            <!-- Bình luận -->
+            <li class="navbar-vertical-aside-has-menu">
+              <a class="js-navbar-vertical-aside-menu-link nav-link" href="index.php?act=binh_luan" title="Bình luận">
+
+                <i style="font-size: 21px; margin-left: 0px; margin-right: 4px;" class="fa-solid fa-comments nav-icon"></i>
+                <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Bình luận</span>
+              </a>
+
+            </li>
+            <!-- End Bình luận -->
             <!-- Danh mục -->
             <li class="navbar-vertical-aside-has-menu">
               <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:;" title="Danh mục">
@@ -70,10 +88,10 @@
               </ul>
             </li>
             <!-- End Sản phẩm -->
-             <!-- Tài khoản -->
+            <!-- Tài khoản -->
             <li class="navbar-vertical-aside-has-menu">
               <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:;" title="Sản phẩm">
-              <i style="font-size: 21px; margin-left: 2px; margin-right: 2px;" class="fa-solid fa-user nav-icon"></i>
+                <i style="font-size: 21px; margin-left: 2px; margin-right: 2px;" class="fa-solid fa-user nav-icon"></i>
                 <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Tài khoản</span>
               </a>
 
@@ -90,7 +108,7 @@
             <!-- Khách hàng -->
             <li class="navbar-vertical-aside-has-menu">
               <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:;" title="Sản phẩm">
-              <i style="font-size: 21px; margin-right: 4px;" class="fa-solid fa-users nav-icon"></i>
+                <i style="font-size: 21px; margin-right: 4px;" class="fa-solid fa-users nav-icon"></i>
                 <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Khách hàng</span>
               </a>
 
@@ -104,8 +122,8 @@
               </ul>
             </li>
             <!-- End khách hàng -->
-             <!-- Hóa đơn -->
-             <li class="navbar-vertical-aside-has-menu">
+            <!-- Hóa đơn -->
+            <li class="navbar-vertical-aside-has-menu">
               <a class="js-navbar-vertical-aside-menu-link nav-link nav-link-toggle" href="javascript:;" title="Sản phẩm">
                 <i style="font-size: 21px; margin-left: 3px; margin-right: 1px;" class="fa-solid fa-file-invoice nav-icon"></i>
                 <span class="navbar-vertical-aside-mini-mode-hidden-elements text-truncate">Hóa đơn</span>
@@ -121,8 +139,8 @@
               </ul>
             </li>
             <!-- End hóa đơn -->
-             
-             
+
+
 
             <!-- <li class="nav-item">
                   <small class="nav-subtitle" title="Pages">Pages</small>

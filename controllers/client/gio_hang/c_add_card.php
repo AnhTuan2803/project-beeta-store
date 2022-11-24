@@ -8,8 +8,20 @@ if (isset($_SESSION['email'])) {
         $soluong = $_POST['so_luong'];
         $thanhtien = $soluong * $gia_sp;
 
-        $spadd = [$id, $ten_sp, $gia_sp, $soluong, $thanhtien, $img_sp];
-        array_push($_SESSION['myCart'], $spadd);
+        $flag = true;
+        if (isset($_SESSION['myCart'])) {
+            foreach ($_SESSION['myCart'] as $key => $value) {
+                if ($value[0] == $id) {
+                    $_SESSION['myCart'][$key][3] += $soluong;
+                    $_SESSION['myCart'][$key][4] += $gia_sp;
+                    $flag = false;
+                }
+            }
+        }
+        if ($flag == true) {
+            $spadd = [$id, $ten_sp, $gia_sp, $soluong, $thanhtien, $img_sp];
+            array_push($_SESSION['myCart'], $spadd);
+        }
         echo '<script>alert("Sản phẩm đã được thêm vào giỏ hàng!")</script>';
         include "./views/client/gio_hang/v_gio_hang.php";
         echo header("refresh: 0");
