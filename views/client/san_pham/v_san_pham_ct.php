@@ -61,18 +61,18 @@ $linkimg = "./assets/uploads/" . $hinh;
                                 <h1 class="product_title entry-title"><?= $ten_sp ?></h1>
                                 <p class="price"><span class="akasha-Price-amount amount"><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol"></span><?= number_format($don_gia) ?></span> VNĐ</p>
                                 <p class="stock in-stock">
-                                    Availability: <span> In stock</span>
+                                    Tình trạng: <span> Còn hàng</span>
                                 </p>
                                 <div class="akasha-product-details__short-description">
                                     <p><?= $mo_ta ?></p>
-                                    <ul>
+                                    <!-- <ul>
                                         <li>Water-resistant fabric with soft lycra detailing inside</li>
                                         <li>CLean zip-front, and three piece hood</li>
                                         <li>Subtle branding and diagonal panel detail</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <form action="index.php?act=add_cart" method="POST" class="variations_form cart">
-                                    <table class="variations">
+                                    <!-- <table class="variations">
                                         <tbody>
                                             <tr>
                                                 <td class="label"><label>Color</label></td>
@@ -96,10 +96,10 @@ $linkimg = "./assets/uploads/" . $hinh;
                                                 </td>
                                             </tr>
                                         </tbody>
-                                    </table>
+                                    </table> -->
                                     <div class="single_variation_wrap">
                                         <div class="akasha-variation single_variation"></div>
-                                        <div class="akasha-variation-add-to-cart variations_button akasha-variation-add-to-cart-disabled">
+                                        <div style="display: flex;" class="akasha-variation-add-to-cart variations_button akasha-variation-add-to-cart-disabled">
                                             <div class="quantity">
                                                 <span class="qty-label">Quantiy:</span>
                                                 <div class="control">
@@ -112,25 +112,18 @@ $linkimg = "./assets/uploads/" . $hinh;
                                             <input type="hidden" name="ten_sp" value="<?= $ten_sp ?>">
                                             <input type="hidden" name="img_sp" value="<?= $hinh ?>">
                                             <input type="hidden" name="gia_sp" value="<?= $don_gia ?>">
-                                     
-                                            <button type="submit" class="single_add_to_cart_button button alt  akasha-variation-selection-needed" name="add_cart">
-                                                Add to cart
-                                            </button>
-                                            <input type="submit" class="akasha-variation-selection-needed" name="add_cart" value="Add to cart">
+
+
+                                            <input style="height: 47px; width: 130px; color: #fff; font-weight: 500;" type="submit" class="btn btn-dark add" name="add_cart" value="Add to cart">
+
                                             <input name="add-to-cart" value="27" type="hidden">
                                             <input name="product_id" value="27" type="hidden">
                                             <input name="variation_id" class="variation_id" value="0" type="hidden">
                                         </div>
                                     </div>
                                 </form>
-                                <div class="yith-wcwl-add-to-wishlist">
-                                    <div class="yith-wcwl-add-button show">
-                                        <a href="#" rel="nofollow" data-product-id="27" data-product-type="variable" class="add_to_wishlist">
-                                            Add to Wishlist</a>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                                <a href="#" class="compare button" data-product_id="27" rel="nofollow">Compare</a>
+
+
                                 <div class="product_meta">
                                     <div class="wcml-dropdown product wcml_currency_switcher">
                                         <ul>
@@ -144,9 +137,9 @@ $linkimg = "./assets/uploads/" . $hinh;
                                             </li>
                                         </ul>
                                     </div>
-                                    <span class="sku_wrapper">SKU: <span class="sku">885B712</span></span>
-                                    <span class="posted_in">Categories: <a href="#" rel="tag">Bags</a>, <a href="#" rel="tag">New arrivals</a>, <a href="#" rel="tag">Summer Sale</a></span>
-                                    <span class="tagged_as">Tags: <a href="#" rel="tag">Bags</a>, <a href="#" rel="tag">Sock</a></span>
+                                    <span class="sku_wrapper">SKU: <span class="sku"><?= $id_sp ?></span></span>
+                                    <span class="posted_in">Danh mục: <a href="#" rel="tag">???</a></span>
+
                                 </div>
                                 <div class="akasha-share-socials">
                                     <h5 class="social-heading">Share: </h5>
@@ -165,17 +158,17 @@ $linkimg = "./assets/uploads/" . $hinh;
                     </div>
                     <div class="akasha-tabs akasha-tabs-wrapper">
                         <ul class="tabs dreaming-tabs" role="tablist">
-                            <li class="description_tab active" id="tab-title-description" role="tab" aria-controls="tab-description">
+                            <!-- <li class="description_tab active" id="tab-title-description" role="tab" aria-controls="tab-description">
                                 <a href="#tab-description">Description</a>
                             </li>
                             <li class="additional_information_tab" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
                                 <a href="#tab-additional_information">Additional information</a>
-                            </li>
+                            </li> -->
                             <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                                <a href="#tab-reviews">Reviews (0)</a>
+                                <a href="#tab-reviews">Reviews</a>
                             </li>
                         </ul>
-                        <div class="akasha-Tabs-panel akasha-Tabs-panel--description panel entry-content akasha-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
+                        <!-- <div class="akasha-Tabs-panel akasha-Tabs-panel--description panel entry-content akasha-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
                             <h2>Description</h2>
                             <div class="container-table">
                                 <div class="container-cell">
@@ -227,29 +220,35 @@ $linkimg = "./assets/uploads/" . $hinh;
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
+                        </div> -->
                         <div class="akasha-Tabs-panel akasha-Tabs-panel--reviews panel entry-content akasha-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-                            <div id="reviews" class="akasha-Reviews">
-                                <div id="comments">
-                                    <h2 class="akasha-Reviews-title">Reviews</h2>
-                                    <p class="akasha-noreviews">There are no reviews yet.</p>
-                                </div>
-                                <div id="review_form_wrapper">
-                                    <div id="review_form">
-                                        <div id="respond" class="comment-respond">
-                                            <span id="reply-title" class="comment-reply-title">Be the first to review “T-shirt with skirt”</span>
-                                            <form id="commentform" class="comment-form">
-                                                <p class="comment-notes"><span id="email-notes">Your email adchair will not be published.</span>
-                                                    Required fields are marked <span class="required">*</span></p>
-                                                <p class="comment-form-author">
-                                                    <label for="author">Name&nbsp;<span class="required">*</span></label>
-                                                    <input id="author" name="author" value="" size="30" required="" type="text">
-                                                </p>
-                                                <p class="comment-form-email"><label for="email">Email&nbsp;
-                                                        <span class="required">*</span></label>
-                                                    <input id="email" name="email" value="" size="30" required="" type="email">
-                                                </p>
-                                                <div class="comment-form-rating"><label for="rating">Your rating</label>
+
+                            <?php
+                            if (isset($_SESSION['email'])) {
+                                extract($_SESSION['email']);
+                            ?>
+
+                                <div id="reviews" class="akasha-Reviews">
+                                    <div id="comments">
+                                        <h2 class="akasha-Reviews-title">Reviews</h2>
+                                        <!-- <p class="akasha-noreviews">There are no reviews yet.</p> -->
+                                    </div>
+                                    <div id="review_form_wrapper">
+                                        <div id="review_form">
+                                            <div id="respond" class="comment-respond">
+                                                <!-- <span id="reply-title" class="comment-reply-title">Be the first to review “T-shirt with skirt”</span> -->
+                                                <form id="commentform" class="comment-form">
+                                                    <!-- <p class="comment-notes">
+                                                    <span class="required">*</span> Bắt buộc</p> -->
+                                                    <p class="comment-form-author">
+                                                        <label for="author">Name&nbsp;<span class="required">*</span></label>
+                                                        <input id="author" name="author" value="" size="30" required="" type="text">
+                                                    </p>
+                                                    <p class="comment-form-email"><label for="email">Email&nbsp;
+                                                            <span class="required">*</span></label>
+                                                        <input id="email" name="email" value="" size="30" required="" type="email">
+                                                    </p>
+                                                    <!-- <div class="comment-form-rating"><label for="rating">Your rating</label>
                                                     <p class="stars">
                                                         <span>
                                                             <a class="star-1" href="#">1</a>
@@ -267,18 +266,26 @@ $linkimg = "./assets/uploads/" . $hinh;
                                                         <option value="2">Not that bad</option>
                                                         <option value="1">Very poor</option>
                                                     </select>
-                                                </div>
-                                                <p class="comment-form-comment"><label for="comment">Your
-                                                        review&nbsp;<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" required=""></textarea></p><input name="wpml_language_code" value="en" type="hidden">
-                                                <p class="form-submit"><input name="submit" id="submit" class="submit" value="Submit" type="submit"> <input name="comment_post_ID" value="27" id="comment_post_ID" type="hidden">
-                                                    <input name="comment_parent" id="comment_parent" value="0" type="hidden">
-                                                </p>
-                                            </form>
-                                        </div><!-- #respond -->
+                                                </div> -->
+                                                    <p class="comment-form-comment"><label for="comment">Your
+                                                            review&nbsp;<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" required=""></textarea></p><input name="wpml_language_code" value="en" type="hidden">
+                                                    <p class="form-submit"><input name="submit" id="submit" class="submit" value="Submit" type="submit"> <input name="comment_post_ID" value="27" id="comment_post_ID" type="hidden">
+                                                        <input name="comment_parent" id="comment_parent" value="0" type="hidden">
+                                                    </p>
+                                                </form>
+                                            </div><!-- #respond -->
+                                        </div>
                                     </div>
+                                    <div class="clear"></div>
                                 </div>
-                                <div class="clear"></div>
-                            </div>
+                            <?php
+                            } else {
+                            ?>
+                                <div style="text-align: center; font-weight: 500; font-size: 18px;"><span id="reply-title" class="comment-reply-title">Bạn phải đăng nhập để bình luận!</span></div>
+                            <?php
+                            }
+                            ?>
+
                         </div>
                     </div>
                 </div>

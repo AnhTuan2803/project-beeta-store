@@ -1,4 +1,3 @@
-
 <main id="content" role="main" class="main">
     <!-- Content -->
     <div class="content container-fluid">
@@ -115,11 +114,11 @@
                             extract($hoadon);
                             $xem_ct_hoa_don = "index.php?act=xem_ct_hoa_don&id=" . $id_hd;
                             $xoa_hd = "index.php?act=xoa_hd&id=" . $id_hd;
-                            if ($thanh_toan == 0) {
+                            if ($thanh_toan == 2) {
                                 $tt = "Chuyển khoản";
                             } else if ($thanh_toan == 1) {
                                 $tt = "Tiền mặt";
-                            } else if ($thanh_toan == 2) {
+                            } else if ($thanh_toan == 3) {
                                 $tt = "Ngân hàng liên kết";
                             }
                         ?>
@@ -131,11 +130,11 @@
                                 <th><?= $gia_tien ?></th>
                                 <th><?= $tt ?></th>
                                 <th>
-                                        <select name="tinh_trang" id="">
-                                            <option value="1" <?php echo ($tinh_trang == 1) ? "selected" : "" ?>>Chưa thanh toán</option>
-                                            <option value="0" <?php echo ($tinh_trang == 0) ? "selected" : "" ?>>Đã thanh toán</option>
-                                            <option value="2" <?php echo ($tinh_trang == 2) ? "selected" : "" ?>>Đơn hàng bị hủy</option>
-                                        </select>
+                                    <select name="tinh_trang" id="">
+                                        <option value="1" <?php echo ($tinh_trang == 1) ? "selected" : "" ?>>Chưa thanh toán</option>
+                                        <option value="0" <?php echo ($tinh_trang == 0) ? "selected" : "" ?>>Đã thanh toán</option>
+                                        <option value="2" <?php echo ($tinh_trang == 2) ? "selected" : "" ?>>Đơn hàng bị hủy</option>
+                                    </select>
                                 </th>
                                 <td>
                                     <div class="btn-group" role="group">

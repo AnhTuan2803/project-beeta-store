@@ -95,55 +95,52 @@
                 </div>
             </div>
         </div>
-   
-        <form action="index.php?act=add_cart" method="POST">
+
+
         <div class="akasha-products style-02">
             <div class="response-product product-list-owl owl-slick equal-container better-height" data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:4,&quot;rows&quot;:2}" data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
                 <?php
+
                 foreach ($sphome as $sp) {
                     extract($sp);
                     $linkimg = "./assets/uploads/" . $hinh;
                     echo ' <div class="product-item featured_products style-02 rows-space-30 post-34 product type-product status-publish has-post-thumbnail product_cat-light product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock sale featured shipping-taxable product-type-grouped">
                 <div class="product-inner tooltip-top">
                     <div class="product-thumb">
-                        <a class="thumb-link" href="index.php?act=sanphamct&idsp='.$id_sp.'" tabindex="0">
+                        <a class="thumb-link" href="index.php?act=sanphamct&idsp=' . $id_sp . '" tabindex="0">
                             <img style="height: 345px;" class="img-responsive" src="' . $linkimg . '" alt="Maternity Shoulder" width="270" height="350">
                         </a>
                         <div class="flash">
                             <span class="onnew"><span class="text">New</span></span>
                         </div>
-                        <a href="index.php?act=sanphamct&idsp='.$id_sp.'" class="button yith-wcqv-button">Quick View</a>
+                        <a href="index.php?act=sanphamct&idsp=' . $id_sp . '" class="button yith-wcqv-button">Quick View</a>
                     </div>
                     <div class="product-info">
-                        <div class="rating-wapper nostar">
-                            <div class="star-rating"><span style="width:0%">Rated <strong class="rating">0</strong> out of 5</span></div>
-                            <span class="review">(0)</span>
-                        </div>
+                       
                         <h3 class="product-name product_title">
-                            <a href="index.php?act=sanphamct&idsp='.$id_sp.'" tabindex="0">' . $ten_sp . '</a>
+                            <a href="index.php?act=sanphamct&idsp=' . $id_sp . '" tabindex="0">' . $ten_sp . '</a>
                         </h3>
                         <span class="price"><span class="akasha-Price-amount amount"><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol"></span>' . number_format($don_gia) . '</span> VNĐ</span>
                     </div>
-                    <div class="group-button clearfix">
-                        <div class="yith-wcwl-add-to-wishlist">
-                            <div class="yith-wcwl-add-button show">
-                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
+                    <div style="min-width: 140px !important;" class="group-button clearfix">
+                            <div class="add-to-cart">
+                            <form action="index.php?act=add_cart" method="POST">
+                            <input type="hidden" name="id" value="' . $id_sp . '">
+                            <input type="hidden" name="ten_sp" value="' . $ten_sp . '">
+                            <input type="hidden" name="img_sp" value="' . $hinh . '">
+                            <input type="hidden" name="gia_sp" value="' . $don_gia . '">
+                            <input type="hidden" name="so_luong" value="1">
+                            <input style="cursor: pointer; background-color: transparent; color: #222; font-size: 15px; font-weight: 500;" type="submit" class="button b" name="add_cart" value="Add to cart">
+                            </form>
                             </div>
+                           
                         </div>
-                        <div class="add-to-cart">
-                            <a href="" class="button product_type_grouped">
-                           </a>
-                        </div>
-                        <div class="akasha product compare-button">
-                            <a href="#" class="compare button">Compare</a>
-                        </div>
-                    </div>
                 </div>
-            </div>';
+            </div>
+           ';
                 }
                 ?>
-                 
-               
+
                 <div class="product-item featured_products style-02 rows-space-30 post-32 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-hat product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple">
                     <div class="product-inner tooltip-top">
                         <div class="product-thumb">
@@ -166,18 +163,12 @@
                             </h3>
                             <span class="price"><del><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol">$</span>109.00</span></del> <ins><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol">$</span>89.00</span></ins></span>
                         </div>
-                        <div class="group-button clearfix">
-                            <div class="yith-wcwl-add-to-wishlist">
-                                <div class="yith-wcwl-add-button show">
-                                    <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                </div>
-                            </div>
+                        <div style="min-width: 80px !important;" class="group-button clearfix">
+
                             <div class="add-to-cart">
                                 <a href="#" class="button product_type_grouped">Add to cart</a>
                             </div>
-                            <div class="akasha product compare-button">
-                                <a href="#" class="compare button">Compare</a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -539,9 +530,9 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-        </form>
     </div>
 </div>
 <div>
@@ -563,7 +554,7 @@
                         <div class="subtitle">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit justo
                         </div>
-                        <a class="button" target="_self" href="#"><span>Shop now</span></a>
+                        <a class="button" target="_self" href="index.php?act=shop"><span>Shop now</span></a>
                     </div>
                 </div>
             </div>
@@ -825,7 +816,7 @@
                         <div class="subtitle">
                             Mus venenatis habitasse leo malesuada lacus commodo faucibus torquent donec
                         </div>
-                        <a class="button" target="_self" href="#"><span>Shop now</span></a>
+                        <a class="button" target="_self" href="index.php?act=shop"><span>Shop now</span></a>
                     </div>
                 </div>
             </div>

@@ -290,7 +290,7 @@
                                         <button type="submit" class="button alt" name="dat_hang" id="place_order" value="Place order" data-value="Place order">
                                             Order
                                         </button>
-                                        <input type="submit" name="dat_hang" value="Đặt hàng" class="button alt">
+                                        
                                         <input type="hidden" id="akasha-process-checkout-nonce" name="akasha-process-checkout-nonce" value="634590c981"><input type="hidden" name="_wp_http_referer" value="/akasha/?akasha-ajax=update_order_review">
                                     </div>
                                 </div>

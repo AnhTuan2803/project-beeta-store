@@ -9,7 +9,7 @@
                                 <h5>Limited Colletion</h5>
                                 <h1>Dreamy</h1>
                                 <h2>& Lovely</h2>
-                                <a href="#">Shop now</a>
+                                <a href="index.php?act=shop">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -22,7 +22,7 @@
                                 <h5>Best Selling</h5>
                                 <h1><span>Glamorous</h1>
                                 <h2>& Cute</h2>
-                                <a href="#">Shop now</a>
+                                <a href="index.php?act=shop">Shop now</a>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                                 <h5>This Week Only</h5>
                                 <h1>Mega Sale</h1>
                                 <h2>50% Off</h2>
-                                <a href="#">Shop now</a>
+                                <a href="index.php?act=shop">Shop now</a>
                             </div>
                         </div>
                     </div>

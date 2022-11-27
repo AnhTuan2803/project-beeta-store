@@ -88,18 +88,18 @@
                                         <span class="onnew"><span class="text">New</span></span>
                                     </div>
                                     <div class="group-button">
-                                        <div class="yith-wcwl-add-to-wishlist">
-                                            <div class="yith-wcwl-add-button show">
-                                                <a href="#" class="add_to_wishlist">Add to Wishlist</a>
-                                            </div>
-                                        </div>
-                                        <div class="akasha product compare-button">
-                                            <a href="#" class="compare button">Compare</a>
-                                        </div>
+                                       
+                                        
                                         <a href="index.php?act=sanphamct&idsp=' . $id_sp . '" class="button yith-wcqv-button">Quick View</a>
                                         <div class="add-to-cart">
-                                            <a href="#" class="button product_type_simple add_to_cart_button">Add to
-                                                cart</a>
+                                        <form action="index.php?act=add_cart" method="POST">
+                                        <input type="hidden" name="id" value="' . $id_sp . '">
+                                        <input type="hidden" name="ten_sp" value="' . $ten_sp . '">
+                                        <input type="hidden" name="img_sp" value="' . $hinh . '">
+                                        <input type="hidden" name="gia_sp" value="' . $don_gia . '">
+                                        <input type="hidden" name="so_luong" value="1">
+                                        <input style="cursor: pointer; background-color: transparent; color: #222; font-size: 15px; font-weight: 500;" type="submit" class="button b" name="add_cart" value=" ">
+                                        </form>
                                         </div>
                                     </div>
                                 </div>
@@ -107,11 +107,7 @@
                                     <h3 class="product-name product_title">
                                         <a href="index.php?act=sanphamct&idsp=' . $id_sp . '">' . $ten_sp . '</a>
                                     </h3>
-                                    <div class="rating-wapper ">
-                                        <div class="star-rating"><span style="width:100%">Rated <strong class="rating">5.00</strong> out of 5</span>
-                                        </div>
-                                        <span class="review">(1)</span>
-                                    </div>
+                                   
                                     <span class="price"><ins><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol"></span>' . number_format($don_gia) . '</span> VNĐ</ins></span>
                                 </div>
                             </div>

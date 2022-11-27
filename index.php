@@ -61,6 +61,10 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
             include "./views/client/layout/header_sub.php";
             include "./controllers/client/hoa_don/c_billcofirm.php";
             break;
+        case 'my_bill':
+            include "./views/client/layout/header_sub.php";
+            include "./controllers/client/hoa_don/c_mybill.php";
+            break;
         case 'logout':
             session_unset();
             header('Location: ./index.php');

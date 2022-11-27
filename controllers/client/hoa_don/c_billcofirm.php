@@ -26,13 +26,9 @@ if (isset($_POST['dat_hang'])) {
         $id_ct_hoadon = insert_ct_hoadon($id_hoadon, $cart[0], $cart[3], $cart[2]);
     }
 
+    $hd = loadone_hoadon($id_hoadon);
+    $listhd = load_ct_hoadon($id_hoadon);
 
-    // foreach ($_SESSION['myCart'] as $cart) {
-    //     insert_cart($_SESSION['user']['id'], $cart[0], $cart[2], $cart[1], $cart[3], $cart[4], $cart[5], $idbill);
-    // }
-    // $bill = loadone_bill($idbill);
-    // $billct = loadall_cart($idbill);
-    // $_SESSION['cart'] = [];
+    include "./views/client/hoa_don/v_bill_cofirm.php"; 
     echo '<script>alert("Bạn đã đặt hàng thành công!")</script>';
-    include "./views/client/gio_hang/v_gio_hang.php";
 }

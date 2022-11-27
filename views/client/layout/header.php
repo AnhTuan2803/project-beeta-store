@@ -22,7 +22,13 @@
     <link rel="stylesheet" type="text/css" href="./assets/client/css/megamenu.css" />
     <link rel="stylesheet" type="text/css" href="./assets/client/css/dreaming-attribute.css" />
     <link rel="stylesheet" type="text/css" href="./assets/client/css/style.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>Beeta Store</title>
+    <style>
+        .b:hover {
+            color: #fa8f47 !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -349,7 +355,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item">
+                                        <!-- <li class="menu-item">
                                             <div class="wcml-dropdown product wcml_currency_switcher">
                                                 <ul>
                                                     <li class="wcml-cs-active-currency">
@@ -365,7 +371,7 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                     <div class="header-search akasha-dropdown">
                                         <div class="header-search-inner" data-akasha="akasha-dropdown">
@@ -386,13 +392,7 @@
                                                     <select title="product_cat" name="product_cat" id="64788262" class="category-search-option" tabindex="-1" style="display: none;">
                                                         <option value="0">All Categories</option>
                                                         <option class="level-0" value="light">Shoes</option>
-                                                        <option class="level-0" value="chair">Accessories</option>
-                                                        <option class="level-0" value="table">Bags</option>
-                                                        <option class="level-0" value="bed">Life style</option>
-                                                        <option class="level-0" value="new-arrivals">New arrivals</option>
-                                                        <option class="level-0" value="lamp">Summer Sale</option>
-                                                        <option class="level-0" value="specials">Specials</option>
-                                                        <option class="level-0" value="sofas">Women</option>
+                                                        
                                                     </select>
                                                 </div>
                                                 <button type="submit" class="btn-submit">
@@ -416,7 +416,10 @@
                                             ?>
                                                 <?php
                                                 if ($_SESSION['email']['id_vai_tro'] == 0) {
-                                                    echo '<li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
+                                                    echo ' <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
+                                                    <a href="index.php?act=my_bill">Đơn hàng của tôi</a>
+                                                </li>
+                                                    <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
                                                     <a href="#">Sửa tài khoản</a>
                                                 </li>
                                                 <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--customer-logout">
@@ -425,6 +428,9 @@
                                                 } else if ($_SESSION['email']['id_vai_tro'] == 1) {
                                                     echo ' <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
                                                     <a href="./views/admin/index.php">Quản trị</a>
+                                                </li>
+                                                <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
+                                                    <a href="index.php?act=my_bill">Đơn hàng của tôi</a>
                                                 </li>
                                                 <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
                                                     <a href="#">Sửa tài khoản</a>
