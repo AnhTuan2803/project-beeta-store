@@ -3,7 +3,7 @@ session_start();
 include "../../../models/m_pdo.php";
 include "../../../models/m_binh_luan.php";
 $id_sp = $_REQUEST['id_sp'];
-$dsbl = loadall_binhluan($id_sp);
+$dsbl = loadall_binhluan_client($id_sp);
 ?>
 <!DOCTYPE html>
 <html lang="en">
