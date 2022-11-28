@@ -40,7 +40,16 @@ $dsbl = loadall_binhluan_client($id_sp);
         </ul>
 
         <div class="akasha-Tabs-panel akasha-Tabs-panel--reviews panel entry-content akasha-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
-
+            <?php
+            if (isset($_POST['gui_bl']) && ($_POST['gui_bl'])) {
+                $noi_dung = $_POST['noi_dung'];
+                $id_sp = $_POST['id_sp'];
+                $id_nd = $_SESSION['email']['id_nd'];
+                $ngay_bl = date('d/m/Y');
+                insert_binhluan($noi_dung, $id_nd, $id_sp, $ngay_bl);
+                header("Location:  " . $_SERVER['HTTP_REFERER']);
+            }
+            ?>
             <div class="row">
                 <div class="col-lg-12 mb-1 mb-lg-0">
                     <!-- Card -->
@@ -152,16 +161,6 @@ $dsbl = loadall_binhluan_client($id_sp);
         </div>
     </div>
 
-    <?php
-    if (isset($_POST['gui_bl']) && ($_POST['gui_bl'])) {
-        $noi_dung = $_POST['noi_dung'];
-        $id_sp = $_POST['id_sp'];
-        $id_nd = $_SESSION['email']['id_nd'];
-        $ngay_bl = date('d/m/Y');
-        insert_binhluan($noi_dung, $id_nd, $id_sp, $ngay_bl);
-        header("Location: " . $_SERVER['HTTP_REFERER']);
-    }
-    ?>
 </body>
 
 </html>
