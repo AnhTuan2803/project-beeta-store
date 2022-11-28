@@ -150,20 +150,20 @@
             <?php
             $phantrang_bl = phantrang_bl();
             $row_count = count($phantrang_bl);
-            $trang = ceil($row_count/5);
+            $trang = ceil($row_count / 5);
             // echo $row_count;
             // echo $trang;
 
-        ?>
-        <div class="card-footer">
-            <!-- Pagination -->
-            <div class="row justify-content-center justify-content-sm-between align-items-sm-center">
-              <div class="col-sm mb-2 mb-sm-0">
-                <div class="d-flex justify-content-center justify-content-sm-start align-items-center">
-                  <!-- <span class="mr-2">Showing:</span> -->
+            ?>
+            <div class="card-footer">
+                <!-- Pagination -->
+                <div class="row justify-content-center justify-content-sm-between align-items-sm-center">
+                    <div class="col-sm mb-2 mb-sm-0">
+                        <div class="d-flex justify-content-center justify-content-sm-start align-items-center">
+                            <!-- <span class="mr-2">Showing:</span> -->
 
-                  <!-- Select -->
-                  <!-- <select id="datatableEntries" class="js-select2-custom select2-hidden-accessible" data-hs-select2-options="{
+                            <!-- Select -->
+                            <!-- <select id="datatableEntries" class="js-select2-custom select2-hidden-accessible" data-hs-select2-options="{
                             &quot;minimumResultsForSearch&quot;: &quot;Infinity&quot;,
                             &quot;customClass&quot;: &quot;custom-select custom-select-sm custom-select-borderless&quot;,
                             &quot;dropdownAutoWidth&quot;: true,
@@ -174,35 +174,40 @@
                     <option value="16" data-select2-id="4">16</option>
                     <option value="18" data-select2-id="5">18</option>
                   </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1"><span class="selection"><span class="select2-selection custom-select custom-select-sm custom-select-borderless" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-datatableEntries-container"><span class="select2-selection__rendered" id="select2-datatableEntries-container" role="textbox" aria-readonly="true" title="12"><span>12</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span> -->
-                  <!-- End Select -->
+                            <!-- End Select -->
 
-                  <!-- <span class="text-secondary mr-2">of</span> -->
+                            <!-- <span class="text-secondary mr-2">of</span> -->
 
-                  <!-- Pagination Quantity -->
-                  <!-- <span id="datatableWithPaginationInfoTotalQty">20</span>
+                            <!-- Pagination Quantity -->
+                            <!-- <span id="datatableWithPaginationInfoTotalQty">20</span>
                 </div> -->
-              </div>
-                
-                <div class="col-sm-auto">
-                <div class="d-flex justify-content-center justify-content-sm-end">
-                  <!-- Pagination -->
-                  <nav id="datatablePagination" aria-label="Activity pagination"><div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate"><ul id="datatable_pagination" class="pagination datatable-custom-pagination">
-                  <li class="paginate_item page-item disabled"><a class="paginate_button previous page-link" aria-controls="datatable" data-dt-idx="0" tabindex="0" id="datatable_previous"><span aria-hidden="true">Prev</span></a></li>
-                  <?php
-                    for($i=1; $i <= $trang; $i++){
-                ?>
-                  <li><a class="paginate_button page-link" aria-controls="datatable" name="trang" data-dt-idx="<?=$i?>" tabindex="0" href="index.php?act=binh_luan&trang=<?php echo $i?>"><?php echo $i ?></a></li>
-                  <?php
-                }
-                ?>
-                  <li class="paginate_item page-item"><a class="paginate_button next page-link" aria-controls="datatable" data-dt-idx="4" tabindex="0" id="datatable_next"><span aria-hidden="true">Next</span></a></li></ul></div></nav>
+                        </div>
+
+                        <div class="col-sm-auto">
+                            <div class="d-flex justify-content-center justify-content-sm-end">
+                                <!-- Pagination -->
+                                <nav id="datatablePagination" aria-label="Activity pagination">
+                                    <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
+                                        <ul id="datatable_pagination" class="pagination datatable-custom-pagination">
+                                            <li class="paginate_item page-item disabled"><a class="paginate_button previous page-link" aria-controls="datatable" data-dt-idx="0" tabindex="0" id="datatable_previous"><span aria-hidden="true">Prev</span></a></li>
+                                            <?php
+                                            for ($i = 1; $i <= $trang; $i++) {
+                                            ?>
+                                                <li><a class="paginate_button page-link" aria-controls="datatable" name="trang" data-dt-idx="<?= $i ?>" tabindex="0" href="index.php?act=binh_luan&trang=<?php echo $i ?>"><?php echo $i ?></a></li>
+                                            <?php
+                                            }
+                                            ?>
+                                            <li class="paginate_item page-item"><a class="paginate_button next page-link" aria-controls="datatable" data-dt-idx="4" tabindex="0" id="datatable_next"><span aria-hidden="true">Next</span></a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <!-- End Card -->
             </div>
-        </div>
-        <!-- End Card -->
-    </div>
-    <!-- End Content -->
+            <!-- End Content -->
 
 
 </main>
