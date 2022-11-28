@@ -10,6 +10,7 @@ include "./models/m_danh_muc.php";
 if (!isset($_SESSION['myCart'])) $_SESSION['myCart'] = [];
 
 $sphome = loadall_sanpham_home();
+$spnew = loadall_sanpham_new();
 $listsanpham = loadall_sanpham();
 
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
@@ -64,6 +65,14 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'my_bill':
             include "./views/client/layout/header_sub.php";
             include "./controllers/client/hoa_don/c_mybill.php";
+            break;
+        case 'blog':
+            include "./views/client/layout/header_sub.php";
+            include "./controllers/client/blog/c_blog.php";
+            break;
+        case 'contact':
+            include "./views/client/layout/header_sub.php";
+            include "./controllers/client/contact/c_contact.php";
             break;
         case 'logout':
             session_unset();

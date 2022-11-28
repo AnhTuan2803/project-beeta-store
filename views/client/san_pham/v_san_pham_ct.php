@@ -138,7 +138,7 @@ $linkimg = "./assets/uploads/" . $hinh;
                                         </ul>
                                     </div>
                                     <span class="sku_wrapper">SKU: <span class="sku"><?= $id_sp ?></span></span>
-                                    <span class="posted_in">Danh mục: <a href="#" rel="tag">???</a></span>
+                                    <span class="posted_in">Danh mục: <a href="#" rel="tag"><?= $ten_dm ?></a></span>
 
                                 </div>
                                 <div class="akasha-share-socials">
@@ -156,138 +156,19 @@ $linkimg = "./assets/uploads/" . $hinh;
                             </div>
                         </div>
                     </div>
-                    <div class="akasha-tabs akasha-tabs-wrapper">
-                        <ul class="tabs dreaming-tabs" role="tablist">
-                            <!-- <li class="description_tab active" id="tab-title-description" role="tab" aria-controls="tab-description">
-                                <a href="#tab-description">Description</a>
-                            </li>
-                            <li class="additional_information_tab" id="tab-title-additional_information" role="tab" aria-controls="tab-additional_information">
-                                <a href="#tab-additional_information">Additional information</a>
-                            </li> -->
-                            <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                                <a href="#tab-reviews">Reviews</a>
-                            </li>
-                        </ul>
-                        <!-- <div class="akasha-Tabs-panel akasha-Tabs-panel--description panel entry-content akasha-tab" id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
-                            <h2>Description</h2>
-                            <div class="container-table">
-                                <div class="container-cell">
-                                    <h2 class="az_custom_heading">Platea viverra aenean<br>dictumst</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit
-                                        scelerisque integer, quam dapibus per risus donec semper
-                                        vulputate interdum, imperdiet mus rhoncus commodo ultricies
-                                        class urna tincidunt. Imperdiet vitae lacus etiam metus ut nisl
-                                        curae, conubia enim scelerisque quis facilisis torquent,
-                                        ultricies orci faucibus dictumst mauris curabitur. Massa risus
-                                        nec sociosqu fames montes accumsan iaculis justo turpis
-                                        luctus</p>
-                                </div>
-                                <div class="container-cell">
-                                    <div class="az_single_image-wrapper az_box_border_grey">
-                                        <img src="./assets/client/images/single-pro1.jpg" class="az_single_image-img attachment-full" alt="img">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container-table">
-                                <div class="container-cell">
-                                    <div class="az_single_image-wrapper az_box_border_grey">
-                                        <img src="./assets/client/images/single-pro2.jpg" class="az_single_image-img attachment-full" alt="img">
-                                    </div>
-                                </div>
-                                <div class="container-cell">
-                                    <h2 class="az_custom_heading">
-                                        Potenti praesent molestie<br>
-                                        at viverra</h2>
-                                    <p>This generator uses a dictionary of Latin words to construct
-                                        passages of Lorem Ipsum text that meet your desired length. The
-                                        sentence and paragraph durations and punctuation dispersal are
-                                        calculated using Gaussian distribution, based on statistical
-                                        analysis of real world texts. This ensures that the generated
-                                        Lorem Ipsum text is unique, free of repetition and also
-                                        resembles readable text as much as possible.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="akasha-Tabs-panel akasha-Tabs-panel--additional_information panel entry-content akasha-tab" id="tab-additional_information" role="tabpanel" aria-labelledby="tab-title-additional_information">
-                            <h2>Additional information</h2>
-                            <table class="shop_attributes">
-                                <tbody>
-                                    <tr>
-                                        <th>Color</th>
-                                        <td>
-                                            <p>Blue, Pink, Red, Yellow</p>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div> -->
-                        <div class="akasha-Tabs-panel akasha-Tabs-panel--reviews panel entry-content akasha-tab" id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+                    <!--  -->
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                    <script>
+                        $(document).ready(function() {
+                            $("#binhluan").load("./views/client/binh_luan/v_binh_luan_form.php", {
+                                id_sp: <?= $id_sp ?>
+                            });
+                        });
+                    </script>
+                    <div id="binhluan" class="comment-detail">
 
-                            <?php
-                            if (isset($_SESSION['email'])) {
-                                extract($_SESSION['email']);
-                            ?>
-
-                                <div id="reviews" class="akasha-Reviews">
-                                    <div id="comments">
-                                        <h2 class="akasha-Reviews-title">Reviews</h2>
-                                        <!-- <p class="akasha-noreviews">There are no reviews yet.</p> -->
-                                    </div>
-                                    <div id="review_form_wrapper">
-                                        <div id="review_form">
-                                            <div id="respond" class="comment-respond">
-                                                <!-- <span id="reply-title" class="comment-reply-title">Be the first to review “T-shirt with skirt”</span> -->
-                                                <form id="commentform" class="comment-form">
-                                                    <!-- <p class="comment-notes">
-                                                    <span class="required">*</span> Bắt buộc</p> -->
-                                                    <p class="comment-form-author">
-                                                        <label for="author">Name&nbsp;<span class="required">*</span></label>
-                                                        <input id="author" name="author" value="" size="30" required="" type="text">
-                                                    </p>
-                                                    <p class="comment-form-email"><label for="email">Email&nbsp;
-                                                            <span class="required">*</span></label>
-                                                        <input id="email" name="email" value="" size="30" required="" type="email">
-                                                    </p>
-                                                    <!-- <div class="comment-form-rating"><label for="rating">Your rating</label>
-                                                    <p class="stars">
-                                                        <span>
-                                                            <a class="star-1" href="#">1</a>
-                                                            <a class="star-2" href="#">2</a>
-                                                            <a class="star-3" href="#">3</a>
-                                                            <a class="star-4" href="#">4</a>
-                                                            <a class="star-5" href="#">5</a>
-                                                        </span>
-                                                    </p>
-                                                    <select title="product_cat" name="rating" id="rating" required="" style="display: none;">
-                                                        <option value="">Rate…</option>
-                                                        <option value="5">Perfect</option>
-                                                        <option value="4">Good</option>
-                                                        <option value="3">Average</option>
-                                                        <option value="2">Not that bad</option>
-                                                        <option value="1">Very poor</option>
-                                                    </select>
-                                                </div> -->
-                                                    <p class="comment-form-comment"><label for="comment">Your
-                                                            review&nbsp;<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" required=""></textarea></p><input name="wpml_language_code" value="en" type="hidden">
-                                                    <p class="form-submit"><input name="submit" id="submit" class="submit" value="Submit" type="submit"> <input name="comment_post_ID" value="27" id="comment_post_ID" type="hidden">
-                                                        <input name="comment_parent" id="comment_parent" value="0" type="hidden">
-                                                    </p>
-                                                </form>
-                                            </div><!-- #respond -->
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            <?php
-                            } else {
-                            ?>
-                                <div style="text-align: center; font-weight: 500; font-size: 18px;"><span id="reply-title" class="comment-reply-title">Bạn phải đăng nhập để bình luận!</span></div>
-                            <?php
-                            }
-                            ?>
-
-                        </div>
                     </div>
+                    <!--  -->
                 </div>
             </div>
             <div class="col-md-12 col-sm-12 dreaming_related-product">
@@ -297,42 +178,58 @@ $linkimg = "./assets/uploads/" . $hinh;
                     </h2>
                 </div>
                 <div class="owl-slick owl-products equal-container better-height" data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;slidesToShow&quot;:4}" data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
-                    <div class="product-item style-01 post-27 product type-product status-publish has-post-thumbnail product_cat-table product_cat-new-arrivals product_cat-lamp product_tag-table product_tag-sock  instock shipping-taxable purchasable product-type-variable has-default-attributes ">
-                        <div class="product-inner tooltip-left">
-                            <div class="product-thumb">
-                                <a class="thumb-link" href="#" tabindex="0">
-                                    <img class="img-responsive" src="./assets/client/images/apro101-1-600x778.jpg" alt="Long Oversized" width="600" height="778">
-                                </a>
-                                <div class="flash"><span class="onnew"><span class="text">New</span></span></div>
-                                <div class="group-button">
-                                    <div class="yith-wcwl-add-to-wishlist">
+                    <?php
+                    foreach ($sp_cung_loai as $sp) {
+                        extract($sp);
+                    ?>
+                        <div class="product-item recent-product style-01 rows-space-0 post-93 product type-product status-publish has-post-thumbnail product_cat-light product_cat-table product_cat-new-arrivals product_tag-table product_tag-sock first instock shipping-taxable purchasable product-type-simple  ">
+                            <div class="product-inner tooltip-left">
+                                <div class="product-thumb">
+                                    <a class="thumb-link" href="index.php?act=sanphamct&idsp=<?= $id_sp ?>" tabindex="0">
+                                        <img style="height: 345px;" class="img-responsive" src="./assets/uploads/<?= $hinh ?>" alt="Black Shirt" width="270" height="350">
+                                    </a>
+                                    <!-- <div class="flash">
+                                        <span class="onsale"><span class="text">New</span></span>
+                                    </div> -->
+                                    <div class="group-button">
+                                        <!-- <div class="yith-wcwl-add-to-wishlist">
                                         <div class="yith-wcwl-add-button show">
                                             <a href="#" class="add_to_wishlist">Add to Wishlist</a>
                                         </div>
                                     </div>
                                     <div class="akasha product compare-button">
                                         <a href="#" class="compare button">Compare</a>
-                                    </div>
-                                    <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                    <div class="add-to-cart">
-                                        <a href="#" class="button product_type_variable add_to_cart_button">Add to
-                                            cart</a>
+                                    </div> -->
+                                        <a href="index.php?act=sanphamct&idsp=<?= $id_sp ?>" class="button yith-wcqv-button">Quick View</a>
+                                        <div class="add-to-cart">
+                                            <form action="index.php?act=add_cart" method="POST">
+                                                <input type="hidden" name="id" value="<?= $id_sp ?>">
+                                                <input type="hidden" name="ten_sp" value="<?= $ten_sp ?>">
+                                                <input type="hidden" name="img_sp" value="<?= $hinh ?>">
+                                                <input type="hidden" name="gia_sp" value="<?= $don_gia ?>">
+                                                <input type="hidden" name="so_luong" value="1">
+                                                <input style="cursor: pointer; background-color: transparent; color: #222; font-size: 15px; font-weight: 500;" type="submit" class="button b" name="add_cart" value=" ">
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="product-info equal-elem">
-                                <h3 class="product-name product_title">
-                                    <a href="#" tabindex="0">Long Oversized</a>
-                                </h3>
-                                <div class="rating-wapper nostar">
+                                <div class="product-info equal-elem">
+                                    <h3 class="product-name product_title">
+                                        <a href="index.php?act=sanphamct&idsp=<?= $id_sp ?>" tabindex="0"><?= $ten_sp ?></a>
+                                    </h3>
+                                    <!-- <div class="rating-wapper nostar">
                                     <div class="star-rating"><span style="width:0%">Rated <strong class="rating">0</strong> out of 5</span></div>
                                     <span class="review">(0)</span>
+                                </div> -->
+                                    <span class="price"><span class="akasha-Price-amount amount"><?= number_format($don_gia) ?> <span class="akasha-Price-currencySymbol">VNĐ</span></span></span>
                                 </div>
-                                <span class="price"><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol">$</span>60.00</span></span>
                             </div>
                         </div>
-                    </div>
-                    <div class="product-item style-01 post-30 product type-product status-publish has-post-thumbnail product_cat-light product_cat-bed product_cat-specials product_tag-light product_tag-table product_tag-sock last instock featured downloadable shipping-taxable purchasable product-type-simple  ">
+                    <?php
+                    }
+                    ?>
+
+                    <!-- <div class="product-item style-01 post-30 product type-product status-publish has-post-thumbnail product_cat-light product_cat-bed product_cat-specials product_tag-light product_tag-table product_tag-sock last instock featured downloadable shipping-taxable purchasable product-type-simple  ">
                         <div class="product-inner tooltip-left">
                             <div class="product-thumb">
                                 <a class="thumb-link" href="#" tabindex="0">
@@ -541,7 +438,7 @@ $linkimg = "./assets/uploads/" . $hinh;
                                 <span class="price"><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol">$</span>105.00</span> – <span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol">$</span>110.00</span></span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 

@@ -47,63 +47,64 @@
 
                     <!-- Body -->
                     <div class="card-body">
-                         <!-- Media -->
-                         <div class="media">
-                                <div class="avatar avatar-xl mr-3">
-                                <h2 class="h5 d-block ml-2">Image</h2>
-                                </div>
+                        <!-- Media -->
+                        <div class="media">
+                            <div class="avatar avatar-xl mr-3">
+                                <h2 style="font-size:15px;" class="h5 d-block ml-2">Image</h2>
+                            </div>
 
-                                <div  class="media-body ml-4">
-                                    <div class="row">
-                                        <div class="col-md-5 mb-3 mb-md-0">
-                                            <h2 class="h5 d-block ml-4">Name</h2>
+                            <div class="media-body ml-4">
+                                <div class="row">
+                                    <div class="col-md-5 mb-3 mb-md-0">
+                                        <h2 style="font-size:15px;" class="h5 d-block ml-4">Name</h2>
 
-                                        </div>
+                                    </div>
 
-                                        <div class="col col-md-3 align-self-center">
-                                            <h5 class="h5 d-block ml-3">Price</h5>
-                                        </div>
+                                    <div class="col col-md-3 align-self-center">
+                                        <h5 style="font-size:15px;" class="h5 d-block ml-3">Price</h5>
+                                    </div>
 
-                                        <div class="col col-md-1 align-self-center">
-                                            <h5 class="h5 d-block">Sl</h5>
-                                        </div>
+                                    <div class="col col-md-1 align-self-center">
+                                        <h5 style="font-size:15px;" class="h5 d-block">SL</h5>
+                                    </div>
 
-                                        <div class="col col-md-3 align-self-center text-right">
-                                            <h5 class="h5 d-block mr-2">Total</h5>
-                                        </div>
+                                    <div class="col col-md-3 align-self-center text-right">
+                                        <h5 style="font-size:15px;" class="h5 d-block mr-2">Total</h5>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End Media -->
+                        </div>
+                        <!-- End Media -->
 
-                            <hr />
+                        <hr />
                         <?php
                         $i = 0;
                         foreach ($listhd as $hd) {
+                            $ttien = $hd['so_luong'] * $hd['don_gia'];
                         ?>
                             <!-- Media -->
                             <div class="media">
                                 <div class="avatar avatar-xl mr-3">
-                                    <img style="width: 80px;" class="img-fluid" src="./assets/uploads/<?= $hd['hinh'] ?>" alt="Image" />
+                                    <img style="width: 75px;" class="img-fluid" src="./assets/uploads/<?= $hd['hinh'] ?>" alt="Image" />
                                 </div>
 
-                                <div  class="media-body ml-4">
+                                <div class="media-body ml-4">
                                     <div class="row">
                                         <div class="col-md-5 mb-3 mb-md-0">
-                                            <h2 class="h5 d-block"><?= $hd['ten_sp'] ?></h2>
+                                            <h2 style="font-size:15px;" class="h5 d-block"><?= $hd['ten_sp'] ?></h2>
 
                                         </div>
 
                                         <div class="col col-md-3 align-self-center">
-                                            <h5><?= number_format($hd['don_gia']) ?> VNĐ</h5>
+                                            <h5 style="font-size:15px;"><?= number_format($hd['don_gia']) ?> VNĐ</h5>
                                         </div>
 
                                         <div class="col col-md-1 align-self-center">
-                                            <h5><?= $hd['so_luong'] ?></h5>
+                                            <h5 style="font-size:15px;"><?= $hd['so_luong'] ?></h5>
                                         </div>
 
                                         <div class="col col-md-3 align-self-center text-right">
-                                            <h5><?= number_format($hd['gia_tien']) ?> VNĐ</h5>
+                                            <h5 style="font-size:15px;"><?= number_format($ttien) ?> VNĐ</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +133,7 @@
                                     <dt class="col-sm-6">Ngày đặt hàng:</dt>
                                     <dd class="col-sm-6"><?= $hd['ngay_hd'] ?></dd>
                                     <dt class="col-sm-6">Tổng tiền thanh toán:</dt>
-                                    <dd style="color: red;" class="col-sm-6"><?= number_format($hd['gia_tien']) ?> VNĐ</dd>
+                                    <dd style="color: red; font-weight: 600;" class="col-sm-6"><?= number_format($hd['gia_tien']) ?> VNĐ</dd>
                                     <dt class="col-sm-6">Phương thức thanh toán:</dt>
                                     <dd class="col-sm-6"><?= $bill_pttt ?></dd>
 
@@ -161,11 +162,11 @@
                     <!-- Body -->
                     <div class="card-body">
                         <a class="media align-items-center" href="ecommerce-customer-details.html">
-                            <div class="avatar avatar-circle mr-3">
-                                <span style="font-size: 15px; font-weight:500;" class="text-body text-hover-primary">Họ Tên:</span>
+                            <div class="avatar avatar-circle mr-2">
+                                <span style="font-size: 14px; font-weight:500;" class="text-body text-hover-primary">Họ Tên:</span>
                             </div>
                             <div class="media-body">
-                                <span style="font-size: 16px; font-weight:600;" class="text-body text-hover-primary"><?= $hd['ten_kh'] ?></span>
+                                <span style="font-size: 15px; font-weight:600;" class="text-body text-hover-primary"><?= $hd['ten_kh'] ?></span>
                             </div>
                             <div class="media-body text-right">
                                 <i class="tio-chevron-right text-body"></i>
@@ -189,16 +190,16 @@
                         <hr />
 
                         <div class="d-flex justify-content-between align-items-center">
-                            <h5>Thông tin liên lạc</h5>
+                            <h5 style="font-size: 16px; font-weight: 500;">Thông tin liên lạc</h5>
                             <!-- <a class="link" href="javascript:;">Edit</a> -->
                         </div>
 
                         <ul class="list-unstyled list-unstyled-py-2">
-                            <li>
+                            <li style="font-size: 14px;">
                                 <i class="tio-online mr-2"></i>
                                 <?= $hd['email'] ?>
                             </li>
-                            <li>
+                            <li style="font-size: 14px;">
                                 <i class="tio-android-phone-vs mr-2"></i>
                                 <?= $hd["sdt"] ?>
                             </li>
@@ -207,22 +208,22 @@
                         <hr />
 
                         <div class="d-flex justify-content-between align-items-center">
-                            <h5>Địa chỉ giao hàng</h5>
+                            <h5 style="font-size: 16px; font-weight: 500;">Địa chỉ giao hàng</h5>
 
                         </div>
 
-                        <span class="d-block">
+                        <span style="font-size: 14px;" class="d-block">
                             <?= $hd["dia_chi"] ?>
                         </span>
 
                         <hr />
 
                         <div class="d-flex justify-content-between align-items-center">
-                            <h5>Ghi chú</h5>
+                            <h5 style="font-size: 16px; font-weight: 500;">Ghi chú</h5>
 
                         </div>
 
-                        <span class="d-block">
+                        <span style="font-size: 14px;" class="d-block">
                             <?= $hd["ghi_chu"] ?>
                         </span>
 

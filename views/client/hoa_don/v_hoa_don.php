@@ -109,7 +109,7 @@
                                                                                              placeholder="" value=""
                                                                                              autocomplete="family-name"></span>
                                             </p> -->
-                                            <p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label for="billing_company" class="">Họ & Tên&nbsp;<span style="color: red;" class="optional">*</span></label><span class="akasha-input-wrapper"><input type="text" class="input-text " name="ho_ten" id="billing_company" placeholder="Phạm Anh Tuấn" value="<?= $ho_ten ?>" autocomplete="organization"></span>
+                                            <p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label for="billing_company" class="">Họ & Tên&nbsp;<span style="color: red;" class="optional">*</span></label><span class="akasha-input-wrapper"><input type="text" class="input-text "  name="ho_ten" id="billing_company" placeholder="Họ Tên" value="<?= $ho_ten ?>" autocomplete="organization"></span>
                                             </p>
                                             <p class="form-row form-row-wide adchair-field update_totals_on_change validate-required" id="billing_country_field" data-priority="40"><label for="billing_country" class="">Giới Tính&nbsp;<abbr class="required" title="required">*</abbr></label>
                                                 <span class="akasha-input-wrapper">

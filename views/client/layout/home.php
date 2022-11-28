@@ -573,43 +573,57 @@
         </div>
         <div class="akasha-products style-01">
             <div class="response-product product-list-owl owl-slick equal-container better-height" data-slick="{&quot;arrows&quot;:true,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:4,&quot;rows&quot;:1}" data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
-                <div class="product-item recent-product style-01 rows-space-0 post-93 product type-product status-publish has-post-thumbnail product_cat-light product_cat-table product_cat-new-arrivals product_tag-table product_tag-sock first instock shipping-taxable purchasable product-type-simple  ">
-                    <div class="product-inner tooltip-left">
-                        <div class="product-thumb">
-                            <a class="thumb-link" href="#" tabindex="0">
-                                <img class="img-responsive" src="./assets/client/images/apro13-1-270x350.jpg" alt="Black Shirt" width="270" height="350">
-                            </a>
-                            <div class="flash">
-                                <span class="onnew"><span class="text">New</span></span>
-                            </div>
-                            <div class="group-button">
-                                <div class="yith-wcwl-add-to-wishlist">
-                                    <div class="yith-wcwl-add-button show">
-                                        <a href="#" class="add_to_wishlist">Add to Wishlist</a>
+                <?php
+                foreach ($spnew as $sp) {
+                    extract($sp);
+                ?>
+                    <div class="product-item recent-product style-01 rows-space-0 post-93 product type-product status-publish has-post-thumbnail product_cat-light product_cat-table product_cat-new-arrivals product_tag-table product_tag-sock first instock shipping-taxable purchasable product-type-simple  ">
+                        <div class="product-inner tooltip-left">
+                            <div class="product-thumb">
+                                <a class="thumb-link" href="index.php?act=sanphamct&idsp=<?= $id_sp ?>" tabindex="0">
+                                    <img style="height: 345px;" class="img-responsive" src="./assets/uploads/<?= $hinh ?>" alt="Black Shirt" width="270" height="350">
+                                </a>
+                                <div class="flash">
+                                    <span class="onsale"><span class="text">New</span></span>
+                                </div>
+                                <div class="group-button">
+                                    <!-- <div class="yith-wcwl-add-to-wishlist">
+                                        <div class="yith-wcwl-add-button show">
+                                            <a href="#" class="add_to_wishlist">Add to Wishlist</a>
+                                        </div>
+                                    </div>
+                                    <div class="akasha product compare-button">
+                                        <a href="#" class="compare button">Compare</a>
+                                    </div> -->
+                                    <a href="index.php?act=sanphamct&idsp=<?= $id_sp ?>" class="button yith-wcqv-button">Quick View</a>
+                                    <div class="add-to-cart">
+                                        <form action="index.php?act=add_cart" method="POST">
+                                            <input type="hidden" name="id" value="<?= $id_sp ?>">
+                                            <input type="hidden" name="ten_sp" value="<?= $ten_sp ?>">
+                                            <input type="hidden" name="img_sp" value="<?= $hinh ?>">
+                                            <input type="hidden" name="gia_sp" value="<?= $don_gia ?>">
+                                            <input type="hidden" name="so_luong" value="1">
+                                            <input style="cursor: pointer; background-color: transparent; color: #222; font-size: 15px; font-weight: 500;" type="submit" class="button b" name="add_cart" value=" ">
+                                        </form>
                                     </div>
                                 </div>
-                                <div class="akasha product compare-button">
-                                    <a href="#" class="compare button">Compare</a>
-                                </div>
-                                <a href="#" class="button yith-wcqv-button">Quick View</a>
-                                <div class="add-to-cart">
-                                    <a href="#" class="button product_type_simple add_to_cart_button">Add to cart</a>
-                                </div>
                             </div>
-                        </div>
-                        <div class="product-info equal-elem">
-                            <h3 class="product-name product_title">
-                                <a href="#" tabindex="0">Black Shirt</a>
-                            </h3>
-                            <div class="rating-wapper nostar">
-                                <div class="star-rating"><span style="width:0%">Rated <strong class="rating">0</strong> out of 5</span></div>
-                                <span class="review">(0)</span>
+                            <div class="product-info equal-elem">
+                                <h3 class="product-name product_title">
+                                    <a href="index.php?act=sanphamct&idsp=<?= $id_sp ?>" tabindex="0"><?= $ten_sp ?></a>
+                                </h3>
+                                <!-- <div class="rating-wapper nostar">
+                                    <div class="star-rating"><span style="width:0%">Rated <strong class="rating">0</strong> out of 5</span></div>
+                                    <span class="review">(0)</span>
+                                </div> -->
+                                <span class="price"><span class="akasha-Price-amount amount"><?= number_format($don_gia) ?> <span class="akasha-Price-currencySymbol">VNĐ</span></span></span>
                             </div>
-                            <span class="price"><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol">$</span>109.00</span></span>
                         </div>
                     </div>
-                </div>
-                <div class="product-item recent-product style-01 rows-space-0 post-49 product type-product status-publish has-post-thumbnail product_cat-light product_cat-bed product_cat-sofas product_tag-multi product_tag-lamp  instock shipping-taxable purchasable product-type-simple">
+                <?php
+                }
+                ?>
+                <!-- <div class="product-item recent-product style-01 rows-space-0 post-49 product type-product status-publish has-post-thumbnail product_cat-light product_cat-bed product_cat-sofas product_tag-multi product_tag-lamp  instock shipping-taxable purchasable product-type-simple">
                     <div class="product-inner tooltip-left">
                         <div class="product-thumb">
                             <a class="thumb-link" href="#" tabindex="0">
@@ -789,7 +803,7 @@
                             <span class="price"><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol">$</span>79.00</span> – <span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol">$</span>139.00</span></span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

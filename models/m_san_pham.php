@@ -20,9 +20,16 @@ function loadall_sanpham_home()
     return $listsanpham;
 }
 
+function loadall_sanpham_new()
+{
+    $sql = "select * from san_pham where 1 order by id_sp desc limit 5";
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
+
 function loadone_sanpham($id)
 {
-    $sql = "select * from san_pham where id_sp=" . $id;
+    $sql = "select * from san_pham inner join danh_muc on san_pham.id_dm = danh_muc.id_dm where id_sp=" . $id;
     $sp = pdo_query_one($sql);
     return $sp;
 }

@@ -55,13 +55,13 @@
                      "pagination": "datatablePagination"
                    }'>
                         <thead class="thead-light">
-                            <tr>
+                            <tr style="font-size: 15px;">
 
                                 <th class="table-column-pl-0">Mã đơn hàng</th>
                                 <th>Ngày đặt</th>
                                 <th>Số lượng</th>
-                                <th>Tổng giá trị</th>
-                                <th>Tình trạng</th>
+                                <th class="pl-3">Tổng giá trị</th>
+                                <th style="padding-left: 30px;">Tình trạng</th>
 
 
                             </tr>
@@ -72,26 +72,28 @@
                             if (is_array($listbill)) {
                                 foreach ($listbill as $bill) {
                                     extract($bill);
-                                    $ttdh = get_ttdh($bill['thanh_toan']);
+                                    $ttdh = get_ttdh($bill['tinh_trang']);
                                     $countsp = loadall_cart_count($bill['id_hd']);
+
                             ?>
                                     <tr>
-
                                         <td class="table-column-pl-0">
-                                            <a href="ecommerce-order-details.html"><?= $bill['id_hd'] ?></a>
-                                        </td>
-                                        <td><?= $bill['ngay_hd'] ?></td>
-                                        <td>
-                                            <a class="text-body" href="ecommerce-customer-details.html"><?= $countsp ?></a>
+                                            <span style="font-size: 14px; margin-left: 35px;"><?= $bill['id_hd'] ?></span>
                                         </td>
                                         <td>
-                                            <span class="badge badge-soft-success">
-                                                <span class="legend-indicator bg-success"></span><?= $bill['gia_tien'] ?>
+                                            <span style="font-size: 14px;"><?= $bill['ngay_hd'] ?></span>
+                                        </td>
+                                        <td>
+                                            <span style="font-size: 14px; padding-left: 4px;" class="text-body ml-4"><?= $countsp ?></span>
+                                        </td>
+                                        <td>
+                                            <span style="font-size: 13px;" class="badge badge-soft-success">
+                                                <span class="legend-indicator bg-success"></span><?= number_format($bill['gia_tien']) ?> VNĐ
                                             </span>
                                         </td>
-                                        <td>
-                                            <span class="badge badge-soft-info">
-                                                <span class="legend-indicator bg-info"></span>$ttdh
+                                        <td style="width: 190px;">
+                                            <span style="font-size: 13px;" class="badge badge-soft-info">
+                                                <span class="legend-indicator bg-info"></span><?= $ttdh ?>
                                             </span>
                                         </td>
 

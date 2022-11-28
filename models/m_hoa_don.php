@@ -17,9 +17,9 @@ function insert_khachhang($ho_ten, $gioi_tinh, $ngay_sinh, $dia_chi, $sdt, $emai
     return pdo_execute_lastinsertid($sql);
 }
 
-function insert_hoadon($ngaydathang, $id_khachhang, $gia_tien, $pttt, $tinh_trang)
+function insert_hoadon($ngaydathang, $id_khachhang, $gia_tien, $pttt, $tinh_trang, $id_nd)
 {
-    $sql = "insert into hoa_don(ngay_hd,id_kh,gia_tien,thanh_toan,tinh_trang) values('$ngaydathang', '$id_khachhang', '$gia_tien', '$pttt', '$tinh_trang')";
+    $sql = "insert into hoa_don(ngay_hd,id_kh,gia_tien,thanh_toan,tinh_trang,id_nd) values('$ngaydathang', '$id_khachhang', '$gia_tien', '$pttt', '$tinh_trang', '$id_nd')";
     return pdo_execute_lastinsertid($sql);
 }
 
@@ -39,7 +39,6 @@ function loadall_bill($id_nd = 0)
 }
 
 // 
-
 
 function loadall_hoadon()
 {
@@ -98,27 +97,24 @@ function get_ttdh($n)
 {
     switch ($n) {
         case '0':
-            $tt = 'Đơn hàng mới';
+            $tt = 'Đã thanh toán!';
             break;
         case '1':
-            $tt = 'Đang xử lý';
+            $tt = 'Chưa thanh toán!';
             break;
         case '2':
-            $tt = 'Đang giao hàng';
-            break;
-        case '3':
-            $tt = 'Đã giao hàng';
+            $tt = 'Đơn hàng bị hủy!';
             break;
         default:
-            $tt = 'Đơn hàng mới';
+            $tt = 'Chưa thanh toán!';
             break;
     }
     return $tt;
 }
 
-function loadall_cart_count($idbill)
+function loadall_cart_count($id_hd)
 {
-    $sql = "select * from hoa_don where id_hd=" . $idbill;
-    $bill = pdo_query($sql);
-    return sizeof($bill);
+    $sql = "select * from ct_hoa_don where id_hd=" . $id_hd;
+    $ct_bill = pdo_query($sql);
+    return sizeof($ct_bill);
 }

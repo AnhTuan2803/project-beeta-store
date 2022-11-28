@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['dat_hang'])) {
-    if (isset($_SESSION['email'])) $iduser = $_SESSION['email']['id_nd'];
-    else $iduser = 0;
+    if (isset($_SESSION['email'])) $id_nd = $_SESSION['email']['id_nd'];
+    else $id_nd = 0;
 
     $ho_ten = $_POST['ho_ten'];
     $gioi_tinh = $_POST['gioi_tinh'];
@@ -20,7 +20,7 @@ if (isset($_POST['dat_hang'])) {
 
     $id_khachhang = insert_khachhang($ho_ten, $gioi_tinh, $ngay_sinh, $dia_chi, $sdt, $email, $ghi_chu);
 
-    $id_hoadon = insert_hoadon($ngaydathang, $id_khachhang, $tongtien, $pttt, $tinh_trang);
+    $id_hoadon = insert_hoadon($ngaydathang, $id_khachhang, $tongtien, $pttt, $tinh_trang, $id_nd);
 
     foreach ($_SESSION['myCart'] as $cart) {
         $id_ct_hoadon = insert_ct_hoadon($id_hoadon, $cart[0], $cart[3], $cart[2]);
