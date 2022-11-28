@@ -5,6 +5,7 @@ include "../../models/m_san_pham.php";
 include "../../models/m_khach_hang.php";
 include "../../models/m_hoa_don.php";
 include "../../models/m_nguoi_dung.php";
+include "../../models/m_binh_luan.php";
 include "../admin/layout/header.php";
 include "../admin/layout/box_left.php";
 
@@ -79,7 +80,17 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'cap_nhat_nguoi_dung':
             include "../../controllers/admin/nguoi_dung/c_cap_nhat_nguoi_dung.php";
             break;
-            // 
+            // Bình luận
+        case 'binh_luan':
+            include "../../controllers/admin/binh_luan/c_danh_sach_binh_luan.php";
+            break;
+        case 'xoa_bl':
+            include "../../controllers/admin/binh_luan/c_xoa_binh_luan.php";
+            break;
+        // Thống kê
+        case 'thong_ke':
+            include "../../controllers/admin/thong_ke/c_thong_ke_doanh_thu.php";
+            break;
         case 'logout':
             session_unset();
             break;

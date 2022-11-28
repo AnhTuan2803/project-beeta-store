@@ -1,9 +1,26 @@
 <?php
-     function loadall_khachhang(){
-        $sql = "select * from khach_hang order by id_kh desc";
-            $listkhachhang = pdo_query($sql);
-        return $listkhachhang;
+function loadall_khachhang()
+{
+    if(isset($_GET['trang'])){
+        $page = $_GET['trang'];
+    }else{
+        $page ="";
     }
+    if($page =="" || $page == 1){
+        $begin = 0;
+    }else{
+        $begin = ($page*5)-5;
+    }
+    $sql = "select * from khach_hang order by id_kh desc limit $begin,5";
+    $listkhachhang = pdo_query($sql);
+    return $listkhachhang;
+}
+function phantrang_kh()
+{
+    $sql = "select * from khach_hang order by id_kh desc";
+    $phantrang_kh = pdo_query($sql);
+    return $phantrang_kh;
+}
 
      function delete_khachhang($id){
         $sql = "delete from khach_hang where id_kh=" . $id;

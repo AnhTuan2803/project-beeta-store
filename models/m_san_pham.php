@@ -8,9 +8,25 @@ function insert_sanpham($tensp, $giasp, $motasp, $hinh, $ngaytaosp, $iddm)
 
 function loadall_sanpham()
 {
-    $sql = "select * from san_pham order by id_sp desc";
+    if(isset($_GET['trang'])){
+        $page = $_GET['trang'];
+    }else{
+        $page ="";
+    }
+    if($page =="" || $page == 1){
+        $begin = 0;
+    }else{
+        $begin = ($page*5)-5;
+    }
+    $sql = "select * from san_pham order by id_sp desc limit $begin,5";
     $listsanpham = pdo_query($sql);
     return $listsanpham;
+}
+function phantrang_sp()
+{
+    $sql = "select * from san_pham order by id_sp desc";
+    $phantrang_sp = pdo_query($sql);
+    return $phantrang_sp;
 }
 
 function loadall_sanpham_home()

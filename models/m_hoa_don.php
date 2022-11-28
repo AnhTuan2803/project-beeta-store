@@ -43,9 +43,25 @@ function loadall_bill($id_nd = 0)
 
 function loadall_hoadon()
 {
-    $sql = "select * from `hoa_don` order by id_hd desc";
+    if(isset($_GET['trang'])){
+        $page = $_GET['trang'];
+    }else{
+        $page ="";
+    }
+    if($page =="" || $page == 1){
+        $begin = 0;
+    }else{
+        $begin = ($page*5)-5;
+    }
+    $sql = "select * from hoa_don order by id_hd desc limit $begin,5";
     $listhoadon = pdo_query($sql);
     return $listhoadon;
+}
+function phantrang_hd()
+{
+    $sql = "select * from hoa_don order by id_hd desc";
+    $phantrang_hd = pdo_query($sql);
+    return $phantrang_hd;
 }
 
 function loadone_hoadon($id)
@@ -122,3 +138,11 @@ function loadall_cart_count($idbill)
     $bill = pdo_query($sql);
     return sizeof($bill);
 }
+function Thong_ke_hoa_don()
+{
+    $sql='SELECT concat(Month(ngay_hd),"-",Year(ngay_hd)) as thang,sum(gia_tien) as tong  FROM `hoa_don` 
+    where tinh_trang in(0) group by Month(ngay_hd),Year(ngay_hd) order by Month(ngay_hd),Year(ngay_hd)';
+    $thongke = pdo_query($sql);
+    return $thongke;
+}
+?>

@@ -4,12 +4,28 @@
         pdo_execute($sql);
     }
 
-    function loadall_danhmuc(){
-        $sql = "select * from danh_muc order by id_dm desc";
-            $listdanhmuc = pdo_query($sql);
+    function loadall_danhmuc()
+    {
+        if(isset($_GET['trang'])){
+            $page = $_GET['trang'];
+        }else{
+            $page ="";
+        }
+        if($page =="" || $page == 1){
+            $begin = 0;
+        }else{
+            $begin = ($page*5)-5;
+        }
+        $sql = "select * from danh_muc order by id_dm desc limit $begin,5";
+        $listdanhmuc = pdo_query($sql);
         return $listdanhmuc;
     }
-
+    function phantrang_dm()
+    {
+        $sql = "select * from danh_muc order by id_dm desc";
+        $phantrang_dm = pdo_query($sql);
+        return $phantrang_dm;
+    }
     function delete_danhmuc($id){
         $sql = "delete from danh_muc where id_dm=" . $id;
         pdo_execute($sql);
