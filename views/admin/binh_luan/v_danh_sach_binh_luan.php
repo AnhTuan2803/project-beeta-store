@@ -9,9 +9,7 @@
 
                 </div>
 
-                <!-- <div class="col-sm-auto">
-          <a class="btn btn-primary" href="index.php?act=them_danh_muc">Thêm danh mục</a>
-        </div> -->
+
             </div>
             <!-- End Row -->
 
@@ -93,12 +91,7 @@
                    }'>
                     <thead class="thead-light">
                         <tr>
-                            <!-- <th scope="col" class="table-column-pr-0">
-                                <div class="custom-control custom-checkbox">
-                  <input id="datatableCheckAll" type="checkbox" class="custom-control-input">
-                  <label class="custom-control-label" for="datatableCheckAll"></label>
-                </div>
-                            </th> -->
+
                             <th>Id</th>
                             <th>NỘI DUNG BÌNH LUẬN</th>
                             <th>ID KHÁCH HÀNG</th>
@@ -160,27 +153,7 @@
                 <div class="row justify-content-center justify-content-sm-between align-items-sm-center">
                     <div class="col-sm mb-2 mb-sm-0">
                         <div class="d-flex justify-content-center justify-content-sm-start align-items-center">
-                            <!-- <span class="mr-2">Showing:</span> -->
 
-                            <!-- Select -->
-                            <!-- <select id="datatableEntries" class="js-select2-custom select2-hidden-accessible" data-hs-select2-options="{
-                            &quot;minimumResultsForSearch&quot;: &quot;Infinity&quot;,
-                            &quot;customClass&quot;: &quot;custom-select custom-select-sm custom-select-borderless&quot;,
-                            &quot;dropdownAutoWidth&quot;: true,
-                            &quot;width&quot;: true
-                          }" data-select2-id="datatableEntries" tabindex="-1" aria-hidden="true">
-                    <option value="12" selected="" data-select2-id="2">12</option>
-                    <option value="14" data-select2-id="3">14</option>
-                    <option value="16" data-select2-id="4">16</option>
-                    <option value="18" data-select2-id="5">18</option>
-                  </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1"><span class="selection"><span class="select2-selection custom-select custom-select-sm custom-select-borderless" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-datatableEntries-container"><span class="select2-selection__rendered" id="select2-datatableEntries-container" role="textbox" aria-readonly="true" title="12"><span>12</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span> -->
-                            <!-- End Select -->
-
-                            <!-- <span class="text-secondary mr-2">of</span> -->
-
-                            <!-- Pagination Quantity -->
-                            <!-- <span id="datatableWithPaginationInfoTotalQty">20</span>
-                </div> -->
                         </div>
 
                         <div class="col-sm-auto">
