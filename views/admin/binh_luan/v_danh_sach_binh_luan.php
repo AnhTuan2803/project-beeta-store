@@ -101,7 +101,7 @@
                             </th> -->
                             <th>Id</th>
                             <th>NỘI DUNG BÌNH LUẬN</th>
-                            <th>IDUSER</th>
+                            <th>ID KHÁCH HÀNG</th>
                             <th>IDSP</th>
                             <th>NGÀY BÌNH LUẬN</th>
                             <th style="padding-left:48px;">Điều khiển</th>
@@ -118,9 +118,9 @@
                             <tr>
                                 <td><?= $id ?></td>
                                 <td><?= $binhluan['noi_dung'] ?></td>
-                                <th><?= $binhluan['id_user']  ?></th>
+                                <th><?= $binhluan['id_nd']  ?></th>
                                 <th><?= $binhluan['id_sp']  ?></th>
-                                <th><?= $binhluan['ngay_binh_luan']  ?></th>
+                                <th><?= $binhluan['ngay_bl']  ?></th>
                                 <td>
                                     <div class="btn-group" role="group">
 
