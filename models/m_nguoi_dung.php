@@ -6,12 +6,30 @@
 }
 
 
+
 function loadall_taikhoan()
 {
-    $sql = "select * from nguoi_dung order by id_nd desc";
-    $listtaikhoan = pdo_query($sql);
-    return $listtaikhoan;
+    if(isset($_GET['trang'])){
+        $page = $_GET['trang'];
+    }else{
+        $page ="";
+    }
+    if($page =="" || $page == 1){
+        $begin = 0;
+    }else{
+        $begin = ($page*5)-5;
+    }
+    $sql = "select * from nguoi_dung order by id_nd desc limit $begin,5";
+    $listnguoidung = pdo_query($sql);
+    return $listnguoidung;
 }
+function phantrang_tk()
+{
+    $sql = "select * from nguoi_dung order by id_nd desc";
+    $phantrang_tk = pdo_query($sql);
+    return $phantrang_tk;
+}
+
 
 function insert_taikhoan($name,$user, $pass, $email,$date)
 {
