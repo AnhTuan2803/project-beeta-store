@@ -18,7 +18,7 @@ function loadall_binhluan_client($id_sp)
     return $listbl;
 }
 
-function loadall_binhluan()
+function loadall_binhluan($kyw)
 {
     if (isset($_GET['trang'])) {
         $page = $_GET['trang'];
@@ -30,7 +30,11 @@ function loadall_binhluan()
     } else {
         $begin = ($page * 5) - 5;
     }
-    $sql = "select * from binh_luan order by id_bl desc limit $begin,5";
+    $sql = "select * from binh_luan where 1";
+    if($kyw!=""){
+        $sql.=" and noi_dung like '%".$kyw."%'";
+    }
+    $sql.=" order by id_bl desc limit $begin,5";
     $listbinhluan = pdo_query($sql);
     return $listbinhluan;
 }

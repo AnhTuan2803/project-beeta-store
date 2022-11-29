@@ -115,15 +115,18 @@ if (is_array($ct_hoadon)) {
                     <dd class="col-sm-6"><?= number_format($hd['gia_tien']) ?> VNĐ</dd>
                     <dt class="col-sm-6">Thanh toán:</dt>
                     <dd class="col-sm-6"><?= number_format($hd['gia_tien']) ?> VNĐ</dd>
-                    <dt class="col-sm-6">
-                      <select name="tinh_trang" id="">
-                        <option value="1" <?php echo ($hd['tinh_trang'] == 1) ? "selected" : "" ?>>Chưa thanh toán</option>
-                        <option value="0" <?php echo ($hd['tinh_trang'] == 0) ? "selected" : "" ?>>Đã thanh toán</option>
-                        <option value="2" <?php echo ($hd['tinh_trang'] == 2) ? "selected" : "" ?>>Đơn hàng bị hủy</option>
-                      </select>
-                    </dt>
-                    <dd class="col-sm-6"><input type="submit" class="btn btn-success" name="capnhat" value="Cập Nhật"></input></dd>
-                  </dl>
+                    <dt class="col-sm-6">Tình trạng thanh toán:</dt>
+                    <dd class="col-sm-6">
+                      <?php
+                        if ($hd['tinh_trang'] == 0){
+                          $tt = "Đã thanh toán";
+                        }else if($hd['tinh_trang'] == 1){
+                          $tt = "Chưa thanh toán";
+                        }else if($hd['tinh_trang'] == 2){
+                          $tt = "Đơn hàng bị hủy";
+                        }
+                        echo $tt?>
+                    </dd>
                   <!-- End Row -->
                 </div>
               </div>

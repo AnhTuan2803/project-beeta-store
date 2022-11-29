@@ -158,7 +158,7 @@
                                                     <i class="fa-solid tio-visible-outlined dropdown-item-icon"></i>Xem chi tiết
                                                 </a>
                                                 <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="<?= $sua_tt ?>">
-                                                    <i class="fa-solid fa-trash dropdown-item-icon"></i>Cập nhật tình trạng
+                                                <i class="fa-solid fa-screwdriver-wrench dropdown-item-icon"></i>Cập nhật tình trạng
                                                 </a>
                                             </div>
                                         </div>

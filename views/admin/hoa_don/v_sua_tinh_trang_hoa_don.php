@@ -11,7 +11,7 @@ if (is_array($hd)) {
             <div class="row align-items-center">
                 <div class="col-sm mb-2 mb-sm-0">
 
-                    <h1 class="page-header-title">Sửa tình trang hóa đơn</h1>
+                    <h1 class="page-header-title">Cập nhật tình trạng hóa đơn</h1>
                 </div>
             </div>
             <!-- End Row -->
@@ -38,7 +38,6 @@ if (is_array($hd)) {
                                     <div class="col-sm-6">
                                         <!-- Form Group -->
                                         <div class="form-group">
-                                            <label for="SKULabel" class="input-label">Tình trạng hóa đơn</label>
 
                                             <select name="tinh_trang" id="">
                                                 <option value="1" <?php echo ($hd['tinh_trang'] == 1) ? "selected" : "" ?>>Chưa thanh toán</option>
