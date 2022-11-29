@@ -73,7 +73,7 @@
                         // ID of the element in which to draw the chart.
                         element: 'chart',
                         lineColors: ['orange'],
-                        fillOpacity: 0.2,
+                        fillOpacity: 0.3,
                         pointFillColors: ['#fff'],
                         pointStrokeColors: ['#ff5a00'],
                         // Chart data records -- each entry in this array corresponds to a point on

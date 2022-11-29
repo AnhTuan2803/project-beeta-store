@@ -87,7 +87,7 @@
                  "type": "css-animation"
                }'>
                     <div class="avatar avatar-sm avatar-circle">
-                      <img class="avatar-img" src="..\..\assets\admin\img\160x160\img6.jpg" alt="Image Description">
+                      <img class="avatar-img" src="..\..\assets\admin\img\160x160\img1.jpg" alt="Image Description">
                       <span class="avatar-status avatar-sm-status avatar-status-success"></span>
                     </div>
                   </a></div>
@@ -97,7 +97,7 @@
                   <div class="dropdown-item-text">
                     <div class="media align-items-center">
                       <div class="avatar avatar-sm avatar-circle mr-2">
-                        <img class="avatar-img" src="..\..\assets\admin\img\160x160\img6.jpg" alt="Image Description">
+                        <img class="avatar-img" src="..\..\assets\admin\img\160x160\img1.jpg" alt="Image Description">
                       </div>
                       <div class="media-body">
                         <span class="card-title h5"><?php
