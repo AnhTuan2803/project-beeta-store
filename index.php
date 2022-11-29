@@ -8,25 +8,24 @@ include "./models/m_san_pham.php";
 include "./models/m_danh_muc.php";
 
 if (!isset($_SESSION['myCart'])) $_SESSION['myCart'] = [];
-
-$sphome = loadall_sanpham_home();
+$list_dm = loadall_danhmuc();
 $spnew = loadall_sanpham_new();
-$listsanpham = loadall_sanpham();
 
 if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
+        case 'home':
+            include "./views/client/layout/header.php";
+            include "./views/client/layout/banner.php";
+            include "./controllers/client/home/c_home.php";
+            break;
         case 'shop':
             include "./views/client/layout/header_sub.php";
-            include "./views/client/san_pham/v_san_pham.php";
-            break;
-        case 'sanpham_gird':
-            include "./views/client/layout/header_sub.php";
-            include "./views/client/san_pham/v_san_pham.php";
+            include "./controllers/client/san_pham/c_san_pham.php";
             break;
         case 'sanpham_list':
             include "./views/client/layout/header_sub.php";
-            include "./views/client/san_pham/v_san_pham_list.php";
+            include "./controllers/client/san_pham/c_san_pham_list.php";
             break;
         case 'sanphamct':
             include "./views/client/layout/header_sub.php";
@@ -81,12 +80,12 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         default:
             include "./views/client/layout/header.php";
             include "./views/client/layout/banner.php";
-            include "./views/client/layout/home.php";
+            include "./controllers/client/home/c_home.php";
             break;
     }
 } else {
     include "./views/client/layout/header.php";
     include "./views/client/layout/banner.php";
-    include "./views/client/layout/home.php";
+    include "./controllers/client/home/c_home.php";
 }
 include "./views/client/layout/footer.php";

@@ -18,7 +18,7 @@
                                             extract($dm);
                                         }
                                         // $linkdm = "index.php?act=sanpham&iddm=" . $id_dm;
-                                        echo '<a target="_self" href="#">' . $ten_dm . '</a>';
+                                        echo '<a target="_self" href="index.php?act=home&iddm=' . $id_dm . '">' . $ten_dm . '</a>';
                                         ?>
                                     </h6>
                                 </div>
@@ -45,7 +45,7 @@
                                             extract($dm);
                                         }
                                         // $linkdm = "index.php?act=sanpham&iddm=" . $id_dm;
-                                        echo '<a target="_self" href="#">' . $ten_dm . '</a>';
+                                        echo '<a target="_self" href="index.php?act=home&iddm=' . $id_dm . '">' . $ten_dm . '</a>';
                                         ?>
                                     </h6>
                                 </div>
@@ -70,7 +70,7 @@
                                             extract($dm);
                                         }
                                         // $linkdm = "index.php?act=sanpham&iddm=" . $id_dm;
-                                        echo '<a target="_self" href="#">' . $ten_dm . '</a>';
+                                        echo '<a target="_self" href="index.php?act=home&iddm=' . $id_dm . '">' . $ten_dm . '</a>';
                                         ?>
                                     </h6>
                                 </div>
@@ -101,7 +101,7 @@
             <div class="response-product product-list-owl owl-slick equal-container better-height" data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;speed&quot;:300,&quot;slidesToShow&quot;:4,&quot;rows&quot;:2}" data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:4,&quot;slidesMargin&quot;:&quot;30&quot;}}]">
                 <?php
 
-                foreach ($sphome as $sp) {
+                foreach ($listsp_dm as $sp) {
                     extract($sp);
                     $linkimg = "./assets/uploads/" . $hinh;
                     echo ' <div class="product-item featured_products style-02 rows-space-30 post-34 product type-product status-publish has-post-thumbnail product_cat-light product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock sale featured shipping-taxable product-type-grouped">

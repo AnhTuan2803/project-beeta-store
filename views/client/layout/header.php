@@ -66,266 +66,17 @@
                                     <li id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
                                         <a class="akasha-menu-item-title" title="Shop" href="index.php?act=shop">Shop</a>
                                         <span class="toggle-submenu"></span>
-                                        <!-- <div class="submenu megamenu megamenu-shop">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <div class="akasha-listitem style-01">
-                                                        <div class="listitem-inner">
-                                                            <h4 class="title">Shop Layouts </h4>
-                                                            <ul class="listitem-list">
-                                                                <li>
-                                                                    <a href="shop.html" target="_self">Shop Grid </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="shop-list.html" target="_self">
-                                                                        <span class="image">
-                                                                            <img src="./assets/client/images/label-new.jpg" class="attachment-full size-full" alt="img">
-                                                                        </span>
-                                                                        Shop List
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="shop.html" target="_self">No Sidebar </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="shop-leftsidebar.html" target="_self">Left
-                                                                        Sidebar </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="shop-rightsidebar.html" target="_self">Right
-                                                                        Sidebar </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="akasha-listitem style-01">
-                                                        <div class="listitem-inner">
-                                                            <h4 class="title">Product Layouts </h4>
-                                                            <ul class="listitem-list">
-                                                                <li>
-                                                                    <a href="single-product.html" target="_self">Vertical
-                                                                        Thumbnails </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-product-policy.html" target="_self">
-                                                                        <span class="image">
-                                                                            <img src="./assets/client/images/label-new.jpg" class="attachment-full size-full" alt="img">
-                                                                        </span>
-                                                                        Extra Sidebar
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-product-rightsidebar.html" target="_self">
-                                                                        Right Sidebar </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-product-leftsidebar.html" target="_self">
-                                                                        Left Sidebar </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="akasha-listitem style-01">
-                                                        <div class="listitem-inner">
-                                                            <h4 class="title">
-                                                                Product Extends </h4>
-                                                            <ul class="listitem-list">
-                                                                <li>
-                                                                    <a href="single-product-bundle.html" target="_self">
-                                                                        <span class="image">
-                                                                            <img src="./assets/client/images/label-new.jpg" class="attachment-full size-full" alt="img">
-                                                                        </span>
-                                                                        Product Bundle
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-product-360deg.html" target="_self">
-                                                                        <span class="image">
-                                                                            <img src="./assets/client/images/label-hot.jpg" class="attachment-full size-full" alt="img">
-                                                                        </span>
-                                                                        Product 360 Deg </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-product-video.html" target="_self">
-                                                                        Video </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="akasha-listitem style-01">
-                                                        <div class="listitem-inner">
-                                                            <h4 class="title">
-                                                                Other Pages </h4>
-                                                            <ul class="listitem-list">
-                                                                <li>
-                                                                    <a href="cart.html">Cart </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="wishlist.html" target="_self">Wishlist </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="checkout.html" target="_self">Checkout </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="order-tracking.html" target="_self">Order
-                                                                        Tracking </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="my-account.html" target="_self">My Account </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="akasha-listitem style-01">
-                                                        <div class="listitem-inner">
-                                                            <h4 class="title">
-                                                                Product Types </h4>
-                                                            <ul class="listitem-list">
-                                                                <li>
-                                                                    <a href="single-product-simple.html" target="_self">
-                                                                        Simple </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-product.html" target="_self">
-                                                                        <span class="image"><img src="./assets/client/images/label-hot.jpg" class="attachment-full size-full" alt="img"></span>
-                                                                        Variable </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-product-external.html" target="_self">
-                                                                        External / Affiliate </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-product-group.html" target="_self">
-                                                                        Grouped </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-product-outofstock.html" target="_self">
-                                                                        Out Of Stock </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-product-onsale.html" target="_self">
-                                                                        On Sale </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
+
                                     </li>
                                     <li id="menu-item-996" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
                                         <a class="akasha-menu-item-title" title="Blog" href="index.php?act=blog">Blog</a>
                                         <span class="toggle-submenu"></span>
-                                        <!-- <div class="submenu megamenu megamenu-blog">
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <div class="akasha-listitem style-01">
-                                                        <div class="listitem-inner">
-                                                            <h4 class="title">
-                                                                Blog Layout </h4>
-                                                            <ul class="listitem-list">
-                                                                <li>
-                                                                    <a href="blog.html" target="_self">No Sidebar </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="blog-leftsidebar.html" target="_self">Left
-                                                                        Sidebar </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="blog-rightsidebar.html" target="_self">Right
-                                                                        Sidebar </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="blog.html" target="_self">Blog Standard </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="blog-grid.html" target="_self">Blog Grid </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <div class="akasha-listitem style-01">
-                                                        <div class="listitem-inner">
-                                                            <h4 class="title">
-                                                                Post Layout </h4>
-                                                            <ul class="listitem-list">
-                                                                <li>
-                                                                    <a href="single-post.html" target="_self">No
-                                                                        Sidebar </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-post-leftsidebar.html" target="_self">Left
-                                                                        Sidebar </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-post-rightsidebar.html" target="_self">Right
-                                                                        Sidebar </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-post-instagram.html" target="_self">
-                                                                        <span class="image">
-                                                                            <img src="./assets/client/images/label-hot.jpg" class="attachment-full size-full" alt="img">
-                                                                        </span>
-                                                                        Instagram In Post
-                                                                    </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-post-product.html" target="_self">
-                                                                        <span class="image">
-                                                                            <img src="./assets/client/images/label-new.jpg" class="attachment-full size-full" alt="img">
-                                                                        </span>
-                                                                        Product In Post
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="akasha-listitem style-01">
-                                                        <div class="listitem-inner">
-                                                            <h4 class="title">
-                                                                Post Format </h4>
-                                                            <ul class="listitem-list">
-                                                                <li>
-                                                                    <a href="single-post.html" target="_self">Standard </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-post-gallery.html" target="_self">Gallery </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="single-post-video.html" target="_self">
-                                                                        <span class="image">
-                                                                            <img src="./assets/client/images/label-hot.jpg" class="attachment-full size-full" alt="img">
-                                                                        </span>
-                                                                        Video
-                                                                    </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> -->
+
                                     </li>
                                     <li id="menu-item-237" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-237 parent">
                                         <a class="akasha-menu-item-title" title="Contact" href="index.php?act=contact">Contact</a>
                                         <span class="toggle-submenu"></span>
-                                        <!-- <ul role="menu" class="submenu">
-                                            <li id="menu-item-987" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-987">
-                                                <a class="akasha-menu-item-title" title="About" href="about.html">About</a>
-                                            </li>
-                                            <li id="menu-item-988" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-988">
-                                                <a class="akasha-menu-item-title" title="Contact" href="contact.html">Contact</a>
-                                            </li>
-                                            <li id="menu-item-990" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-990">
-                                                <a class="akasha-menu-item-title" title="Page 404" href="404.html">Page 404</a>
-                                            </li>
-                                        </ul> -->
+
                                     </li>
                                 </ul>
                             </div>
@@ -380,24 +131,31 @@
                                             </a>
                                         </div>
                                         <div class="block-search">
-                                            <form role="search" method="get" class="form-search block-search-form akasha-live-search-form">
+                                            <form role="search" action="index.php?act=home" method="POST" class="form-search block-search-form akasha-live-search-form">
                                                 <div class="form-content search-box results-search">
                                                     <div class="inner">
-                                                        <input autocomplete="off" class="searchfield txt-livesearch input" name="s" value="" placeholder="Search here..." type="text">
+                                                        <input autocomplete="off" class="searchfield txt-livesearch input" name="kyw" placeholder="Tìm kiếm sản phẩm..." type="text">
                                                     </div>
                                                 </div>
                                                 <input name="post_type" value="product" type="hidden">
                                                 <input name="taxonomy" value="product_cat" type="hidden">
                                                 <div class="category">
-                                                    <select title="product_cat" name="product_cat" id="64788262" class="category-search-option" tabindex="-1" style="display: none;">
-                                                        <option value="0">All Categories</option>
-                                                        <option class="level-0" value="light">Shoes</option>
-                                                        
+                                                    <select title="product_cat" name="iddm" id="64788262" class="category-search-option" tabindex="-1" style="display: none;">
+                                                        <option value="0">Tất cả danh mục</option>
+                                                        <?php
+                                                        foreach ($list_dm as $dm) {
+                                                            extract($dm);
+                                                        ?>
+                                                            <option class="level-0" value="<?= $id_dm ?>"><?= $ten_dm ?></option>
+                                                        <?php
+                                                        }
+                                                        ?>
+
                                                     </select>
                                                 </div>
-                                                <button type="submit" class="btn-submit">
-                                                    <span class="flaticon-magnifying-glass-1"></span>
-                                                </button>
+                                                <input type="submit" name="btn" value="Tìm kiếm" class="btn-submit">
+                                                <!-- <span class="flaticon-magnifying-glass-1"></span> -->
+                                                </input>
                                             </form><!-- block search -->
                                         </div>
                                     </div>

@@ -16,9 +16,15 @@
         <div class="row">
             <div class="main-content col-md-12">
                 <div class="shop-control shop-before-control">
-                    <div class="grid-view-mode">
+                    <div style="display: flex;" class="grid-view-mode">
+                    <div style="margin-right: 15px;" id="akasha_product_search-2" class="widget akasha widget_product_search">
+                        <form action="index.php?act=shop" method="POST" class="akasha-product-search">
+                            <input id="akasha-product-search-field-0" class="search-field" placeholder="Search products…" name="kyw" type="search">
+                            <button type="submit" name="btn1" value="Search">Search</button>
+                        </form>
+                    </div>
                         <form>
-                            <a href="index.php?act=sanpham_gird" data-toggle="tooltip" data-placement="top" class="modes-mode mode-grid display-mode active" value="grid">
+                            <a href="index.php?act=shop" data-toggle="tooltip" data-placement="top" class="modes-mode mode-grid display-mode active" value="grid">
                                 <span class="button-inner">
                                     Shop Grid
                                     <span></span>
@@ -36,45 +42,28 @@
                             </a>
                         </form>
                     </div>
-                    <form class="akasha-ordering" method="get">
-                        <select title="product_cat" name="orderby" class="orderby">
-                            <option value="menu_order" selected="selected">Default sorting</option>
-                            <option value="popularity">Sort by popularity</option>
-                            <option value="rating">Sort by average rating</option>
-                            <option value="date">Sort by latest</option>
-                            <option value="price">Sort by price: low to high</option>
-                            <option value="price-desc">Sort by price: high to low</option>
+                    <form action="index.php?act=shop" method="POST" class="akasha-ordering">
+                        <select title="product_cat" name="iddm" class="orderby">
+                            <option value="0" selected="selected">Tất cả danh mục</option>
+                            <?php
+                            foreach ($list_dm as $dm) {
+                                extract($dm);
+                            ?>
+                                <option class="popularity" value="<?= $id_dm ?>"><?= $ten_dm ?></option>
+                            <?php
+                            }
+                            ?>
+
                         </select>
-                    </form>
-                    <form class="per-page-form">
-                        <label>
-                            <select class="option-perpage">
-                                <option value="12" selected="">
-                                    Show 12
-                                </option>
-                                <option value="5">
-                                    Show 05
-                                </option>
-                                <option value="10">
-                                    Show 10
-                                </option>
-                                <option value="12">
-                                    Show 12
-                                </option>
-                                <option value="15">
-                                    Show 15
-                                </option>
-                                <option value="20">
-                                    Show All
-                                </option>
-                            </select>
-                        </label>
+                        <input style="font-weight: 500; height: 44px; margin-bottom: 3px;" type="submit" name="btn" value="Tìm kiếm" class="btn btn-light">
+
                     </form>
                 </div>
+
                 <div class="auto-clear equal-container better-height akasha-products">
                     <ul class="row products columns-3">
                         <?php
-                        foreach ($listsanpham as $sp) {
+                        foreach ($listsp_dm as $sp) {
                             extract($sp);
                             $linkimg = "./assets/uploads/" . $hinh;
                             echo ' <li class="product-item wow fadeInUp product-item rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-ts-6 style-01 post-24 product type-product status-publish has-post-thumbnail product_cat-chair product_cat-table product_cat-new-arrivals product_tag-light product_tag-hat product_tag-sock first instock featured shipping-taxable purchasable product-type-variable has-default-attributes"
@@ -581,7 +570,6 @@
                         <a class="page-numbers" href="#">2</a>
                         <a class="next page-numbers" href="#">Next</a>
                     </nav>
-                    <!-- <p class="akasha-result-count">Showing 1–12 of 20 results</p> -->
                 </div>
             </div>
         </div>
