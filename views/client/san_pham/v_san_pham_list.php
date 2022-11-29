@@ -18,7 +18,7 @@
                 <div class="shop-control shop-before-control">
                     <div class="grid-view-mode">
                         <form>
-                            <a href="index.php?act=sanpham_gird" data-toggle="tooltip" data-placement="top" class="modes-mode mode-grid display-mode" value="grid">
+                            <a href="index.php?act=shop" data-toggle="tooltip" data-placement="top" class="modes-mode mode-grid display-mode" value="grid">
                                 <span class="button-inner">
                                     Shop Grid
                                     <span></span>
@@ -36,17 +36,23 @@
                             </a>
                         </form>
                     </div>
-                    <form class="akasha-ordering" method="get">
-                        <select title="product_cat" name="orderby" class="orderby">
-                            <option value="menu_order" selected="selected">Default sorting</option>
-                            <option value="popularity">Sort by popularity</option>
-                            <option value="rating">Sort by average rating</option>
-                            <option value="date">Sort by latest</option>
-                            <option value="price">Sort by price: low to high</option>
-                            <option value="price-desc">Sort by price: high to low</option>
+                    <form action="index.php?act=sanpham_list" method="POST" class="akasha-ordering">
+                        <select title="product_cat" name="iddm" class="orderby">
+                            <option value="0" selected="selected">Tất cả danh mục</option>
+                            <?php
+                            foreach ($list_dm as $dm) {
+                                extract($dm);
+                            ?>
+                                <option class="popularity" value="<?= $id_dm ?>"><?= $ten_dm ?></option>
+                            <?php
+                            }
+                            ?>
+
                         </select>
+                        <input style="font-weight: 500; height: 44px; margin-bottom: 3px;" type="submit" name="btn" value="Tìm kiếm" class="btn btn-light">
+
                     </form>
-                    <form class="per-page-form">
+                    <!-- <form class="per-page-form">
                         <label>
                             <select class="option-perpage">
                                 <option value="12" selected="">
@@ -69,12 +75,12 @@
                                 </option>
                             </select>
                         </label>
-                    </form>
+                    </form> -->
                 </div>
                 <div class=" auto-clear equal-container better-height akasha-products">
                     <ul class="row products columns-3">
                         <?php
-                        foreach ($listsanpham as $sp) {
+                        foreach ($listsp_dm as $sp) {
                             extract($sp);
                             $linkimg = "./assets/uploads/" . $hinh;
                             echo '  <li class="product-item wow fadeInUp product-item rows-space-30 col-bg-4 col-xl-4 col-lg-6 col-md-6 col-sm-6 col-ts-6 style-01 post-28 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple" data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
@@ -84,7 +90,6 @@
                                         <img style="height: 345px;" class="img-responsive" src="' . $linkimg . '" alt="Classic Shirt" width="600" height="778">
                                     </a>
                                     <div class="flash">
-                                        <span class="onsale"><span class="number">-14%</span></span>
                                         <span class="onnew"><span class="text">New</span></span>
                                     </div>
                                     <div class="group-button">
@@ -606,9 +611,9 @@
             <div class="sidebar col-xl-3 col-lg-4 col-md-4 col-sm-12">
                 <div id="widget-area" class="widget-area shop-sidebar">
                     <div id="akasha_product_search-2" class="widget akasha widget_product_search">
-                        <form class="akasha-product-search">
-                            <input id="akasha-product-search-field-0" class="search-field" placeholder="Search products…" value="" name="s" type="search">
-                            <button type="submit" value="Search">Search</button>
+                        <form action="index.php?act=sanpham_list" method="POST" class="akasha-product-search">
+                            <input id="akasha-product-search-field-0" class="search-field" placeholder="Search products…" name="kyw" type="search">
+                            <button type="submit" name="btn1" value="Search">Search</button>
                         </form>
                     </div>
                     <div id="akasha_price_filter-2" class="widget akasha widget_price_filter">
@@ -703,7 +708,17 @@
                     <div id="akasha_product_categories-3" class="widget akasha widget_product_categories">
                         <h2 class="widgettitle">Product categories<span class="arrow"></span></h2>
                         <ul class="product-categories">
-                            <li class="cat-item cat-item-22"><a href="#">Shoes</a>
+                            <?php
+                            foreach ($list_dm as $dm) {
+                                extract($dm);
+                            ?>
+                                <li class="cat-item cat-item-22"><a href="index.php?act=sanpham_list&iddm=<?= $id_dm ?>"><?= $ten_dm ?></a>
+                                    <span class="count">(<?= $id_dm ?>)</span>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                            <!-- <li class="cat-item cat-item-22"><a href="#">Shoes</a>
                                 <span class="count">(11)</span>
                             </li>
                             <li class="cat-item cat-item-16"><a href="#">Accessories</a>
@@ -720,7 +735,7 @@
                                 <span class="count">(6)</span>
                             </li>
                             <li class="cat-item cat-item-26"><a href="#">Specials</a> <span class="count">(4)</span></li>
-                            <li class="cat-item cat-item-18"><a href="#">Women</a> <span class="count">(6)</span></li>
+                            <li class="cat-item cat-item-18"><a href="#">Women</a> <span class="count">(6)</span></li> -->
                         </ul>
                     </div>
                 </div><!-- .widget-area -->

@@ -8,15 +8,15 @@ function insert_sanpham($tensp, $giasp, $motasp, $hinh, $ngaytaosp, $iddm)
 
 function loadall_sanpham($kyw="")
 {
-    if(isset($_GET['trang'])){
+    if (isset($_GET['trang'])) {
         $page = $_GET['trang'];
-    }else{
-        $page ="";
+    } else {
+        $page = "";
     }
-    if($page =="" || $page == 1){
+    if ($page == "" || $page == 1) {
         $begin = 0;
-    }else{
-        $begin = ($page*5)-5;
+    } else {
+        $begin = ($page * 5) - 5;
     }
     $sql = "select * from san_pham where 1";
     if($kyw!=""){
@@ -26,6 +26,7 @@ function loadall_sanpham($kyw="")
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
+
 function phantrang_sp()
 {
     $sql = "select * from san_pham order by id_sp desc";
@@ -33,16 +34,9 @@ function phantrang_sp()
     return $phantrang_sp;
 }
 
-function loadall_sanpham_home()
-{
-    $sql = "select * from san_pham where 1 order by id_sp desc limit 10";
-    $listsanpham = pdo_query($sql);
-    return $listsanpham;
-}
-
 function loadall_sanpham_new()
 {
-    $sql = "select * from san_pham where 1 order by id_sp desc limit 5";
+    $sql = "select * from san_pham where 1 order by id_sp desc limit 6";
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
@@ -73,6 +67,34 @@ function update_sanpham($id, $tensp, $giasp, $motasp, $hinh, $iddm)
 function load_sanpham_cungloai($id_sp, $id_dm)
 {
     $sql = "select * from san_pham where id_dm=" . $id_dm . " AND id_sp <>" . $id_sp;
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
+
+function loadall_sanpham_dm_home($kyw = "", $id_dm = 0)
+{
+    $sql = "select * from san_pham where 1";
+    if ($kyw != "") {
+        $sql .= " and ten_sp like '%" . $kyw . "%'";
+    }
+    if ($id_dm > 0) {
+        $sql .= " and id_dm ='" . $id_dm . "'";
+    }
+    $sql .= " order by id_sp desc limit 12";
+    $listsanpham = pdo_query($sql);
+    return $listsanpham;
+}
+
+function loadall_sanpham_dm($kyw = "", $id_dm = 0)
+{
+    $sql = "select * from san_pham where 1";
+    if ($kyw != "") {
+        $sql .= " and ten_sp like '%" . $kyw . "%'";
+    }
+    if ($id_dm > 0) {
+        $sql .= " and id_dm ='" . $id_dm . "'";
+    }
+    $sql .= " order by id_sp desc";
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
