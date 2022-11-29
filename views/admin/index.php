@@ -61,11 +61,14 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'danh_sach_hoa_don':
             include "../../controllers/admin/hoa_don/c_danh_sach_hoa_don.php";
             break;
-        case 'xoa_hd':
-            include "../../controllers/admin/hoa_don/c_xoa_hoa_don.php";
+        case 'sua_tt':
+            include "../../controllers/admin/hoa_don/c_sua_tinh_trang_hoa_don.php";
             break;
         case 'xem_ct_hoa_don':
             include "../../controllers/admin/hoa_don/c_chi_tiet_hoa_don.php";
+            break;
+        case 'cap_nhat_tinh_trang_hd':
+            include "../../controllers/admin/hoa_don/c_cap_nhat_tinh_trang_hd.php";
             break;
             // Điều hướng tài khoản
         case 'danh_sach_nguoi_dung':
@@ -87,7 +90,7 @@ if ((isset($_GET['act'])) && ($_GET['act'] != "")) {
         case 'xoa_bl':
             include "../../controllers/admin/binh_luan/c_xoa_binh_luan.php";
             break;
-        // Thống kê
+            // Thống kê
         case 'thong_ke':
             include "../../controllers/admin/thong_ke/c_thong_ke_doanh_thu.php";
             break;

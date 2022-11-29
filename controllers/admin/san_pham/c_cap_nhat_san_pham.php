@@ -16,5 +16,5 @@ if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
     echo '<script>alert("Cập nhật sản phẩm thành công!")</script>';
 }
 $listdanhmuc = loadall_danhmuc();
-$listsanpham = loadall_sanpham();
+$listsanpham = loadall_sanpham($kyw);
 include "../../views/admin/san_pham/v_danh_sach_san_pham.php";

@@ -8,7 +8,7 @@ function loadone_taikhoan($id)
 
 
 
-function loadall_taikhoan()
+function loadall_taikhoan($kyw)
 {
     if (isset($_GET['trang'])) {
         $page = $_GET['trang'];
@@ -20,7 +20,11 @@ function loadall_taikhoan()
     } else {
         $begin = ($page * 5) - 5;
     }
-    $sql = "select * from nguoi_dung order by id_nd desc limit $begin,5";
+    $sql = "select * from nguoi_dung where 1";     
+    if($kyw!=""){
+        $sql.=" and ten_dang_nhap or email like '%".$kyw."%'";
+    }
+    $sql.=" order by id_nd desc limit $begin,5";
     $listnguoidung = pdo_query($sql);
     return $listnguoidung;
 }

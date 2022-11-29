@@ -52,7 +52,7 @@
             <div class="card-header">
                 <div class="row justify-content-between align-items-center flex-grow-1">
                     <div class="col-md-4 mb-3 mb-md-0">
-                        <form>
+                        <form action="#" method="POST">
                             <!-- Search -->
                             <div class="input-group input-group-merge input-group-flush">
                                 <div class="input-group-prepend">
@@ -60,7 +60,8 @@
                                         <i class="tio-search"></i>
                                     </div>
                                 </div>
-                                <input id="datatableSearch" type="search" class="form-control" placeholder="Tìm kiếm sản phẩm" aria-label="Search users">
+                                <input id="datatableSearch" type="text" class="form-control" placeholder="Tìm kiếm sản phẩm" aria-label="Search users" name="kyw">
+                                <input type="submit" class="btn btn-primary"  aria-label="Search users" value="Tìm kiếm" name="search">
                             </div>
                             <!-- End Search -->
                         </form>

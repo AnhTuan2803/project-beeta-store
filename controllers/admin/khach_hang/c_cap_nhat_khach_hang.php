@@ -12,6 +12,6 @@ if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
 
     echo '<script>alert("Cập nhật khách hàng thành công!")</script>';
 }
-$listkhachhang = loadall_khachhang();
+$listkhachhang = loadall_khachhang($kyw);
 include "../../views/admin/khach_hang/v_danh_sach_khach_hang.php";
 ?>

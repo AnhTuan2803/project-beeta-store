@@ -51,7 +51,7 @@
             <div class="card-header">
                 <div class="row justify-content-between align-items-center flex-grow-1">
                     <div class="col-md-4 mb-3 mb-md-0">
-                        <form>
+                        <form method="POST" action="#">
                             <!-- Search -->
                             <div class="input-group input-group-merge input-group-flush">
                                 <div class="input-group-prepend">
@@ -59,7 +59,14 @@
                                         <i class="tio-search"></i>
                                     </div>
                                 </div>
-                                <input id="datatableSearch" type="search" class="form-control" placeholder="Tìm kiếm hóa đơn" aria-label="Search">
+                                <!-- <input id="datatableSearch" type="search" class="form-control" placeholder="Tìm theo tình trạng hóa đơn" aria-label="Search" name="kyw"><select name="" id=""> -->
+                                <select class="form-control" name="kyw">
+                                    <option value="">Tìm theo tình trạng thanh toán</option>
+                                    <option value="0">Đã thanh toán</option>
+                                    <option value="1">Chưa thanh toán</option>
+                                    <option value="2">Đơn hàng bị hủy</option>
+                                </select>
+                                <input type="submit" class="btn btn-primary"  aria-label="Search users" value="Tìm kiếm" name="search">
                             </div>
                             <!-- End Search -->
                         </form>
@@ -113,7 +120,7 @@
                         foreach ($listhoadon as $hoadon) {
                             extract($hoadon);
                             $xem_ct_hoa_don = "index.php?act=xem_ct_hoa_don&id=" . $id_hd;
-                            $xoa_hd = "index.php?act=xoa_hd&id=" . $id_hd;
+                            $sua_tt = "index.php?act=sua_tt&id=" . $id_hd;
                             if ($thanh_toan == 2) {
                                 $tt = "Chuyển khoản trực tiếp";
                             } else if ($thanh_toan == 1) {
@@ -150,8 +157,8 @@
                                                 <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="<?= $xem_ct_hoa_don ?>">
                                                     <i class="fa-solid tio-visible-outlined dropdown-item-icon"></i>Xem chi tiết
                                                 </a>
-                                                <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="<?= $xoa_hd ?>">
-                                                    <i class="fa-solid fa-trash dropdown-item-icon"></i>Xóa
+                                                <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="<?= $sua_tt ?>">
+                                                    <i class="fa-solid fa-trash dropdown-item-icon"></i>Cập nhật tình trạng
                                                 </a>
                                             </div>
                                         </div>

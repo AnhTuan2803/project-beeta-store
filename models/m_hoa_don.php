@@ -40,7 +40,7 @@ function loadall_bill($id_nd = 0)
 
 // 
 
-function loadall_hoadon()
+function loadall_hoadon($kyw)
 {
     if(isset($_GET['trang'])){
         $page = $_GET['trang'];
@@ -52,7 +52,11 @@ function loadall_hoadon()
     }else{
         $begin = ($page*5)-5;
     }
-    $sql = "select * from hoa_don order by id_hd desc limit $begin,5";
+    $sql = "select * from hoa_don where 1";
+    if($kyw!=""){
+        $sql.=" and tinh_trang like '%".$kyw."%'";
+    }
+    $sql.=" order by id_hd desc limit $begin,5";
     $listhoadon = pdo_query($sql);
     return $listhoadon;
 }
@@ -84,9 +88,9 @@ function load_ct_hoadon($id)
     $ct_hoadon = pdo_query($sql);
     return $ct_hoadon;
 }
-function update_hoadon($hd, $tinh_trang)
+function update_hoadon($id, $tinh_trang)
 {
-    $sql = "UPDATE `hoa_don` SET `tinh_trang` = '$tinh_trang' WHERE `hoa_don`.`id_hd`= " . $hd['id_hd'];
+    $sql = "UPDATE `hoa_don` SET `tinh_trang` = '$tinh_trang' WHERE `hoa_don`.`id_hd`= " . $id;
     pdo_execute($sql);
 }
 

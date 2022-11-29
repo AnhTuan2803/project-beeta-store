@@ -6,7 +6,7 @@ function insert_sanpham($tensp, $giasp, $motasp, $hinh, $ngaytaosp, $iddm)
     pdo_execute($sql);
 }
 
-function loadall_sanpham()
+function loadall_sanpham($kyw="")
 {
     if(isset($_GET['trang'])){
         $page = $_GET['trang'];
@@ -18,7 +18,11 @@ function loadall_sanpham()
     }else{
         $begin = ($page*5)-5;
     }
-    $sql = "select * from san_pham order by id_sp desc limit $begin,5";
+    $sql = "select * from san_pham where 1";
+    if($kyw!=""){
+        $sql.=" and ten_sp or id_sp like '%".$kyw."%'";
+    }
+    $sql.=" order by id_sp desc limit $begin,5";
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }

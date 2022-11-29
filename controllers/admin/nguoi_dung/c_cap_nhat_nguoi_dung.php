@@ -10,7 +10,7 @@ if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
 
     echo '<script>alert("Cập nhật khách hàng thành công!")</script>';
 }
-$listnguoidung = loadall_taikhoan();
+$listnguoidung = loadall_taikhoan($kyw);
 $listvaitro = loadall_vaitro();
 include "../../views/admin/nguoi_dung/v_danh_sach_nguoi_dung.php";
 ?>

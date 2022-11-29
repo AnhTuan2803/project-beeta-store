@@ -1,5 +1,5 @@
 <?php
-function loadall_khachhang()
+function loadall_khachhang($kyw)
 {
     if(isset($_GET['trang'])){
         $page = $_GET['trang'];
@@ -11,7 +11,11 @@ function loadall_khachhang()
     }else{
         $begin = ($page*5)-5;
     }
-    $sql = "select * from khach_hang order by id_kh desc limit $begin,5";
+    $sql = "select * from khach_hang where 1";     
+    if($kyw!=""){
+        $sql.=" and email like '%".$kyw."%'";
+    }
+    $sql.=" order by id_kh desc limit $begin,5";
     $listkhachhang = pdo_query($sql);
     return $listkhachhang;
 }
