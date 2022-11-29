@@ -105,11 +105,11 @@
                         <?php
                         foreach ($listbinhluan as $binhluan) {
                             extract($binhluan);
-                            $xoabl = "index.php?act=xoa_bl&id=" . $id;
+                            $xoabl = "index.php?act=xoa_bl&id=" . $id_bl;
                         ?>
 
                             <tr>
-                                <td><?= $id ?></td>
+                                <td><?= $id_bl ?></td>
                                 <td><?= $binhluan['noi_dung'] ?></td>
                                 <th><?= $binhluan['id_nd']  ?></th>
                                 <th><?= $binhluan['id_sp']  ?></th>
