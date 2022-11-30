@@ -22,7 +22,7 @@ function loadall_taikhoan($kyw)
     }
     $sql = "select * from nguoi_dung where 1";     
     if($kyw!=""){
-        $sql.=" and ten_dang_nhap or email like '%".$kyw."%'";
+        $sql.=" and email like '%".$kyw."%'";
     }
     $sql.=" order by id_nd desc limit $begin,5";
     $listnguoidung = pdo_query($sql);

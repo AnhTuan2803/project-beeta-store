@@ -60,7 +60,7 @@
                                         <i class="tio-search"></i>
                                     </div>
                                 </div>
-                                <input id="datatableSearch" type="search" class="form-control" placeholder="Tìm kiếm khách hàng" aria-label="Search users" name="kyw">
+                                <input id="datatableSearch" type="search" class="form-control" placeholder="Tìm kiếm theo email khách hàng" aria-label="Search users" name="kyw">
                                 <input type="submit" class="btn btn-primary"  aria-label="Search users" value="Tìm kiếm" name="search">
                             </div>
                             <!-- End Search -->
