@@ -42,21 +42,21 @@ function loadall_bill($id_nd = 0)
 
 function loadall_hoadon($kyw)
 {
-    if(isset($_GET['trang'])){
+    if (isset($_GET['trang'])) {
         $page = $_GET['trang'];
-    }else{
-        $page ="";
+    } else {
+        $page = "";
     }
-    if($page =="" || $page == 1){
+    if ($page == "" || $page == 1) {
         $begin = 0;
-    }else{
-        $begin = ($page*5)-5;
+    } else {
+        $begin = ($page * 5) - 5;
     }
-    $sql = "select * from hoa_don where 1";
-    if($kyw!=""){
-        $sql.=" and tinh_trang like '%".$kyw."%'";
+    $sql = "select * from hoa_don inner join khach_hang on hoa_don.id_kh = khach_hang.id_kh where 1";
+    if ($kyw != "") {
+        $sql .= " and tinh_trang like '%" . $kyw . "%'";
     }
-    $sql.=" order by id_hd desc limit $begin,5";
+    $sql .= " order by id_hd desc limit $begin,5";
     $listhoadon = pdo_query($sql);
     return $listhoadon;
 }
@@ -140,9 +140,8 @@ function loadall_cart_count($id_hd)
 }
 function Thong_ke_hoa_don()
 {
-    $sql='SELECT concat(Month(ngay_hd),"-",Year(ngay_hd)) as thang,sum(gia_tien) as tong  FROM `hoa_don` 
+    $sql = 'SELECT concat(Month(ngay_hd),"-",Year(ngay_hd)) as thang,sum(gia_tien) as tong  FROM `hoa_don` 
     where tinh_trang in(0) group by Month(ngay_hd),Year(ngay_hd) order by Month(ngay_hd),Year(ngay_hd)';
     $thongke = pdo_query($sql);
     return $thongke;
 }
-?>

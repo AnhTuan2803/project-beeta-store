@@ -5,8 +5,8 @@ $linkimg = "./assets/uploads/" . $hinh;
 <div class="single-thumb-vertical main-container shop-page no-sidebar">
     <div class="banner-wrapper no_background">
         <div class="banner-wrapper-inner">
-            <nav style="margin-top: 40px;padding-left: 173px; text-align: left;" class="akasha-breadcrumb"><a href="./index.php">Home</a><i class="fa fa-angle-right"></i><a href="index.php?act=shop">Shop</a>
-                <i class="fa fa-angle-right"></i>Product Detail
+            <nav style="margin-top: 40px;padding-left: 173px; text-align: left;" class="akasha-breadcrumb"><a href="./index.php">Trang chủ</a><i class="fa fa-angle-right"></i><a href="index.php?act=shop">Cửa hàng</a>
+                <i class="fa fa-angle-right"></i>Chi tiết sản phẩm
             </nav>
         </div>
     </div>
@@ -60,9 +60,9 @@ $linkimg = "./assets/uploads/" . $hinh;
                                 </div>
                                 <h1 class="product_title entry-title"><?= $ten_sp ?></h1>
                                 <p class="price"><span class="akasha-Price-amount amount"><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol"></span><?= number_format($don_gia) ?></span> VNĐ</p>
-                                <p class="stock in-stock">
+                                <!-- <p class="stock in-stock">
                                     Tình trạng: <span> Còn hàng</span>
-                                </p>
+                                </p> -->
                                 <div class="akasha-product-details__short-description">
                                     <p><?= $mo_ta ?></p>
                                     <!-- <ul>
@@ -114,7 +114,7 @@ $linkimg = "./assets/uploads/" . $hinh;
                                             <input type="hidden" name="gia_sp" value="<?= $don_gia ?>">
 
 
-                                            <input style="height: 47px; width: 130px; color: #fff; font-weight: 500;" type="submit" class="btn btn-dark add" name="add_cart" value="Add to cart">
+                                            <input style="height: 47px; width: 175px; color: #fff; font-weight: 500;" type="submit" class="btn btn-dark add" name="add_cart" value="Thêm vào giỏ hàng">
 
                                             <input name="add-to-cart" value="27" type="hidden">
                                             <input name="product_id" value="27" type="hidden">
@@ -137,7 +137,7 @@ $linkimg = "./assets/uploads/" . $hinh;
                                             </li>
                                         </ul>
                                     </div>
-                                    <span class="sku_wrapper">SKU: <span class="sku"><?= $id_sp ?></span></span>
+                                    <span class="sku_wrapper">Mã sản phẩm: <span class="sku"><?= $id_sp ?></span></span>
                                     <span class="posted_in">Danh mục: <a href="#" rel="tag"><?= $ten_dm ?></a></span>
 
                                 </div>
@@ -174,7 +174,7 @@ $linkimg = "./assets/uploads/" . $hinh;
             <div class="col-md-12 col-sm-12 dreaming_related-product">
                 <div class="block-title">
                     <h2 class="product-grid-title">
-                        <span>Related Products</span>
+                        <span>Sản phẩm liên quan</span>
                     </h2>
                 </div>
                 <div class="owl-slick owl-products equal-container better-height" data-slick="{&quot;arrows&quot;:false,&quot;slidesMargin&quot;:30,&quot;dots&quot;:true,&quot;infinite&quot;:false,&quot;slidesToShow&quot;:4}" data-responsive="[{&quot;breakpoint&quot;:480,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:768,&quot;settings&quot;:{&quot;slidesToShow&quot;:2,&quot;slidesMargin&quot;:&quot;10&quot;}},{&quot;breakpoint&quot;:992,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1200,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;20&quot;}},{&quot;breakpoint&quot;:1500,&quot;settings&quot;:{&quot;slidesToShow&quot;:3,&quot;slidesMargin&quot;:&quot;30&quot;}}]">

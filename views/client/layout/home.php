@@ -89,10 +89,10 @@
         <div class="akasha-heading style-01">
             <div class="heading-inner">
                 <h3 class="title">
-                    Featured Products</h3>
-                <div class="subtitle">Made with care for your little ones, our products are perfect for every
+                    SẢN PHẨM NỔI BẬT</h3>
+                <!-- <div class="subtitle">Made with care for your little ones, our products are perfect for every
                     occasion.
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -130,7 +130,7 @@
                             <input type="hidden" name="img_sp" value="' . $hinh . '">
                             <input type="hidden" name="gia_sp" value="' . $don_gia . '">
                             <input type="hidden" name="so_luong" value="1">
-                            <input style="cursor: pointer; background-color: transparent; color: #222; font-size: 15px; font-weight: 500;" type="submit" class="button b" name="add_cart" value="Add to cart">
+                            <input style="cursor: pointer; background-color: transparent; color: #222; font-size: 15px; font-weight: 500;" type="submit" class="button b" name="add_cart" value="Thêm vào giỏ hàng">
                             </form>
                             </div>
                            
@@ -154,16 +154,16 @@
                 <div class="banner-content">
                     <div class="title-wrap">
                         <div class="banner-label">
-                            Modern Glasses
+                            Phong cách hiện đại
                         </div>
                         <h6 class="title">
-                            Best Seller </h6>
+                            Bán chạy nhất </h6>
                     </div>
                     <div class="button-wrap">
-                        <div class="subtitle">
+                        <!-- <div class="subtitle">
                             Lorem ipsum dolor sit amet consectetur adipiscing elit justo
-                        </div>
-                        <a class="button" target="_self" href="index.php?act=shop"><span>Shop now</span></a>
+                        </div> -->
+                        <a class="button" target="_self" href="index.php?act=shop"><span>Cửa hàng</span></a>
                     </div>
                 </div>
             </div>
@@ -174,10 +174,10 @@
     <div class="container">
         <div class="akasha-heading style-01">
             <div class="heading-inner">
-                <h3 class="title">New Arrival</h3>
-                <div class="subtitle">
+                <h3 class="title">Sản phẩm mới</h3>
+                <!-- <div class="subtitle">
                     Made with care for your little ones, our products are perfect for every occasion. Check it out.
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="akasha-products style-01">
@@ -228,7 +228,7 @@
                 <?php
                 }
                 ?>
-    
+
             </div>
         </div>
     </div>
@@ -243,19 +243,19 @@
                 <div class="banner-content">
                     <div class="title-wrap">
                         <div class="banner-label">
-                            01 Dec - 15 Dec
+                            01/12 - 15/12
                         </div>
                         <h6 class="title">
-                            New Collection </h6>
+                            Bộ sưu tập mới </h6>
                     </div>
                     <div class="cate">
-                        50% Off / Selected items
+                        Giảm 50% / Sản phẩm
                     </div>
                     <div class="button-wrap">
-                        <div class="subtitle">
+                        <!-- <div class="subtitle">
                             Mus venenatis habitasse leo malesuada lacus commodo faucibus torquent donec
-                        </div>
-                        <a class="button" target="_self" href="index.php?act=shop"><span>Shop now</span></a>
+                        </div> -->
+                        <a class="button mt-5" target="_self" href="index.php?act=shop"><span>Cửa hàng</span></a>
                     </div>
                 </div>
             </div>
@@ -267,11 +267,11 @@
         <div class="akasha-heading style-01">
             <div class="heading-inner">
                 <h3 class="title">
-                    From Our Blog </h3>
-                <div class="subtitle">
+                    Bài viết của chúng tôi </h3>
+                <!-- <div class="subtitle">
                     Lorem ipsum dolor sit amet consectetur adipiscing elit erat vehicula ad, mollis viverra
                     vulputate
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="akasha-blog style-01">
@@ -435,9 +435,9 @@
                             <span class="flaticon-rocket-ship"></span>
                         </div>
                         <div class="content">
-                            <h4 class="title">Worldwide Delivery</h4>
-                            <div class="desc">With sites in 5 languages, we ship to over 200 countries &amp;
-                                regions.
+                            <h4 class="title">Vận chuyển toàn cầu</h4>
+                            <div class="desc">Với các trang web bằng 5 ngôn ngữ, chúng tôi giao hàng đến hơn 200 quốc gia &amp;
+                                khu vực.
                             </div>
                         </div>
                     </div>
@@ -450,8 +450,9 @@
                             <span class="flaticon-padlock"></span>
                         </div>
                         <div class="content">
-                            <h4 class="title">Safe Shipping</h4>
-                            <div class="desc">Pay with the world’s most popular and secure payment methods.</div>
+                            <h4 class="title">Vận chuyển an toàn</h4>
+                            <div class="desc">
+                                Thanh toán bằng các phương thức thanh toán an toàn và phổ biến nhất thế giới.</div>
                         </div>
                     </div>
                 </div>
@@ -463,8 +464,8 @@
                             <span class="flaticon-recycle"></span>
                         </div>
                         <div class="content">
-                            <h4 class="title">365 Days Return</h4>
-                            <div class="desc">Round-the-clock assistance for a smooth shopping experience.</div>
+                            <h4 class="title">365 ngày hoàn trả sản phẩm</h4>
+                            <div class="desc">Hỗ trợ suốt ngày đêm để có trải nghiệm mua sắm suôn sẻ.</div>
                         </div>
                     </div>
                 </div>
@@ -476,8 +477,9 @@
                             <span class="flaticon-support"></span>
                         </div>
                         <div class="content">
-                            <h4 class="title">Shop Confidence</h4>
-                            <div class="desc">Our Buyer Protection covers your purchase from click to delivery.
+                            <h4 class="title">Sự tự tin của shop</h4>
+                            <div class="desc">
+                                Bảo vệ người mua của chúng tôi bao gồm giao dịch mua của bạn từ nhấp chuột đến giao hàng.
                             </div>
                         </div>
                     </div>

@@ -4,7 +4,7 @@ if (is_array($ct_hoadon)) {
 }
 
 ?>
-<main id="content" role="main" class="main">
+<main id="content" style="padding-top: 0px;" role="main" class="main">
   <!-- Content -->
   <div class="content container-fluid">
     <!-- Page Header -->
@@ -59,7 +59,7 @@ if (is_array($ct_hoadon)) {
           <!-- Header -->
           <div class="card-header">
             <h4 class="card-header-title">Chi tiết hóa đơn</h4>
-            <a class="link" href="javascript:;">Edit</a>
+            <!-- <a class="link" href="javascript:;">Edit</a> -->
           </div>
           <!-- End Header -->
 
@@ -77,7 +77,7 @@ if (is_array($ct_hoadon)) {
                 <div class="media-body">
                   <div class="row">
                     <div class="col-md-6 mb-3 mb-md-0" name="ten_sp">
-                      <a class="h5 d-block" href="ecommerce-product-details.html"><?= $hd['ten_sp'] ?></a>
+                      <a class="h5 d-block" href="#"><?= $hd['ten_sp'] ?></a>
                     </div>
 
                     <div class="col col-md-2 align-self-center">
@@ -118,16 +118,16 @@ if (is_array($ct_hoadon)) {
                     <dt class="col-sm-6">Tình trạng thanh toán:</dt>
                     <dd class="col-sm-6">
                       <?php
-                        if ($hd['tinh_trang'] == 0){
-                          $tt = "Đã thanh toán";
-                        }else if($hd['tinh_trang'] == 1){
-                          $tt = "Chưa thanh toán";
-                        }else if($hd['tinh_trang'] == 2){
-                          $tt = "Đơn hàng bị hủy";
-                        }
-                        echo $tt?>
+                      if ($hd['tinh_trang'] == 0) {
+                        $tt = "Đã thanh toán";
+                      } else if ($hd['tinh_trang'] == 1) {
+                        $tt = "Chưa thanh toán";
+                      } else if ($hd['tinh_trang'] == 2) {
+                        $tt = "Đơn hàng bị hủy";
+                      }
+                      echo $tt ?>
                     </dd>
-                  <!-- End Row -->
+                    <!-- End Row -->
                 </div>
               </div>
             </form>
@@ -136,143 +136,7 @@ if (is_array($ct_hoadon)) {
 
           <!-- End Body -->
         </div>
-        <!-- Card -->
-        <div class="card">
-          <!-- Header -->
-          <div class="card-header">
-            <h4 class="card-header-title">
-              Shipping activity
-              <span class="badge badge-soft-dark ml-1">
-                <span class="legend-indicator bg-dark"></span>Marked as fulfilled
-              </span>
-            </h4>
-          </div>
-          <!-- End Header -->
 
-          <!-- Body -->
-          <div class="card-body">
-            <!-- Step -->
-            <ul class="step step-icon-xs">
-              <!-- Step Item -->
-              <li class="step-item">
-                <div class="step-content-wrapper">
-                  <small class="step-divider">Wednesday, 19 August</small>
-                </div>
-              </li>
-              <!-- End Step Item -->
-
-              <!-- Step Item -->
-              <li class="step-item">
-                <div class="step-content-wrapper">
-                  <span class="step-icon step-icon-soft-dark step-icon-pseudo"></span>
-
-                  <div class="step-content">
-                    <h5 class="mb-1">
-                      <a class="text-dark" href="#">Delivered</a>
-                    </h5>
-
-                    <p class="font-size-sm mb-0">4:17 AM</p>
-                  </div>
-                </div>
-              </li>
-              <!-- End Step Item -->
-
-              <!-- Step Item -->
-              <li class="step-item">
-                <div class="step-content-wrapper">
-                  <span class="step-icon step-icon-soft-dark step-icon-pseudo"></span>
-
-                  <div class="step-content">
-                    <h5 class="mb-1">
-                      <a class="text-dark" href="#">Out for delivery</a>
-                    </h5>
-
-                    <p class="font-size-sm mb-0">2:38 AM</p>
-                  </div>
-                </div>
-              </li>
-              <!-- End Step Item -->
-
-              <!-- Step Item -->
-              <li class="step-item">
-                <div class="step-content-wrapper">
-                  <span class="step-icon step-icon-soft-dark step-icon-pseudo"></span>
-
-                  <div class="step-content">
-                    <h5 class="mb-1">
-                      <a class="text-dark" href="#">Package arrived at the final delivery station</a>
-                    </h5>
-
-                    <p class="font-size-sm mb-0">2:00 AM</p>
-                  </div>
-                </div>
-              </li>
-              <!-- End Step Item -->
-
-              <!-- Step Item -->
-              <li class="step-item">
-                <div class="step-content-wrapper">
-                  <small class="step-divider">Tuesday, 18 August</small>
-                </div>
-              </li>
-              <!-- End Step Item -->
-
-              <!-- Step Item -->
-              <li class="step-item">
-                <div class="step-content-wrapper">
-                  <span class="step-icon step-icon-soft-dark step-icon-pseudo"></span>
-
-                  <div class="step-content">
-                    <h5 class="mb-1">
-                      <a class="text-dark" href="#">Tracking number</a>
-                    </h5>
-
-                    <a class="link" href="#">3981241023109293</a>
-                    <p class="font-size-sm mb-0">6:29 AM</p>
-                  </div>
-                </div>
-              </li>
-              <!-- End Step Item -->
-
-              <!-- Step Item -->
-              <li class="step-item">
-                <div class="step-content-wrapper">
-                  <span class="step-icon step-icon-soft-dark step-icon-pseudo"></span>
-
-                  <div class="step-content">
-                    <h5 class="mb-1">
-                      <a class="text-dark" href="#">Package has dispatched</a>
-                    </h5>
-
-                    <p class="font-size-sm mb-0">6:29 AM</p>
-                  </div>
-                </div>
-              </li>
-              <!-- End Step Item -->
-
-              <!-- Step Item -->
-              <li class="step-item">
-                <div class="step-content-wrapper">
-                  <span class="step-icon step-icon-soft-dark step-icon-pseudo"></span>
-
-                  <div class="step-content">
-                    <h5 class="mb-1">
-                      <a class="text-dark" href="#">Order was placed</a>
-                    </h5>
-
-                    <p class="font-size-sm mb-0">Hóa đơn *ID HOA DON</p>
-                  </div>
-                </div>
-              </li>
-              <!-- End Step Item -->
-            </ul>
-            <!-- End Step -->
-
-            <small>Times are shown in the local time zone.</small>
-          </div>
-          <!-- End Body -->
-        </div>
-        <!-- End Card -->
       </div>
 
       <div class="col-lg-4">
@@ -286,23 +150,23 @@ if (is_array($ct_hoadon)) {
 
           <!-- Body -->
           <div class="card-body">
-            <a class="media align-items-center" href="ecommerce-customer-details.html">
+            <a class="media align-items-center" href="#">
               <div class="avatar avatar-circle mr-3">
-                <img class="avatar-img" src="..\..\assets\admin\img\160x160\img10.jpg" alt="Image Description">
+                <img class="avatar-img" src="..\..\assets\admin\img\160x160\img1.jpg" alt="Image Description">
               </div>
               <div class="media-body">
                 <span class="text-body text-hover-primary"><?= $hd['ten_kh'] ?></span>
               </div>
-              <div class="media-body text-right">
+              <!-- <div class="media-body text-right">
                 <i class="tio-chevron-right text-body"></i>
-              </div>
+              </div> -->
             </a>
 
             <hr>
 
             <div class="d-flex justify-content-between align-items-center">
-              <h5>Contact info</h5>
-              <a class="link" href="javascript:;">Edit</a>
+              <h5>Thông tin liên lạc</h5>
+              <!-- <a class="link" href="javascript:;">Edit</a> -->
             </div>
 
             <ul class="list-unstyled list-unstyled-py-2">
@@ -318,19 +182,19 @@ if (is_array($ct_hoadon)) {
             <hr>
 
             <div class="d-flex justify-content-between align-items-center">
-              <h5>Address</h5>
-              <a class="link" href="javascript:;">Edit</a>
+              <h5>Địa chỉ</h5>
+              <!-- <a class="link" href="javascript:;">Edit</a> -->
             </div>
 
             <span class="d-block">
               <?= $hd['dia_chi'] ?><br>
-              <img class="avatar avatar-xss avatar-circle ml-1" src="..\..\assets\admin\vendor\flag-icon-css\flags\1x1\us.svg" alt="Great Britain Flag">
+              <img class="avatar avatar-xss avatar-circle ml-1" src="..\..\assets\admin\img\vn.png" alt="Great Britain Flag">
             </span>
 
-            <div class="mt-3">
+            <!-- <div class="mt-3">
               <h5 class="mb-0">Mastercard</h5>
               <span class="d-block">Card Number: ************4291</span>
-            </div>
+            </div> -->
           </div>
           <!-- End Body -->
         </div>
@@ -338,10 +202,10 @@ if (is_array($ct_hoadon)) {
       </div>
     </div>
     <?php
-         if(isset($_POST['tinh_trang'])){
-          $tinh_trang = $_POST['tinh_trang'];
-          update_hoadon($hd, $tinh_trang);
-        }
-         ?>
+    if (isset($_POST['tinh_trang'])) {
+      $tinh_trang = $_POST['tinh_trang'];
+      update_hoadon($hd, $tinh_trang);
+    }
+    ?>
     <!-- End Row -->
   </div>

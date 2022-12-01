@@ -49,8 +49,8 @@
             <div class="card-body">
               <div class="text-center">
                 <div class="mb-5">
-                  <h1 class="display-4">Sign in</h1>
-                  <p>Don't have an account yet? <a href="./v_dang_ky_tai_khoan.php">Sign up here</a></p>
+                  <h1 class="display-4">Đăng nhập</h1>
+                  <p>Bạn chưa có tài khoản? <a href="./v_dang_ky_tai_khoan.php">Đăng ký tại đây</a></p>
                 </div>
                 <!-- 
                       <a class="btn btn-lg btn-block btn-white mb-4" href="#">
@@ -68,7 +68,7 @@
 
                 <!-- Form Group -->
                 <div class="js-form-message form-group">
-                  <label class="input-label" for="signinSrEmail">Your email</label>
+                  <label class="input-label" for="signinSrEmail">Tên đăng nhập hoặc email</label>
 
                   <input type="text" class="form-control form-control-lg" name="email" id="signinSrEmail" tabindex="1" placeholder="email@address.com" aria-label="email@address.com" required="" data-msg="Please enter a valid email address.">
                 </div>
@@ -78,8 +78,8 @@
                 <div class="js-form-message form-group">
                   <label class="input-label" for="signupSrPassword" tabindex="0">
                     <span class="d-flex justify-content-between align-items-center">
-                      Password
-                      <a class="input-label-secondary" href="#">Forgot Password?</a>
+                      Mật khẩu
+                      <a class="input-label-secondary" href="#">Quên mật khẩu?</a>
                     </span>
                   </label>
 
@@ -103,7 +103,7 @@
                 <div class="form-group">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox">
-                    <label class="custom-control-label text-muted" for="termsCheckbox"> Remember me</label>
+                    <label class="custom-control-label text-muted" for="termsCheckbox"> Ghi nhớ</label>
                   </div>
                 </div>
                 <!-- End Checkbox -->

@@ -33,9 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="v_hoa_don.php">Tất cả hóa đơn</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Archived</a>
-                    </li>
+                    </li> -->
                 </ul>
                 <!-- End Nav -->
             </div>
@@ -66,7 +66,7 @@
                                     <option value="1">Chưa thanh toán</option>
                                     <option value="2">Đơn hàng bị hủy</option>
                                 </select>
-                                <input type="submit" class="btn btn-primary"  aria-label="Search users" value="Tìm kiếm" name="search">
+                                <input type="submit" class="btn btn-primary ml-3" aria-label="Search users" value="Tìm kiếm" name="search">
                             </div>
                             <!-- End Search -->
                         </form>
@@ -107,7 +107,7 @@
                             </th> -->
                             <th>Mã hóa đơn</th>
                             <th>Ngày đặt hàng</th>
-                            <th>Mã khách hàng</th>
+                            <th>Tên khách hàng</th>
                             <th>Tổng tiền</th>
                             <th>Hình thức thanh toán</th>
                             <th>Tình trạng</th>
@@ -141,8 +141,8 @@
                             <tr>
                                 <td><?= $id_hd ?></td>
                                 <td><?= $ngay_hd ?></td>
-                                <th><?= $id_kh ?></th>
-                                <th><?= $gia_tien ?></th>
+                                <th><?= $ten_kh ?></th>
+                                <th><?= number_format($gia_tien) ?> VNĐ</th>
                                 <th><?= $tt ?></th>
                                 <th><?= $tt_thanh_toan ?></th>
                                 <td>
@@ -158,7 +158,7 @@
                                                     <i class="fa-solid tio-visible-outlined dropdown-item-icon"></i>Xem chi tiết
                                                 </a>
                                                 <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="<?= $sua_tt ?>">
-                                                <i class="fa-solid fa-screwdriver-wrench dropdown-item-icon"></i>Cập nhật tình trạng
+                                                    <i class="fa-solid fa-screwdriver-wrench dropdown-item-icon"></i>Cập nhật tình trạng
                                                 </a>
                                             </div>
                                         </div>

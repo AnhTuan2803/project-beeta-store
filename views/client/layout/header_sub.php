@@ -33,7 +33,7 @@
             background-color: #FA8F47 !important;
         }
     </style>
-  
+
 </head>
 
 <body>
@@ -59,39 +59,42 @@
                             <div class="box-header-nav menu-nocenter">
                                 <ul id="menu-primary-menu" class="clone-main-menu akasha-clone-mobile-menu akasha-nav main-menu">
                                     <li id="menu-item-230" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
-                                        <a class="akasha-menu-item-title" href="./index.php">Home</a>
-                                        <span class="toggle-submenu"></span>
-
-                                    </li>
-                                    <!-- <li id="menu-item-"
-                                class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-230 parent parent-megamenu item-megamenu menu-item-has-children">
-                                <a class="akasha-menu-item-title" title="Product" href="#">Product</a>
-                                <span class="toggle-submenu"></span>
-                                </li> -->
-                                    <li id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
-                                        <a class="akasha-menu-item-title" title="Shop" href="index.php?act=shop">Shop</a>
-                                        <span class="toggle-submenu"></span>
-
-                                    </li>
-                                    <li id="menu-item-996" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
-                                        <a class="akasha-menu-item-title" title="Blog" href="index.php?act=blog">Blog</a>
+                                        <a class="akasha-menu-item-title" href="./index.php">Trang chủ</a>
                                         <span class="toggle-submenu"></span>
 
                                     </li>
                                     <li id="menu-item-237" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-237 parent">
-                                        <a class="akasha-menu-item-title" title="Contact" href="index.php?act=contact">Contact</a>
+                                        <a class="akasha-menu-item-title" title="Danh mục" href="#">Danh mục</a>
                                         <span class="toggle-submenu"></span>
-                                        <!-- <ul role="menu" class="submenu">
-                                            <li id="menu-item-987" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-987">
-                                                <a class="akasha-menu-item-title" title="About" href="about.html">About</a>
-                                            </li>
-                                            <li id="menu-item-988" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-988">
-                                                <a class="akasha-menu-item-title" title="Contact" href="contact.html">Contact</a>
-                                            </li>
-                                            <li id="menu-item-990" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-990">
-                                                <a class="akasha-menu-item-title" title="Page 404" href="404.html">Page 404</a>
-                                            </li>
-                                        </ul> -->
+                                        <ul role="menu" class="submenu">
+                                            <?php
+                                            foreach ($list_dm as $dm) {
+                                                extract($dm);
+                                            ?>
+                                                <li id="menu-item-987" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-987">
+                                                    <a class="akasha-menu-item-title" title="<?= $ten_dm ?>" href="index.php?act=home&iddm=<?= $id_dm ?>"><?= $ten_dm ?></a>
+                                                </li>
+                                            <?php
+                                            }
+                                            ?>
+
+                                        </ul>
+                                    </li>
+
+                                    <li id="menu-item-228" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-228 parent parent-megamenu item-megamenu menu-item-has-children">
+                                        <a class="akasha-menu-item-title" title="Shop" href="index.php?act=shop">Cửa hàng</a>
+                                        <span class="toggle-submenu"></span>
+
+                                    </li>
+                                    <li id="menu-item-996" class="menu-item menu-item-type-post_type menu-item-object-megamenu menu-item-996 parent parent-megamenu item-megamenu menu-item-has-children">
+                                        <a class="akasha-menu-item-title" title="Blog" href="index.php?act=blog">Bài viết</a>
+                                        <span class="toggle-submenu"></span>
+
+                                    </li>
+                                    <li id="menu-item-237" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-237 parent">
+                                        <a class="akasha-menu-item-title" title="Contact" href="index.php?act=contact">Liên hệ</a>
+                                        <span class="toggle-submenu"></span>
+
                                     </li>
                                 </ul>
                             </div>
@@ -196,7 +199,7 @@
                                                     <a href="#">Sửa tài khoản</a>
                                                 </li>
                                                 <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--customer-logout">
-                                                    <a href="index.php?act=logout">Logout</a>
+                                                    <a href="index.php?act=logout">Đăng xuất</a>
                                                 </li>';
                                                 } else if ($_SESSION['email']['id_vai_tro'] == 1) {
                                                     echo ' <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
@@ -209,7 +212,7 @@
                                                     <a href="#">Sửa tài khoản</a>
                                                 </li>
                                                 <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--customer-logout">
-                                                    <a href="index.php?act=logout">Logout</a>
+                                                    <a href="index.php?act=logout">Đăng xuất</a>
                                                 </li>';
                                                 }
                                                 ?>
@@ -242,7 +245,7 @@
                                         </div>
                                         <div class="widget akasha widget_shopping_cart">
                                             <div class="widget_shopping_cart_content">
-                                                <h3 class="minicart-title">Your Cart<span class="minicart-number-items"><?= $count ?></span></h3>
+                                                <h3 class="minicart-title">Giỏ hàng<span class="minicart-number-items"><?= $count ?></span></h3>
                                                 <ul class="akasha-mini-cart cart_list product_list_widget">
                                                     <?php
                                                     $tong = 0;
@@ -282,12 +285,12 @@
                                                         <span class="quantity">1 × <span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol">$</span>139.00</span></span>
                                                     </li> -->
                                                 </ul>
-                                                <p class="akasha-mini-cart__total total"><strong>Total:</strong>
+                                                <p class="akasha-mini-cart__total total"><strong>Tổng tiền:</strong>
                                                     <span class="akasha-Price-amount amount"><?= number_format($tong) ?> VNĐ</span>
                                                 </p>
                                                 <p class="akasha-mini-cart__buttons buttons">
-                                                    <a href="index.php?act=view_cart" class="button akasha-forward">Viewcart</a>
-                                                    <a href="index.php?act=hoa_don" class="button checkout akasha-forward">Checkout</a>
+                                                    <a href="index.php?act=view_cart" class="button akasha-forward">Xem chi tiết</a>
+                                                    <a href="index.php?act=hoa_don" class="button checkout akasha-forward">Đặt hàng</a>
                                                 </p>
                                             </div>
                                         </div>

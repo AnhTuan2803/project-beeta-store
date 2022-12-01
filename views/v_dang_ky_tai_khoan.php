@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,8 +52,8 @@
               <form class="js-validate" action="../index.php?act=dangky" method="POST">
                 <div class="text-center">
                   <div class="mb-5">
-                    <h1 class="display-4">Create your account</h1>
-                    <p>Already have an account? <a href="./v_login.php">Sign in here</a></p>
+                    <h1 class="display-4">Tạo tài khoản của bạn</h1>
+                    <p>Bạn đã có tài khoản? <a href="./v_login.php">Đăng nhập tại đây</a></p>
                   </div>
 
                   <!-- <a class="btn btn-lg btn-block btn-white mb-4" href="#">
@@ -85,18 +84,18 @@
                 </div> -->
                 <!-- End Form Group -->
                 <div class="js-form-message form-group">
-                  <label class="input-label" for="signupSrEmail">Fullname</label>
+                  <label class="input-label" for="signupSrEmail">Họ & Tên</label>
 
                   <input type="text" class="form-control form-control-lg" name="name" id="signupSrEmail" placeholder="fullname" aria-label="" required="" data-msg="Please enter a valid username.">
                 </div>
                 <!-- Form Group -->
                 <div class="js-form-message form-group">
-                  <label class="input-label" for="signupSrEmail">Username</label>
+                  <label class="input-label" for="signupSrEmail">Tên đăng nhập</label>
 
                   <input type="text" class="form-control form-control-lg" name="user" id="signupSrEmail" placeholder="username" aria-label="" required="" data-msg="Please enter a valid username.">
                 </div>
                 <div class="js-form-message form-group">
-                  <label class="input-label" for="signupSrEmail">Your email</label>
+                  <label class="input-label" for="signupSrEmail">Email</label>
 
                   <input type="email" class="form-control form-control-lg" name="email" id="signupSrEmail" placeholder="email@example.com" aria-label="Markwilliams@example.com" required="" data-msg="Please enter a valid email address.">
                 </div>
@@ -104,7 +103,7 @@
 
                 <!-- Form Group -->
                 <div class="js-form-message form-group">
-                  <label class="input-label" for="signupSrPassword">Password</label>
+                  <label class="input-label" for="signupSrPassword">Mật khẩu</label>
 
                   <div class="input-group input-group-merge">
                     <input type="password" class="js-toggle-password form-control form-control-lg" name="pass" id="signupSrPassword" placeholder="8+ characters required" aria-label="8+ characters required" required="" data-msg="Your password is invalid. Please try again." data-hs-toggle-password-options='{
@@ -146,7 +145,8 @@
                 <div class="js-form-message form-group">
                   <div class="custom-control custom-checkbox">
                     <input type="checkbox" class="custom-control-input" id="termsCheckbox" name="termsCheckbox" required="" data-msg="Please accept our Terms and Conditions.">
-                    <label class="custom-control-label text-muted" for="termsCheckbox"> I accept the <a href="#">Terms and Conditions</a></label>
+                    <label class="custom-control-label text-muted" for="termsCheckbox"> Tôi chấp nhận các <a href="#">
+                        điều khoản và điều kiện</a></label>
                   </div>
                 </div>
                 <!-- End Checkbox -->

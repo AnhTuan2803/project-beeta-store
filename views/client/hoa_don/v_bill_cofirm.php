@@ -1,11 +1,11 @@
 <div class="banner-wrapper has_background">
     <img src="./assets/client/images/banner-for-all2.jpg" class="img-responsive attachment-1920x447 size-1920x447" alt="img">
     <div class="banner-wrapper-inner">
-        <h1 class="page-title">Bill Cofrim</h1>
+        <h1 class="page-title">Xác nhận hóa đơn</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="#"><span>Cart</span></a></li>
-                <li class="trail-item trail-end active"><span>Bill cofrim</span>
+                <li class="trail-item trail-begin"><a href="#"><span>Giỏ hàng</span></a></li>
+                <li class="trail-item trail-end active"><span>Xác nhận hóa đơn</span>
                 </li>
             </ul>
         </div>
@@ -50,18 +50,18 @@
                         <!-- Media -->
                         <div class="media">
                             <div class="avatar avatar-xl mr-3">
-                                <h2 style="font-size:15px;" class="h5 d-block ml-2">Image</h2>
+                                <h2 style="font-size:15px;" class="h5 d-block ml-2">Ảnh</h2>
                             </div>
 
                             <div class="media-body ml-4">
                                 <div class="row">
                                     <div class="col-md-5 mb-3 mb-md-0">
-                                        <h2 style="font-size:15px;" class="h5 d-block ml-4">Name</h2>
+                                        <h2 style="font-size:15px;" class="h5 d-block ml-4">Tên</h2>
 
                                     </div>
 
                                     <div class="col col-md-3 align-self-center">
-                                        <h5 style="font-size:15px;" class="h5 d-block ml-3">Price</h5>
+                                        <h5 style="font-size:15px;" class="h5 d-block ml-3">Giá</h5>
                                     </div>
 
                                     <div class="col col-md-1 align-self-center">
@@ -69,7 +69,7 @@
                                     </div>
 
                                     <div class="col col-md-3 align-self-center text-right">
-                                        <h5 style="font-size:15px;" class="h5 d-block mr-2">Total</h5>
+                                        <h5 style="font-size:15px;" class="h5 d-block mr-2">Tổng</h5>
                                     </div>
                                 </div>
                             </div>

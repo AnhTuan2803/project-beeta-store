@@ -1,11 +1,11 @@
 <div class="banner-wrapper has_background">
     <img src="./assets/client/images/banner-for-all2.jpg" class="img-responsive attachment-1920x447 size-1920x447" alt="img">
     <div class="banner-wrapper-inner">
-        <h1 class="page-title">My Bill</h1>
+        <h1 class="page-title">Đơn hàng của tôi</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="#"><span>Cart</span></a></li>
-                <li class="trail-item trail-end active"><span>My Bill</span>
+                <li class="trail-item trail-begin"><a href="#"><span>Giỏ hàng</span></a></li>
+                <li class="trail-item trail-end active"><span>Đơn hàng của tôi</span>
                 </li>
             </ul>
         </div>

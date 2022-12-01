@@ -36,9 +36,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Biểu đồ thống kê</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Archived</a>
-                    </li>
+                    </li> -->
                 </ul>
                 <!-- End Nav -->
             </div>

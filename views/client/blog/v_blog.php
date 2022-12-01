@@ -2,11 +2,11 @@
     <img src="./assets/client/images/banner-for-all2.jpg"
          class="img-responsive attachment-1920x447 size-1920x447" alt="img">
     <div class="banner-wrapper-inner">
-        <h1 class="page-title">Blog</h1>
+        <h1 class="page-title">Bài viết</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="./index.php"><span>Home</span></a></li>
-                <li class="trail-item trail-end active"><span>Blog</span>
+                <li class="trail-item trail-begin"><a href="./index.php"><span>Trang chủ</span></a></li>
+                <li class="trail-item trail-end active"><span>Bài viết</span>
                 </li>
             </ul>
         </div>

@@ -1,11 +1,11 @@
 <div class="banner-wrapper has_background">
     <img src="./assets/client/images/banner-for-all2.jpg" class="img-responsive attachment-1920x447 size-1920x447" alt="img">
     <div class="banner-wrapper-inner">
-        <h1 class="page-title">Checkout</h1>
+        <h1 class="page-title">Thủ tục thanh toán</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="./index.php"><span>Home</span></a></li>
-                <li class="trail-item trail-end active"><span>Checkout</span>
+                <li class="trail-item trail-begin"><a href="./index.php"><span>Trang chủ</span></a></li>
+                <li class="trail-item trail-end active"><span>Thủ tục thanh toán</span>
                 </li>
             </ul>
         </div>
@@ -18,97 +18,14 @@
                 <div class="page-main-content">
                     <div class="akasha">
                         <div class="akasha-notices-wrapper"></div>
-                        <!-- <div class="checkout-before-top">
-                            <div class="akasha-checkout-login">
-                                <div class="akasha-form-login-toggle">
-                                    <div class="akasha-info">
-                                        Returning customer? <a href="#" class="showlogin">Click here to login</a></div>
-                                </div>
-                                <form class="akasha-form akasha-form-login login" method="post"
-                                      style="display:none;">
-                                    <p>If you have shopped with us before, please enter your details below. If you are a
-                                        new customer, please proceed to the Billing &amp; Shipping section.</p>
-                                    <p class="form-row form-row-first">
-                                        <label for="username">Username or email&nbsp;<span
-                                                class="required">*</span></label>
-                                        <input type="text" class="input-text" name="username" id="username"
-                                               autocomplete="username">
-                                    </p>
-                                    <p class="form-row form-row-last">
-                                        <label for="password">Password&nbsp;<span class="required">*</span></label>
-                                        <input class="input-text" type="password" name="password" id="password"
-                                               autocomplete="current-password">
-                                    </p>
-                                    <div class="clear"></div>
-                                    <p class="form-row">
-                                        <input type="hidden" id="akasha-login-nonce" name="akasha-login-nonce"
-                                               value="832993cb93"><input type="hidden" name="_wp_http_referer"
-                                                                         value="/akasha/checkout/">
-                                        <button type="submit" class="button" name="login" value="Login">Login</button>
-                                        <label class="akasha-form__label akasha-form__label-for-checkbox inline">
-                                            <input class="akasha-form__input akasha-form__input-checkbox"
-                                                   name="rememberme" type="checkbox" id="rememberme" value="forever">
-                                            <span>Remember me</span>
-                                        </label>
-                                    </p>
-                                    <p class="lost_password">
-                                        <a href="#">Lost your
-                                            password?</a>
-                                    </p>
-                                    <div class="clear"></div>
-                                </form>
-                            </div>
-                            <div class="akasha-checkout-coupon">
-                                <div class="akasha-notices-wrapper"></div>
-                                <div class="akasha-form-coupon-toggle">
-                                    <div class="akasha-info">
-                                        Have a coupon? <a href="#" class="showcoupon">Click here to enter your code</a>
-                                    </div>
-                                </div>
-                                <form class="checkout_coupon akasha-form-coupon" method="post"
-                                      style="display:none">
-                                    <p>If you have a coupon code, please apply it below.</p>
-                                    <p class="form-row form-row-first">
-                                        <input type="text" name="coupon_code" class="input-text"
-                                               placeholder="Coupon code" id="coupon_code" value="">
-                                    </p>
-                                    <p class="form-row form-row-last">
-                                        <button type="submit" class="button" name="apply_coupon" value="Apply coupon">
-                                            Apply coupon
-                                        </button>
-                                    </p>
-                                    <div class="clear"></div>
-                                </form>
-                            </div>
-                        </div> -->
+                      
                         <form name="checkout" class="checkout akasha-checkout" action="index.php?act=billcofirm" method="POST" novalidate="novalidate">
                             <div class="col2-set" id="customer_details">
                                 <div class="col-1">
                                     <div class="akasha-billing-fields">
-                                        <h3>Billing details</h3>
+                                        <h3>Chi tiết thanh toán</h3>
                                         <div class="akasha-billing-fields__field-wrapper">
-                                            <!-- <p class="form-row form-row-first validate-required"
-                                               id="billing_first_name_field" data-priority="10"><label
-                                                    for="billing_first_name" class="">First name&nbsp;<abbr
-                                                    class="required" title="required">*</abbr></label><span
-                                                    class="akasha-input-wrapper"><input type="text"
-                                                                                             class="input-text "
-                                                                                             name="billing_first_name"
-                                                                                             id="billing_first_name"
-                                                                                             placeholder="" value=""
-                                                                                             autocomplete="given-name"></span>
-                                            </p>
-                                            <p class="form-row form-row-last validate-required"
-                                               id="billing_last_name_field" data-priority="20"><label
-                                                    for="billing_last_name" class="">Last name&nbsp;<abbr
-                                                    class="required" title="required">*</abbr></label><span
-                                                    class="akasha-input-wrapper"><input type="text"
-                                                                                             class="input-text "
-                                                                                             name="billing_last_name"
-                                                                                             id="billing_last_name"
-                                                                                             placeholder="" value=""
-                                                                                             autocomplete="family-name"></span>
-                                            </p> -->
+                                            
                                             <p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label for="billing_company" class="">Họ & Tên&nbsp;<span style="color: red;" class="optional">*</span></label><span class="akasha-input-wrapper"><input type="text" class="input-text "  name="ho_ten" id="billing_company" placeholder="Họ Tên" value="<?= $ho_ten ?>" autocomplete="organization"></span>
                                             </p>
                                             <p class="form-row form-row-wide adchair-field update_totals_on_change validate-required" id="billing_country_field" data-priority="40"><label for="billing_country" class="">Giới Tính&nbsp;<abbr class="required" title="required">*</abbr></label>
@@ -164,13 +81,13 @@
                                 $email =  "";
                             }
                             ?>
-                            <h3 id="order_review_heading">Your order</h3>
+                            <h3 id="order_review_heading">Đơn hàng của bạn</h3>
                             <div id="order_review" class="akasha-checkout-review-order">
                                 <table class="shop_table akasha-checkout-review-order-table">
                                     <thead>
                                         <tr>
-                                            <th class="product-name">Product</th>
-                                            <th class="product-total">Total</th>
+                                            <th class="product-name">Sản phẩm</th>
+                                            <th class="product-total">Tổng</th>
                                         </tr>
                                     </thead>
                                     <?php
@@ -220,7 +137,7 @@
                                             <td><span class="akasha-Price-amount amount"><span class="akasha-Price-currencySymbol">$</span>418.00</span></td>
                                         </tr> -->
                                             <tr class="order-total">
-                                                <th>Total</th>
+                                                <th>Thanh toán:</th>
                                                 <td><strong><span class="akasha-Price-amount amount"><?= number_format($tong) ?> <span class="akasha-Price-currencySymbol">VNĐ</span></span></strong>
                                                 </td>
                                             </tr>
@@ -288,7 +205,7 @@
                                         </div> -->
                                         <input type="hidden" name="gia_tien" value="<?= $cart[3] ?>">
                                         <button type="submit" class="button alt" name="dat_hang" id="place_order" value="Place order" data-value="Place order">
-                                            Order
+                                            Đặt hàng
                                         </button>
                                         
                                         <input type="hidden" id="akasha-process-checkout-nonce" name="akasha-process-checkout-nonce" value="634590c981"><input type="hidden" name="_wp_http_referer" value="/akasha/?akasha-ajax=update_order_review">

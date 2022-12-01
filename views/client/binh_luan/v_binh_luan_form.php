@@ -35,7 +35,7 @@ $dsbl = loadall_binhluan_client($id_sp);
         <ul class="tabs dreaming-tabs mb-4" role="tablist">
 
             <li class="reviews_tab" id="tab-title-reviews" role="tab" aria-controls="tab-reviews">
-                <span style="font-size: 22px; font-weight: 600;">Reviews</span>
+                <span style="font-size: 22px; font-weight: 600;">Bình luận</span>
             </li>
         </ul>
 
@@ -82,7 +82,7 @@ $dsbl = loadall_binhluan_client($id_sp);
                                 if ($count >= 1) {
                                 ?>
                                     <tr style="font-size: 15px;">
-                                        <th style="width: 300px;" class="table-column-pl-0">Tên người dùng</th>
+                                        <th style="width: 300px; padding-left:45px ;" class="table-column-pl-0">Tên người dùng</th>
                                         <th style="width: 250px;">Thời gian</th>
                                         <th style="padding-left: 230px;">Nội dung</th>
                                     </tr>
@@ -139,9 +139,8 @@ $dsbl = loadall_binhluan_client($id_sp);
                                 <form action="<?= $_SERVER['PHP_SELF'] ?>" method="POST" id="commentform" class="comment-form">
 
                                     <input type="hidden" name="id_sp" value="<?= $id_sp ?>">
-                                    <p class="comment-form-comment"><label for="comment">Your
-                                            review&nbsp;<span class="required">*</span></label><textarea id="comment" name="noi_dung" cols="45" rows="8" required=""></textarea></p><input name="wpml_language_code" value="en" type="hidden">
-                                    <p class="form-submit"><input type="submit" name="gui_bl" id="submit" class="submit" value="Submit" type="submit"> <input name="comment_post_ID" value="27" id="comment_post_ID" type="hidden">
+                                    <p class="comment-form-comment"><label for="comment">Bình luận của bạn&nbsp;<span class="required">*</span></label><textarea id="comment" name="noi_dung" cols="45" rows="8" required=""></textarea></p><input name="wpml_language_code" value="en" type="hidden">
+                                    <p class="form-submit"><input type="submit" name="gui_bl" id="submit" class="submit" value="Gửi bình luận" type="submit"> <input name="comment_post_ID" value="27" id="comment_post_ID" type="hidden">
                                         <input name="comment_parent" id="comment_parent" value="0" type="hidden">
                                     </p>
                                 </form>

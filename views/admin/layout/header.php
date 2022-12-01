@@ -44,9 +44,9 @@
           </button>
           <!-- End Navbar Vertical Toggle -->
           <!-- Search Form -->
-          <div class="d-none d-md-block">
+          <!-- <div class="d-none d-md-block">
             <form class="position-relative m-0">
-              <!-- Input Group -->
+             
               <div class="input-group input-group-merge input-group-borderless input-group-hover-light navbar-input-group">
                 <div class="input-group-prepend">
                   <div class="input-group-text">
@@ -66,9 +66,9 @@
                   </span>
                 </a>
               </div>
-              <!-- End Input Group -->
+           
             </form>
-          </div>
+          </div> -->
           <!-- End Search Form -->
 
         </div>
@@ -81,8 +81,8 @@
               <!-- Account -->
               <div class="hs-unfold">
 
-                <div style="display:flex; align-items: center;"><span style="font-size: 14px; font-weight: 600; color: #000;" class="mr-2">Xin chào: <span style="color: #E68441;"><?php session_start();
-                                                                                                                                                                                    echo $_SESSION['showuser'] ?></span></span><a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:;" data-hs-unfold-options='{
+                <div style="display:flex; align-items: center;"><span style="font-size: 14px; font-weight: 600; color: #000;" class="mr-2">Xin chào: <span style="color: #E68441; font-size: 14px; font-weight: 600px;"><?php session_start();
+                                                                                                                                                                                                                        echo $_SESSION['showuser'] ?></span></span><a class="js-hs-unfold-invoker navbar-dropdown-account-wrapper" href="javascript:;" data-hs-unfold-options='{
                  "target": "#accountNavbarDropdown",
                  "type": "css-animation"
                }'>
@@ -114,10 +114,10 @@
 
 
                   <a class="dropdown-item" href="../.././index.php">
-                    <span class="text-truncate pr-2" title="Manage team">Client</span>
+                    <span class="text-truncate pr-2" title="Manage team">Khách hàng</span>
                   </a>
                   <a class="dropdown-item" href="../.././index.php?act=logout">
-                    <span class="text-truncate pr-2" title="Sign out">Sign out</span>
+                    <span class="text-truncate pr-2" title="Sign out">Đăng xuất</span>
                   </a>
                 </div>
               </div>

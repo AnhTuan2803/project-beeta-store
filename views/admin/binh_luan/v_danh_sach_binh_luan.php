@@ -5,7 +5,7 @@
         <div class="page-header">
             <div class="row align-items-center mb-3">
                 <div class="col-sm mb-2 mb-sm-0">
-                    <h1 class="page-header-title">Danh sách khách hàng</h1>
+                    <h1 class="page-header-title">Danh sách bình luận</h1>
 
                 </div>
 
@@ -30,11 +30,11 @@
                 <!-- Nav -->
                 <ul class="nav nav-tabs page-header-tabs" id="pageHeaderTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Tất cả khách hàng</a>
+                        <a class="nav-link active" href="#">Tất cả bình luận</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Archived</a>
-                    </li>
+                    </li> -->
                 </ul>
                 <!-- End Nav -->
             </div>
@@ -58,8 +58,8 @@
                                         <i class="tio-search"></i>
                                     </div>
                                 </div>
-                                <input id="datatableSearch" type="search" class="form-control" placeholder="Tìm kiếm theo bình luận" aria-label="Search users" name="kyw">
-                                <input type="submit" class="btn btn-primary"  aria-label="Search users" value="Tìm kiếm" name="search">
+                                <input id="datatableSearch" type="search" class="form-control" placeholder="Tìm kiếm bình luận" aria-label="Search users" name="kyw">
+                                <input style="display: none;" type="submit" class="btn btn-primary"  aria-label="Search users" value="Tìm kiếm" name="search">
                             </div>
                             <!-- End Search -->
                         </form>
@@ -95,8 +95,8 @@
 
                             <th>Id</th>
                             <th>NỘI DUNG BÌNH LUẬN</th>
-                            <th>ID KHÁCH HÀNG</th>
-                            <th>IDSP</th>
+                            <th>TÊN KHÁCH HÀNG</th>
+                            <th>TÊN SP</th>
                             <th>NGÀY BÌNH LUẬN</th>
                             <th style="padding-left:48px;">Điều khiển</th>
                         </tr>

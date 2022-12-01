@@ -5,18 +5,17 @@
                 <div class="newsletter-inner">
                     <div class="newsletter-info">
                         <div class="newsletter-wrap">
-                            <h3 class="title">Newsletter</h3>
-                            <h4 class="subtitle">Get Discount 30% Off</h4>
-                            <p class="desc">Suspendisse netus proin eleifend fusce sollicitudin potenti vel magnis
-                                nascetur</p>
+                            <h3 class="title">BẢN TIN</h3>
+                            <h4 class="subtitle">Giảm giá 30%</h4>
+                            <p class="desc">Dòng dõi của thế hệ trẻ sẽ được sinh ra để mạnh mẽ hoặc vĩ đại</p>
                         </div>
                     </div>
                     <div class="newsletter-form-wrap">
                         <div class="newsletter-form-inner">
-                            <input class="email email-newsletter" name="email" placeholder="Enter your email ..."
+                            <input class="email email-newsletter" name="email" placeholder="Nhập email của bạn ..."
                                    type="email">
                             <a href="#" class="button btn-submit submit-newsletter">
-                                <span class="text">Subscribe</span>
+                                <span class="text">Đặt mua</span>
                             </a>
                         </div>
                     </div>
@@ -28,7 +27,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p>© Copyright 2022 <a href="#">Beeta-Store</a>. All Rights Reserved.</p>
+                    <p>© Bản quyền 2022 <a href="#">Beeta-Store</a>. Đã đăng ký Bản quyền.</p>
                 </div>
                 <div class="col-md-6">
                     <div class="akasha-socials style-01">

@@ -34,9 +34,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Tất cả tài khoản</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Archived</a>
-                    </li>
+                    </li> -->
                 </ul>
                 <!-- End Nav -->
             </div>
@@ -61,7 +61,7 @@
                                     </div>
                                 </div>
                                 <input id="datatableSearch" type="search" class="form-control" placeholder="Tìm kiếm theo email" aria-label="Search users" name="kyw">
-                                <input type="submit" class="btn btn-primary "  aria-label="Search users" value="Tìm kiếm" name="search">
+                                <input style="display: none;" type="submit" class="btn btn-primary "  aria-label="Search users" value="Tìm kiếm" name="search">
                             </div>
                             <!-- End Search -->
                         </form>

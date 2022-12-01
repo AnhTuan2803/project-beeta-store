@@ -1,11 +1,11 @@
 <div class="banner-wrapper has_background">
     <img src="./assets/client/images/banner-for-all2.jpg" class="img-responsive attachment-1920x447 size-1920x447" alt="img">
     <div class="banner-wrapper-inner">
-        <h1 class="page-title">Shop</h1>
+        <h1 class="page-title">Cửa hàng</h1>
         <div role="navigation" aria-label="Breadcrumbs" class="breadcrumb-trail breadcrumbs">
             <ul class="trail-items breadcrumb">
-                <li class="trail-item trail-begin"><a href="./index.php"><span>Home</span></a></li>
-                <li class="trail-item trail-end active"><span>Shop</span>
+                <li class="trail-item trail-begin"><a href="./index.php"><span>Trang chủ</span></a></li>
+                <li class="trail-item trail-end active"><span>Cửa hàng</span>
                 </li>
             </ul>
         </div>
@@ -49,7 +49,7 @@
                             ?>
 
                         </select>
-                        <input style="font-weight: 500; height: 44px; margin-bottom: 3px;" type="submit" name="btn" value="Tìm kiếm" class="btn btn-light">
+                        <input style="font-weight: 500; height: 44px; margin-bottom: 3px; margin-left: 5px;" type="submit" name="btn" value="Tìm kiếm" class="btn btn-light">
 
                     </form>
                 </div>
@@ -111,11 +111,11 @@
                 <div id="widget-area" class="widget-area shop-sidebar">
                     <div id="akasha_product_search-2" class="widget akasha widget_product_search">
                         <form action="index.php?act=sanpham_list" method="POST" class="akasha-product-search">
-                            <input id="akasha-product-search-field-0" class="search-field" placeholder="Search products…" name="kyw" type="search">
+                            <input id="akasha-product-search-field-0" class="search-field" placeholder="Tìm kiếm sản phẩm . . ." name="kyw" type="search">
                             <button type="submit" name="btn1" value="Search">Search</button>
                         </form>
                     </div>
-                    <div id="akasha_price_filter-2" class="widget akasha widget_price_filter">
+                    <!-- <div id="akasha_price_filter-2" class="widget akasha widget_price_filter">
                         <h2 class="widgettitle">Filter By Price<span class="arrow"></span></h2>
                         <form method="get" action="#">
                             <div class="price_slider_wrapper">
@@ -129,8 +129,8 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
-                    <div id="akasha_akasha_layered_nav-4" class="widget akasha_widget_layered_nav widget_layered_nav">
+                    </div> -->
+                    <!-- <div id="akasha_akasha_layered_nav-4" class="widget akasha_widget_layered_nav widget_layered_nav">
                         <h2 class="widgettitle">Filter By Color<span class="arrow"></span></h2>
                         <div class="color-group">
                             <a class="term-color " href="#">
@@ -203,9 +203,9 @@
                                 <span class="count">(3)</span>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                     <div id="akasha_product_categories-3" class="widget akasha widget_product_categories">
-                        <h2 class="widgettitle">Product categories<span class="arrow"></span></h2>
+                        <h2 class="widgettitle">Danh mục sản phẩm<span class="arrow"></span></h2>
                         <ul class="product-categories">
                             <?php
                             foreach ($list_dm as $dm) {
