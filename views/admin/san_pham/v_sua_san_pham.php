@@ -2,7 +2,6 @@
 if (is_array($sp)) {
     extract($sp);
 }
-
 $hinhpath = "../../assets/uploads/" . $hinh;
 if (is_file($hinhpath)) {
     $anh = "<img style='height: 100%;' class='avatar avatar-xxl avatar-4by3 mb-3' alt='Image Description' src='" . $hinhpath . "' height='120px'>";
@@ -58,7 +57,7 @@ if (is_file($hinhpath)) {
                                         <select name="id_dm" class="js-select2-custom custom-select" size="1" data-hs-select2-options='{
                                     "minimumResultsForSearch": "Infinity"
                                   }'>
-                                            <option value="<?= $id_dm ?>" selected>Danh mục</option>
+                                            <option value="<?php echo $sp['id_dm'];?>" selected><?php echo $ten_dm ?></option>
                                             <?php
                                             foreach ($listdanhmuc as $danhmuc) {
                                                 extract($danhmuc);

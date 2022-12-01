@@ -106,7 +106,7 @@
                         }
                         ?>
 
-                        <li class="product-item wow fadeInUp product-item rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-ts-6 style-01 post-28 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple" data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
+                        <!-- <li class="product-item wow fadeInUp product-item rows-space-30 col-bg-3 col-xl-3 col-lg-4 col-md-6 col-sm-6 col-ts-6 style-01 post-28 product type-product status-publish has-post-thumbnail product_cat-light product_cat-chair product_cat-sofas product_tag-light product_tag-sock  instock sale featured shipping-taxable purchasable product-type-simple" data-wow-duration="1s" data-wow-delay="0ms" data-wow="fadeInUp">
                             <div class="product-inner tooltip-left">
                                 <div class="product-thumb">
                                     <a class="thumb-link" href="#">
@@ -563,7 +563,7 @@
                             </div>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="shop-control shop-after-control">
                     <nav class="akasha-pagination">
                         <span class="page-numbers current">1</span>

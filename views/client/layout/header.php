@@ -86,16 +86,16 @@
                                 <div class="meta-dreaming">
                                     <ul class="wpml-menu">
                                         <li class="menu-item akasha-dropdown block-language">
-                                            <a href="#" data-akasha="akasha-dropdown">
-                                                <img src="./assets/client/images/en.png" alt="en" width="18" height="12">
-                                                English
+                                            <a href="#">
+                                                <img src="./assets/client/images/vn.png" alt="it" width="18" height="12">
+                                                VietNam
                                             </a>
                                             <span class="toggle-submenu"></span>
                                             <ul class="sub-menu">
                                                 <li class="menu-item">
-                                                    <a href="#">
-                                                        <img src="./assets/client/images/vn.png" alt="it" width="18" height="12">
-                                                        VietNam
+                                                    <a href="#" data-akasha="akasha-dropdown">
+                                                        <img src="./assets/client/images/en.png" alt="en" width="18" height="12">
+                                                        English
                                                     </a>
                                                 </li>
                                                 <li class="menu-item">
@@ -106,23 +106,6 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <!-- <li class="menu-item">
-                                            <div class="wcml-dropdown product wcml_currency_switcher">
-                                                <ul>
-                                                    <li class="wcml-cs-active-currency">
-                                                        <a class="wcml-cs-item-toggle">USD</a>
-                                                        <ul class="wcml-cs-submenu">
-                                                            <li>
-                                                                <a>VNĐ</a>
-                                                            </li>
-                                                            <li>
-                                                                <a>EUR</a>
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li> -->
                                     </ul>
                                     <div class="header-search akasha-dropdown">
                                         <div class="header-search-inner" data-akasha="akasha-dropdown">
