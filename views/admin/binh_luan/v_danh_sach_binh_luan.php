@@ -124,7 +124,7 @@
 
 
                                             <div style="display: flex">
-                                                <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="<?= $xoabl ?>">
+                                                <a style="padding-left:10px; padding-right:10px" class="dropdown-item" onclick="return confirm('Bạn muốn xóa bình luận?');" href="<?= $xoabl ?>">
                                                     <i class="fa-solid fa-trash dropdown-item-icon"></i>Xóa
                                                 </a>
                                             </div>

@@ -111,7 +111,8 @@
               extract($danhmuc);
               $suadm = "index.php?act=suadm&id=" . $id_dm;
               $xoadm = "index.php?act=xoadm&id=" . $id_dm;
-              echo '<tr>
+              ?>
+              <tr>
                   <td class="table-column-pr-0">
                     <div class="custom-control custom-checkbox">
                       <input type="checkbox" class="custom-control-input" id="productsCheck1">
@@ -119,8 +120,8 @@
                     </div>
                   </td>
                  
-                  <td>' . $id_dm . '</td>
-                  <td>' . $ten_dm . '</td>
+                  <td><?= $id_dm ?></td>
+                  <td><?= $ten_dm ?></td>
                   
                   <td>
                     <div class="btn-group" role="group">
@@ -131,10 +132,10 @@
                         
 
     <div style="display: flex">
-                        <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="' . $suadm . '">
+                        <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="<?= $suadm ?>">
                         <i class="fa-solid fa-screwdriver-wrench dropdown-item-icon"></i>Sửa
                         </a>
-                          <a style="padding-left:10px; padding-right:10px" class="dropdown-item" onclick="return confirm("Bạn muốn xóa danh mục này?")" href="' . $xoadm . '">
+                          <a style="padding-left:10px; padding-right:10px" class="dropdown-item" onclick="return confirm('Bạn muốn xóa danh mục?');" href="<?= $xoadm ?>">
                           <i class="fa-solid fa-trash dropdown-item-icon"></i>Xóa
                           </a>
                         </div>
@@ -142,7 +143,8 @@
                       <!-- End Unfold -->
                     </div>
                   </td>
-                </tr>';
+                </tr>
+                <?php
             }
             ?>
 
