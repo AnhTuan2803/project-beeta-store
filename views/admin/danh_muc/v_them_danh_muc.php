@@ -44,7 +44,7 @@
                                         <div class="form-group">
                                             <label for="SKULabel" class="input-label">Tên danh mục</label>
 
-                                            <input type="text" class="form-control" name="tenloai" id="SKULabel" placeholder="Nhập tên danh mục" aria-label="eg. 348121032">
+                                            <input type="text" class="form-control" name="tenloai" id="SKULabel" placeholder="Nhập tên danh mục" aria-label="eg. 348121032" required>
                                         </div>
                                         <!-- End Form Group -->
                                     </div>

@@ -112,8 +112,8 @@
                             <tr>
                                 <td><?= $id_bl ?></td>
                                 <td><?= $binhluan['noi_dung'] ?></td>
-                                <th><?= $binhluan['id_nd']  ?></th>
-                                <th><?= $binhluan['id_sp']  ?></th>
+                                <th><?= $binhluan['ho_ten']  ?></th>
+                                <th><?= $binhluan['ten_sp']  ?></th>
                                 <th><?= $binhluan['ngay_bl']  ?></th>
                                 <td>
                                     <div class="btn-group" role="group">

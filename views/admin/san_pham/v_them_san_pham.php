@@ -63,7 +63,7 @@
                   <!-- Form Group -->
                   <div class="form-group">
                     <label for="SKULabel" class="input-label">Tên sản phẩm</label>
-                    <input type="text" class="form-control" name="tensp" id="SKULabel" placeholder="Tên sản phẩm..." aria-label="eg. 348121032">
+                    <input type="text" class="form-control" name="tensp" id="SKULabel" placeholder="Tên sản phẩm..." aria-label="eg. 348121032" required>
                   </div>
                   <!-- End Form Group -->
                 </div>
@@ -72,7 +72,7 @@
                   <!-- Form Group -->
                   <div class="form-group">
                     <label for="weightLabel" class="input-label">Đơn giá</label>
-                    <input type="text" class="form-control" name="giasp" id="weightLabel" placeholder="Đơn giá..." aria-label="0.0">
+                    <input type="text" class="form-control" name="giasp" id="weightLabel" placeholder="Đơn giá..." aria-label="0.0" required>
 
 
 
@@ -132,7 +132,7 @@
                   <img class="avatar avatar-xl avatar-4by3 mb-3" src="..\..\assets\admin\svg\illustrations\browse.svg" alt="Image Description">
                   <h5 class="mb-1">Choose files to upload</h5>
                   <p class="mb-2">or</p>
-                  <input type="file" name="anhsp" style="max-width:200px;" class="btn btn-sm btn-primary">
+                  <input type="file" name="anhsp" style="max-width:200px;" class="btn btn-sm btn-primary" required>
 
                 </div>
               </div>

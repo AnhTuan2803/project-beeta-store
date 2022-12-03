@@ -30,7 +30,10 @@ function loadall_binhluan($kyw)
     } else {
         $begin = ($page * 5) - 5;
     }
-    $sql = "select * from binh_luan where 1";
+    $sql = "select * from binh_luan
+    inner join nguoi_dung on nguoi_dung.id_nd = binh_luan.id_nd
+    inner join san_pham on san_pham.id_sp = binh_luan.id_sp
+    where 1";
     if($kyw!=""){
         $sql.=" and noi_dung like '%".$kyw."%'";
     }
