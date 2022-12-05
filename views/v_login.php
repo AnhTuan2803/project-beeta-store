@@ -1,3 +1,11 @@
+<?php
+$url = $_SERVER["HTTP_REFERER"];
+session_start();
+$_SESSION['url'] = $url;
+if (isset($_SESSION['tb']) && $_SESSION['tb'] != "") {
+  echo '<script>alert("' . $_SESSION['tb'] . '")</script>';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
