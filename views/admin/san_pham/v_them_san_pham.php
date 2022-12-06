@@ -101,26 +101,6 @@
             <!-- Header -->
             <div class="card-header">
               <h4 class="card-header-title">Hình ảnh</h4>
-
-              <!-- Unfold -->
-              <!-- <div class="hs-unfold">
-                  <a class="js-hs-unfold-invoker btn btn-sm btn-ghost-secondary" href="javascript:;" data-hs-unfold-options='{
-                       "target": "#mediaDropdown",
-                       "type": "css-animation"
-                     }'>
-                    Add media from URL <i class="tio-chevron-down"></i>
-                  </a>
-
-                  <div id="mediaDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right mt-1">
-                    <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#addImageFromURLModal">
-                      <i class="tio-link dropdown-item-icon"></i> Add image from URL
-                    </a>
-                    <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#embedVideoModal">
-                      <i class="tio-youtube-outlined dropdown-item-icon"></i> Embed video
-                    </a>
-                  </div>
-                </div> -->
-              <!-- End Unfold -->
             </div>
             <!-- End Header -->
 
@@ -133,6 +113,27 @@
                   <h5 class="mb-1">Choose files to upload</h5>
                   <p class="mb-2">or</p>
                   <input type="file" name="anhsp" style="max-width:200px;" class="btn btn-sm btn-primary" required>
+
+                </div>
+              </div>
+              <!-- End Dropzone -->
+            </div>
+            <div class="card mb-3 mb-lg-5">
+            <!-- Header -->
+            <div class="card-header">
+              <h4 class="card-header-title">Hình ảnh mô tả</h4>
+            </div>
+            <!-- End Header -->
+
+            <!-- Body -->
+            <div class="card-body">
+              <!-- Dropzone -->
+              <div id="attachFilesNewProjectLabel" class="js-dropzone dropzone-custom custom-file-boxed">
+                <div class="dz-message custom-file-boxed-label">
+                  <img class="avatar avatar-xl avatar-4by3 mb-3" src="..\..\assets\admin\svg\illustrations\browse.svg" alt="Image Description">
+                  <h5 class="mb-1">Choose files to upload</h5>
+                  <p class="mb-2">or</p>
+                  <input type="file" name="hinhmota[]" style="max-width:200px;" class="btn btn-sm btn-primary" multiple="multiple">
 
                 </div>
               </div>

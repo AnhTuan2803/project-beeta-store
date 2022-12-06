@@ -1,7 +1,11 @@
 <?php
 extract($onesp);
+extract($listhinhanh);
+
 $linkimg = "./assets/uploads/" . $hinh;
+
 ?>
+
 <div class="single-thumb-vertical main-container shop-page no-sidebar">
     <div class="banner-wrapper no_background">
         <div class="banner-wrapper-inner">
@@ -27,30 +31,32 @@ $linkimg = "./assets/uploads/" . $hinh;
                                             <div class="akasha-product-gallery__image">
                                                 <img style="width: 100%;" alt="img" src="<?= $linkimg ?>" />
                                             </div>
-                                            <div class="akasha-product-gallery__image">
-                                                <img style="width: 100%;" src="./assets/client/images/apro134-1.jpg" alt="img" />
-                                            </div>
-                                            <div class="akasha-product-gallery__image">
-                                                <img style="width: 100%;" src="./assets/client/images/apro132-1.jpg" class="" alt="img" />
-                                            </div>
-                                            <div class="akasha-product-gallery__image">
-                                                <img style="width: 100%;" src="./assets/client/images/apro133-1.jpg" class="" alt="img" />
-                                            </div>
+                                            <?php
+                                            foreach ($listhinhanh as $ha) {
+                                                $linkmota = "./assets/uploadhinhmt/" . $ha['hinh_mo_ta'];
+                                            ?>
+                                                <div class="akasha-product-gallery__image">
+                                                    <img style="width: 100%;" src="<?= $linkmota ?>" alt="img" />
+                                                </div>
+                                            <?php
+                                            }
+                                            ?>
                                         </figure>
                                     </div>
                                     <ol class="flex-control-nav flex-control-thumbs">
-                                        <li>
-                                            <img style="height: 110px;" src="<?= $linkimg ?>" alt="img" />
-                                        </li>
-                                        <li>
-                                            <img style="height: 110px;" src="./assets/client/images/apro134-1-100x100.jpg" alt="img" />
-                                        </li>
-                                        <li>
-                                            <img style="height: 110px;" src="./assets/client/images/apro132-1-100x100.jpg" alt="img" />
-                                        </li>
-                                        <li>
-                                            <img style="height: 110px;" src="./assets/client/images/apro133-1-100x100.jpg" alt="img" />
-                                        </li>
+                                        <div class="akasha-product-gallery__image">
+                                            <img style="width: 100%;" alt="img" src="<?= $linkimg ?>" />
+                                        </div>
+                                        <?php
+                                        foreach ($listhinhanh as $ha) {
+                                            $linkmota = "./assets/uploadhinhmt/" . $ha['hinh_mo_ta'];
+                                        ?>
+                                            <div class="akasha-product-gallery__image">
+                                                <img style="width: 100%;" src="<?= $linkmota ?>" alt="img" />
+                                            </div>
+                                        <?php
+                                        }
+                                        ?>
                                     </ol>
                                 </div>
                             </div>

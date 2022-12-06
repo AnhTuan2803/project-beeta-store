@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 01, 2022 lúc 11:03 AM
+-- Thời gian đã tạo: Th12 06, 2022 lúc 11:05 AM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 7.4.29
 
@@ -54,7 +54,9 @@ CREATE TABLE `binh_luan` (
 
 INSERT INTO `binh_luan` (`id_bl`, `noi_dung`, `id_nd`, `id_sp`, `ngay_bl`) VALUES
 (13, 'Balo nhẹ, gọn, đeo êm vai', 20, 23, '01/12/2022'),
-(14, 'Áo đẹp', 20, 26, '01/12/2022');
+(14, 'Áo đẹp', 20, 26, '01/12/2022'),
+(15, 'Sản phẩm này xấu điên\r\n', 20, 21, '02/12/2022'),
+(16, 'Áo này xấu điên \r\n', 20, 28, '03/12/2022');
 
 -- --------------------------------------------------------
 
@@ -82,7 +84,22 @@ INSERT INTO `ct_hoa_don` (`id_hd`, `id_sp`, `so_luong`, `don_gia`, `stt`) VALUES
 ('50', '24', 2, 150000, 62),
 ('51', '15', 2, 120000, 63),
 ('51', '17', 1, 150000, 64),
-('52', '20', 3, 150000, 65);
+('52', '20', 3, 150000, 65),
+('53', '28', 2, 125000, 66),
+('53', '23', 1, 300000, 67),
+('54', '26', 1, 200000, 68),
+('55', '28', 1, 125000, 69),
+('56', '26', 1, 200000, 70),
+('57', '31', 1, 150000, 71),
+('58', '31', 1, 150000, 72),
+('59', '28', 5, 125000, 73),
+('60', '32', 2, 250000, 74),
+('61', '32', 2, 250000, 75),
+('62', '32', 2, 250000, 76),
+('63', '32', 2, 250000, 77),
+('64', '32', 2, 250000, 78),
+('65', '32', 3, 250000, 79),
+('66', '32', 3, 250000, 80);
 
 -- --------------------------------------------------------
 
@@ -103,6 +120,28 @@ INSERT INTO `danh_muc` (`id_dm`, `ten_dm`) VALUES
 (1, 'Phụ kiện'),
 (2, 'Thời trang nữ'),
 (3, 'Thời trang nam');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `hinh_mo_ta`
+--
+
+CREATE TABLE `hinh_mo_ta` (
+  `id` int(11) NOT NULL,
+  `id_sp` int(11) NOT NULL,
+  `hinh_mo_ta` varchar(300) NOT NULL,
+  `ghi_chu` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `hinh_mo_ta`
+--
+
+INSERT INTO `hinh_mo_ta` (`id`, `id_sp`, `hinh_mo_ta`, `ghi_chu`) VALUES
+(4, 32, 'apro201-1-270x350.jpg', ''),
+(5, 32, 'apro1221-2-592x592.jpg', ''),
+(6, 32, 'apro1231-2-90x90.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -130,7 +169,15 @@ INSERT INTO `hoa_don` (`id_hd`, `ngay_hd`, `id_kh`, `gia_tien`, `thanh_toan`, `t
 (49, '2022-09-30', '48', 900000, '1', 0, 20),
 (50, '2022-11-30', '49', 300000, '1', 0, 20),
 (51, '2022-11-30', '50', 390000, '1', 0, 20),
-(52, '2022-10-30', '51', 450000, '1', 0, 20);
+(52, '2022-10-30', '51', 450000, '1', 0, 20),
+(53, '2022-12-01', '52', 550000, '1', 0, 20),
+(54, '2022-12-02', '53', 200000, '1', 1, 20),
+(55, '2022-12-02', '54', 125000, '1', 0, 20),
+(56, '2022-12-03', '55', 200000, '1', 0, 20),
+(59, '2022-12-05', '58', 625000, '1', 1, 20),
+(64, '2022-12-06', '63', 500000, '1', 1, 20),
+(65, '2022-12-06', '64', 750000, '1', 1, 20),
+(66, '2022-12-06', '65', 750000, '1', 1, 20);
 
 -- --------------------------------------------------------
 
@@ -159,7 +206,19 @@ INSERT INTO `khach_hang` (`id_kh`, `ten_kh`, `gioi_tinh`, `ngay_sinh`, `dia_chi`
 (48, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', 'Hải Dương', '0383379990', 'tinhhd@gmail.com', ''),
 (49, 'Hoàng Thị B', 0, '2000-10-10', 'Nghệ An', '0363636363', 'hoangb@gmail.com', ''),
 (50, 'Phạm Thị C', 1, '2001-10-20', 'Hà Nội', '0353839367', 'tinh54040@gmail.com', ''),
-(51, 'Hoàng Anh D', 0, '2002-01-10', 'Hà Nội', '0965685789', 'hoangd@gmail.com', '');
+(51, 'Hoàng Anh D', 0, '2002-01-10', 'Hà Nội', '0965685789', 'hoangd@gmail.com', ''),
+(52, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', 'Hà Nội', '0383379990', 'tinh54040@gmail.com', ''),
+(54, 'Nguyễn Văn Tĩnh', 0, '0000-00-00', '', '', 'tinh54040@gmail.com', ''),
+(56, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', '', '', 'tinh54040@gmail.com', ''),
+(57, 'Nguyễn Văn Tĩnh', 0, '0000-00-00', '', '', 'tinh54040@gmail.com', ''),
+(58, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', 'Hà Nội', '0383379990', 'tinh54040@gmail.com', ''),
+(59, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', 'Hà Nội', '0383379990', 'tinhnvph20542@fpt.edu.vn', ''),
+(60, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', 'Hà Nội', '0383379990', 'tinhnvph20542@fpt.edu.vn', ''),
+(61, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', 'Hà Nội', '0383379990', 'tinhnvph20542@fpt.edu.vn', ''),
+(62, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', 'Hà Nội', '0383379990', 'tinh54040@gmail.com', ''),
+(63, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', 'HN', '0383379990', 'tinh54040@gmail.com', ''),
+(64, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', 'HN', '0383379990', 'tinhnvoh20542@fpt.edu.vn', ''),
+(65, 'Nguyễn Văn Tĩnh', 0, '2003-10-23', 'HN', '0383379990', 'tinhnvph20542@fpt.edu.vn', '');
 
 -- --------------------------------------------------------
 
@@ -216,9 +275,10 @@ INSERT INTO `san_pham` (`id_sp`, `ten_sp`, `mo_ta`, `don_gia`, `hinh`, `san_pham
 (22, 'Giày sneaker', 'Giày sneaker nam, nữ MC phong cách thời trang', 350000, 'insta8.jpg', 0, '2022-11-30', 1),
 (23, 'Balo', 'Balo thời trang, rộng rãi, êm, chống nước', 300000, 'cat3.jpg', 0, '2022-11-30', 1),
 (24, 'Áo thun nữ', 'Áo thun nữ ôm sát', 150000, 'apro31-1-600x778.jpg', 0, '2022-11-30', 2),
-(26, 'Áo sơ mi', 'Áo sơ mi nam, trẻ trung, phong cách', 200000, 'apro1221-2-592x592.jpg', 0, '2022-11-30', 1),
+(26, 'Áo sơ mi', 'Áo sơ mi nam, trẻ trung, phong cách', 200000, 'apro1221-2-592x592.jpg', 0, '2022-11-30', 3),
 (27, 'Áo khoác ', 'Áo khoác gió ', 350000, 'apro191-1-270x350.jpg', 0, '2022-11-30', 3),
-(28, 'Áo thun hở vai', 'Áo cho nữ', 125000, 'apro71-1-600x778.jpg', 0, '2022-12-01', 2);
+(28, 'Áo thun hở vai', 'Áo cho nữ', 125000, 'apro71-1-600x778.jpg', 0, '2022-12-01', 2),
+(32, 'Áo sơ mi', 'Áo sơ mi nam', 250000, 'apro1211-2-90x90.jpg', 0, '2022-12-06', 3);
 
 -- --------------------------------------------------------
 
@@ -268,6 +328,12 @@ ALTER TABLE `danh_muc`
   ADD PRIMARY KEY (`id_dm`);
 
 --
+-- Chỉ mục cho bảng `hinh_mo_ta`
+--
+ALTER TABLE `hinh_mo_ta`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Chỉ mục cho bảng `hoa_don`
 --
 ALTER TABLE `hoa_don`
@@ -311,31 +377,37 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT cho bảng `binh_luan`
 --
 ALTER TABLE `binh_luan`
-  MODIFY `id_bl` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_bl` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT cho bảng `ct_hoa_don`
 --
 ALTER TABLE `ct_hoa_don`
-  MODIFY `stt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
+  MODIFY `stt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT cho bảng `danh_muc`
 --
 ALTER TABLE `danh_muc`
-  MODIFY `id_dm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_dm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT cho bảng `hinh_mo_ta`
+--
+ALTER TABLE `hinh_mo_ta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `hoa_don`
 --
 ALTER TABLE `hoa_don`
-  MODIFY `id_hd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id_hd` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT cho bảng `khach_hang`
 --
 ALTER TABLE `khach_hang`
-  MODIFY `id_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id_kh` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT cho bảng `nguoi_dung`
@@ -347,7 +419,7 @@ ALTER TABLE `nguoi_dung`
 -- AUTO_INCREMENT cho bảng `san_pham`
 --
 ALTER TABLE `san_pham`
-  MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_sp` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT cho bảng `vai_tro`

@@ -57,7 +57,7 @@ if (is_file($hinhpath)) {
                                         <select name="id_dm" class="js-select2-custom custom-select" size="1" data-hs-select2-options='{
                                     "minimumResultsForSearch": "Infinity"
                                   }'>
-                                            <option value="<?php echo $sp['id_dm'];?>" selected><?php echo $ten_dm ?></option>
+                                            <option value="<?php echo $sp['id_dm']; ?>" selected><?php echo $ten_dm ?></option>
                                             <?php
                                             foreach ($listdanhmuc as $danhmuc) {
                                                 extract($danhmuc);
@@ -127,28 +127,6 @@ if (is_file($hinhpath)) {
                         <!-- Header -->
                         <div class="card-header">
                             <h4 class="card-header-title">Hình ảnh</h4>
-
-                            <!-- Unfold -->
-                            <!-- <div class="hs-unfold">
-<<<<<<< HEAD
-                  <a class="js-hs-unfold-invoker btn btn-sm btn-ghost-secondary" href="javascript:;" data-hs-unfold-options='{
-                       "target": "#mediaDropdown",
-                       "type": "css-animation"
-                     }'>
-                    Add media from URL <i class="tio-chevron-down"></i>
-                  </a>
-
-                  <div id="mediaDropdown" class="hs-unfold-content dropdown-unfold dropdown-menu dropdown-menu-right mt-1">
-                    <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#addImageFromURLModal">
-                      <i class="tio-link dropdown-item-icon"></i> Add image from URL
-                    </a>
-                    <a class="dropdown-item" href="javascript:;" data-toggle="modal" data-target="#embedVideoModal">
-                      <i class="tio-youtube-outlined dropdown-item-icon"></i> Embed video
-                    </a>
-                  </div>
-                </div> -->
-
-                            <!-- End Unfold -->
                         </div>
                         <!-- End Header -->
 
@@ -168,6 +146,36 @@ if (is_file($hinhpath)) {
                             </div>
                             <!-- End Dropzone -->
                         </div>
+                        <div class="card-header">
+                            <h4 class="card-header-title">Hình ảnh mô tả</h4>
+                        </div>
+                        <!-- End Header -->
+
+                        <!-- Body -->
+                        <div class="card-body">
+                            <!-- Dropzone -->
+                            <div id="attachFilesNewProjectLabel" class="js-dropzone dropzone-custom custom-file-boxed">
+                                <div class="dz-message custom-file-boxed-label">
+
+                                    <?php
+                                    foreach ($listhinhanh as $ha) {
+                                        $linkmota = "../../assets/uploadhinhmt/" . $ha['hinh_mo_ta'];
+                                    ?>
+                                        <img style='height: 100%;' class='avatar avatar-xxl avatar-4by3 mb-3' alt='Image Description' src='<?=$linkmota?>' height='120px'>
+                                    <?php
+                                    }
+                                    ?>
+                                    <h5 class="mb-1">Choose files to upload</h5>
+                                    <p class="mb-2">or</p>
+                                    <input type="file" name="hinhmota[]" style="max-width:200px;" class="btn btn-sm btn-primary" multiple="multiple">
+
+                                </div>
+
+
+                            </div>
+                            <!-- End Dropzone -->
+                        </div>
+
                         <div class="ml-4 mb-4">
 
                             <input type="hidden" name="id" value="<?= $id_sp ?>">

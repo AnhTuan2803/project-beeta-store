@@ -19,10 +19,10 @@ function loadall_sanpham($kyw)
         $begin = ($page * 5) - 5;
     }
     $sql = "select * from san_pham where 1";
-    if($kyw!=""){
-        $sql.=" and ten_sp like '%".$kyw."%'";
+    if ($kyw != "") {
+        $sql .= " and ten_sp like '%" . $kyw . "%'";
     }
-    $sql.=" order by id_sp desc limit $begin,5";
+    $sql .= " order by id_sp desc limit $begin,5";
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
@@ -40,7 +40,12 @@ function loadall_sanpham_new()
     $listsanpham = pdo_query($sql);
     return $listsanpham;
 }
-
+function loadall_hinhanh($id)
+{
+    $sql = "select * from hinh_mo_ta where id_sp=" . $id;
+    $listhinhanh = pdo_query($sql);
+    return $listhinhanh;
+}
 function loadone_sanpham($id)
 {
     $sql = "select * from san_pham inner join danh_muc on san_pham.id_dm = danh_muc.id_dm where id_sp=" . $id;
@@ -62,6 +67,16 @@ function update_sanpham($id, $tensp, $giasp, $motasp, $hinh, $iddm)
         $sql = "update san_pham set id_dm='" . $iddm . "', ten_sp='" . $tensp . "',mo_ta='" . $motasp . "',don_gia='" . $giasp . "' where id_sp=" . $id;
     }
     pdo_execute($sql);
+}
+function update_hinhmota($id, $hinhmota, $ghichu)
+{ {
+        if ($hinhmota != "") {
+            $sql = "update hinh_mo_ta set hinh_mo_ta='" . $hinhmota . "'where id_sp=" . $id;
+        } else {
+            $sql = "update hinh_mo_ta set ghi_chu='" . $ghichu . "', where id_sp=" . $id;
+        }
+        pdo_execute($sql);
+    }
 }
 
 function load_sanpham_cungloai($id_sp, $id_dm)

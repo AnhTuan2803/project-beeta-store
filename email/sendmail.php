@@ -21,18 +21,19 @@ class Mailer
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;                               // Enable SMTP authentication
-            $mail->Username = 'tuanpaph20520@fpt.edu.vn';                 // SMTP username
-            $mail->Password = 'ezgkmxenaydgzdwb';                          // SMTP password
+            $mail->Username = 'phamanhtuan1628@gmail.com';                 // SMTP username
+            $mail->Password = 'mopjlyuwsujdcdip';                          // SMTP password
             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;                                    // TCP port to connect to
 
             //Recipients
-            $mail->setFrom('tuanpaph20520@fpt.edu.vn', 'Beeta-Store');
+            $mail->setFrom('phamanhtuan1628@gmail.com', 'Beeta-Store');
             $mail->addAddress($mail_dat_hang, '');     // Add a recipient
             // $mail->addAddress('phamanhtuan1628@gmail.com', 'Anh Tuấn');               // Name is optional
 
             // $mail->addReplyTo('info@example.com', 'Information');
-            $mail->addCC('tuanpaph20520@fpt.edu.vn');
+            
+            // $mail->addCC('tuanpaph20520@fpt.edu.vn');
             // $mail->addBCC('bcc@example.com');
 
             //Attachments
