@@ -42,7 +42,7 @@
                     <!-- Select -->
                     <select name="id_dm" class="js-select2-custom custom-select" size="1" data-hs-select2-options='{
                                     "minimumResultsForSearch": "Infinity"
-                                  }'>
+                                  }' required>
 
                       <option value="0" selected>Danh mục</option>
 
@@ -72,10 +72,7 @@
                   <!-- Form Group -->
                   <div class="form-group">
                     <label for="weightLabel" class="input-label">Đơn giá</label>
-                    <input type="text" class="form-control" name="giasp" id="weightLabel" placeholder="Đơn giá..." aria-label="0.0" required>
-
-
-
+                    <input type="text" class="form-control" name="giasp" id="weightLabel" placeholder="Đơn giá..." aria-label="0.0" pattern="[0-9]{1,20}"required>
                   </div>
                   <!-- End Form Group -->
                 </div>

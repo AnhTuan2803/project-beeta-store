@@ -15,9 +15,10 @@
 <div class="site-main main-container no-sidebar">
     <div class="section-041">
         <div class="container">
-            <div class="akasha-google-maps" id="akasha-google-maps" data-hue="" data-lightness="1" data-map-style="2"
+            <div class="akasha-google-maps" data-hue="" data-lightness="1" data-map-style="2"
                  data-saturation="-99" data-longitude="-73.985130" data-latitude="40.758896" data-pin-icon=""
-                 data-zoom="14" data-map-type="ROADMAP"></div>
+                 data-zoom="14" ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.863981044331!2d105.74459841501292!3d21.038127785993407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313454b991d80fd5%3A0x53cefc99d6b0bf6f!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEZQVCBQb2x5dGVjaG5pYw!5e0!3m2!1svi!2s!4v1670493621194!5m2!1svi!2s" width="100%" height="700px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+
         </div>
     </div>
     <div class="section-042">

@@ -2,6 +2,17 @@
 if (is_array($kh)) {
     extract($kh);
 }
+error_reporting(0);
+if (isset($_POST['capnhat'])) {
+    // validate email
+    $email = $_POST['emailkh'];
+    if (empty($email)) {
+        $err = "Vui lòng nhập email";
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $err = "Vui lòng nhập đúng định dạng ";
+    }
+
+}
 ?>
 <main id="content" role="main" class="main">
     <!-- Content -->
@@ -39,7 +50,7 @@ if (is_array($kh)) {
                                     <!-- Form Group -->
                                     <div class="form-group">
                                         <label for="firstNameLabel" class="input-label">Tên khách hàng</label>
-                                        <input type="text" class="form-control" name="tenkh" id="firstNameLabel" value="<?php if (isset($ten_kh) && ($ten_kh != "")) echo $ten_kh ?>" placeholder="Tên khách hàng..." aria-label="Clarice">
+                                        <input type="text" class="form-control" name="tenkh" id="firstNameLabel" value="<?php if (isset($ten_kh) && ($ten_kh != "")) echo $ten_kh ?>" placeholder="Tên khách hàng..." aria-label="Clarice" required>
                                     </div>
                                     <!-- End Form Group -->
                                 </div>
@@ -48,7 +59,7 @@ if (is_array($kh)) {
                                     <!-- Form Group -->
                                     <div class="form-group">
                                         <label for="lastNameLabel" class="input-label">Email</label>
-                                        <input type="text" class="form-control" name="emailkh" id="lastNameLabel" value="<?php if (isset($email) && ($email != "")) echo $email ?>" placeholder="Email..." aria-label="Boone">
+                                        <input type="email" class="form-control" name="emailkh" id="lastNameLabel" value="<?php if (isset($email) && ($email != "")) echo $email ?>" placeholder="Email..." aria-label="Boone" required>
                                     </div>
                                     <!-- End Form Group -->
                                 </div>
@@ -61,7 +72,7 @@ if (is_array($kh)) {
 
                                     <!-- Select -->
 
-                                    <select  class="js-select2-custom form-control" size="1" style="border-color: #e7eaf3;" name="gioitinhkh" data-hs-select2-options='{
+                                    <select  class="js-select2-custom form-control" size="1" style="border-color: #e7eaf3;" name="gioitinhkh"required data-hs-select2-options='{
                                 "minimumResultsForSearch": "Infinity",
                                 "dropdownAutoWidth": true,
                                 "width": "6rem"
@@ -79,7 +90,7 @@ if (is_array($kh)) {
                                 <!-- Form Group -->
                                 <div class="form-group ml-5">
                                     <label for="emailLabel" class="input-label">Ngày sinh</label>
-                                    <input type="date" class="form-control" name="ngaysinhkh" id="lastNameLabel" value="<?php if (isset($ngay_sinh) && ($ngay_sinh != "")) echo $ngay_sinh ?>" placeholder="Ngày sinh..." aria-label="Boone">
+                                    <input type="date" class="form-control" name="ngaysinhkh" id="lastNameLabel" required value="<?php if (isset($ngay_sinh) && ($ngay_sinh != "")) echo $ngay_sinh ?>" placeholder="Ngày sinh..." aria-label="Boone">
 
 
 
@@ -90,7 +101,7 @@ if (is_array($kh)) {
                             <!-- Form Group -->
                             <div class="form-group">
                                 <label for="emailLabel" class="input-label">Địa chỉ</label>
-                                <input type="text" class="form-control" name="diachikh" id="emailLabel" value="<?php if (isset($dia_chi) && ($dia_chi != "")) echo $dia_chi ?>" placeholder="Địa chỉ" aria-label="clarice@example.com">
+                                <input type="text" class="form-control" name="diachikh" id="emailLabel" value="<?php if (isset($dia_chi) && ($dia_chi != "")) echo $dia_chi ?>" placeholder="Địa chỉ" aria-label="clarice@example.com" required>
                             </div>
                             <!-- End Form Group -->
 
@@ -103,7 +114,7 @@ if (is_array($kh)) {
                                 <label for="phoneLabel" class="input-label">Điện thoại</label>
 
                                 <div class="input-group input-group-sm-down-break align-items-center">
-                                    <input type="text" class="js-masked-input form-control" name="sdtkh" id="phoneLabel" value="<?php if (isset($sdt) && ($sdt != "")) echo $sdt ?>" placeholder="+x(xxx)xxx-xx-xx" aria-label="+x(xxx)xxx-xx-xx" data-hs-mask-options='{
+                                    <input type="text" class="js-masked-input form-control" name="sdtkh" id="phoneLabel" value="<?php if (isset($sdt) && ($sdt != "")) echo $sdt ?>" placeholder="0xxx-xxx-xxx" pattern="0[9|8|1|7|3|5]([0-9]|\s|-|\.){8,12}" maxlength="10" required  aria-label="+x(xxx)xxx-xx-xx" data-hs-mask-options='{
                              "template": "+0(000)000-00-00"
                            }'>
 
@@ -115,7 +126,7 @@ if (is_array($kh)) {
                             <!-- Form Group -->
                             <div class="form-group">
                                 <label for="emailLabel" class="input-label">Ghi chú</label>
-                                <textarea class="form-control" style="height:170px;" name="ghichukh" value="<?php if (isset($ghi_chu) && ($ghi_chu != "")) echo $ghi_chu ?>" placeholder="Ghi chú"><?php if (isset($ghi_chu) && ($ghi_chu != "")) echo $ghi_chu?></textarea>
+                                <textarea class="form-control" style="height:170px;" name="ghichukh" value="<?php if (isset($ghi_chu) && ($ghi_chu != "")) echo $ghi_chu ?>" placeholder="Ghi chú" ><?php if (isset($ghi_chu) && ($ghi_chu != "")) echo $ghi_chu?></textarea>
                             </div>
                             <!-- End Form Group -->
                             <div class="d-flex justify-content-end">

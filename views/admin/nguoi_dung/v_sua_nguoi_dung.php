@@ -2,6 +2,17 @@
 if (is_array($nd)) {
     extract($nd);
 }
+error_reporting(0);
+if (isset($_POST['capnhat'])) {
+    // validate email
+    $email = $_POST['email'];
+    if (empty($email)) {
+        $err = "Vui lòng nhập email";
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $err = "Vui lòng nhập đúng định dạng ";
+    }
+
+}
 ?>
 <main id="content" role="main" class="main">
     <!-- Content -->
@@ -48,7 +59,7 @@ if (is_array($nd)) {
                                     <!-- Form Group -->
                                     <div class="form-group">
                                         <label for="lastNameLabel" class="input-label">Email</label>
-                                        <input type="text" class="form-control" name="email" id="lastNameLabel" value="<?php if (isset($email) && ($email != "")) echo $email ?>" placeholder="Email..." aria-label="Boone">
+                                        <input type="email" class="form-control" name="email" id="lastNameLabel" value="<?php if (isset($email) && ($email != "")) echo $email ?>" placeholder="Email..." aria-label="Boone">
                                     </div>
                                     <!-- End Form Group -->
                                 </div>
@@ -91,7 +102,7 @@ if (is_array($nd)) {
                             <!-- Form Group -->
                             <div class="form-group">
                                 <label for="emailLabel" class="input-label">Tên đăng nhập</label>
-                                <input type="text" class="form-control" name="ten_dang_nhap" id="ten_dang_nhap" value="<?php if (isset($ten_dang_nhap) && ($ten_dang_nhap != "")) echo $ten_dang_nhap ?>" placeholder="Tên đăng nhập" aria-label="Tên đăng nhập">
+                                <input type="text" class="form-control" name="ten_dang_nhap" id="ten_dang_nhap" required value="<?php if (isset($ten_dang_nhap) && ($ten_dang_nhap != "")) echo $ten_dang_nhap ?>" placeholder="Tên đăng nhập" aria-label="Tên đăng nhập">
                             </div>
                             <!-- End Form Group -->
 
@@ -104,7 +115,7 @@ if (is_array($nd)) {
                                 <label for="phoneLabel" class="input-label">Mật khẩu</label>
 
                                 <div class="input-group input-group-sm-down-break align-items-center">
-                                    <input type="text" class="js-masked-input form-control" name="mat_khau" id="phoneLabel" value="<?php if (isset($mat_khau) && ($mat_khau != "")) echo $mat_khau ?>" placeholder="password" aria-label="password" data-hs-mask-options='{
+                                    <input type="text" class="js-masked-input form-control" name="mat_khau" id="phoneLabel" required value="<?php if (isset($mat_khau) && ($mat_khau != "")) echo $mat_khau ?>" placeholder="password" aria-label="password" data-hs-mask-options='{
                              "template": "+0(000)000-00-00"
                            }'>
 

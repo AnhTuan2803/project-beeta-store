@@ -79,7 +79,7 @@ if (is_file($hinhpath)) {
 
                                         <label for="SKULabel" class="input-label">Tên sản phẩm</label>
 
-                                        <input type="text" class="form-control" name="tensp" value="<?= $ten_sp ?>" id="SKULabel" placeholder="Tên sản phẩm..." aria-label="eg. 348121032">
+                                        <input type="text" class="form-control" name="tensp" value="<?= $ten_sp ?>" id="SKULabel" placeholder="Tên sản phẩm..." aria-label="eg. 348121032" required>
 
                                     </div>
                                     <!-- End Form Group -->
@@ -92,7 +92,7 @@ if (is_file($hinhpath)) {
 
 
 
-                                        <input type="text" class="form-control" name="giasp" value="<?= $don_gia ?>" id="weightLabel" placeholder="Đơn giá..." aria-label="0.0">
+                                        <input type="text" class="form-control" name="giasp" value="<?= $don_gia ?>" id="weightLabel" placeholder="Đơn giá..." aria-label="0.0" pattern="[0-9]{1,20}"required>
 
 
 
@@ -139,7 +139,7 @@ if (is_file($hinhpath)) {
                                     <?= $anh ?>
                                     <h5 class="mb-1">Choose files to upload</h5>
                                     <p class="mb-2">or</p>
-                                    <input type="file" name="anhsp" style="max-width:200px;" class="btn btn-sm btn-primary">
+                                    <input type="file" name="anhsp" style="max-width:200px;" class="btn btn-sm btn-primary" >
                                 </div>
 
 

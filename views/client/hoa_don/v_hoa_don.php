@@ -1,3 +1,15 @@
+<?php
+error_reporting(0);
+if (isset($_POST['dat_hang'])) {
+    // validate email
+    $email = $_POST['email'];
+    if (empty($email)) {
+        $err = "Vui lòng nhập email";
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $err = "Vui lòng nhập đúng định dạng ";
+    }
+}
+?>
 <div class="banner-wrapper has_background">
     <img src="./assets/client/images/banner-for-all2.jpg" class="img-responsive attachment-1920x447 size-1920x447" alt="img">
     <div class="banner-wrapper-inner">
@@ -19,36 +31,40 @@
                     <div class="akasha">
                         <div class="akasha-notices-wrapper"></div>
 
-                        <form name="checkout" class="checkout akasha-checkout" action="index.php?act=billcofirm" method="POST" novalidate="novalidate">
+                        <form name="checkout" class="checkout akasha-checkout" action="index.php?act=billcofirm" method="POST">
+
                             <div class="col2-set" id="customer_details">
                                 <div class="col-1">
                                     <div class="akasha-billing-fields">
                                         <h3>Chi tiết thanh toán</h3>
                                         <div class="akasha-billing-fields__field-wrapper">
+                                            <p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label for="billing_company" class="">Họ & Tên&nbsp;<span style="color: red;" class="optional">*</span></label><span class="akasha-input-wrapper"><input type="text" class="input-text " name="ho_ten" id="billing_company" placeholder="Họ Tên" value="<?= $ho_ten ?>" autocomplete="organization" required></span>
 
-                                            <p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label for="billing_company" class="">Họ & Tên&nbsp;<span style="color: red;" class="optional">*</span></label><span class="akasha-input-wrapper"><input type="text" class="input-text " name="ho_ten" id="billing_company" placeholder="Họ Tên" value="<?= $ho_ten ?>" autocomplete="organization"></span>
                                             </p>
                                             <p class="form-row form-row-wide adchair-field update_totals_on_change validate-required" id="billing_country_field" data-priority="40"><label for="billing_country" class="">Giới Tính&nbsp;<abbr class="required" title="required">*</abbr></label>
                                                 <span class="akasha-input-wrapper">
-                                                    <select name="gioi_tinh" id="billing_country" class="country_to_state country_select" autocomplete="country" tabindex="-1" aria-hidden="true">
+                                                    <select name="gioi_tinh" id="billing_country" class="country_to_state country_select" autocomplete="country" tabindex="-1" aria-hidden="true" required>
                                                         <option value="">Giới tính</option>
                                                         <option value="0">Nam</option>
                                                         <option value="1">Nữ</option>
                                                     </select>
                                                 </span>
                                             </p>
-                                            <p class="form-row form-row-wide adchair-field validate-required" id="billing_adchair_1_field" data-priority="50"><label for="billing_adchair_1" class="">Ngày sinh&nbsp;<abbr class="required" title="required">*</abbr></label><span class="akasha-input-wrapper"><input type="date" class="input-text " name="ngay_sinh" id="billing_adchair_1" placeholder="House number and street name" value="" autocomplete="adchair-line1" data-placeholder=""></span>
+                                            <p class="form-row form-row-wide adchair-field validate-required" id="billing_adchair_1_field" data-priority="50"><label for="billing_adchair_1" class="">Ngày sinh&nbsp;<abbr class="required" title="required">*</abbr></label><span class="akasha-input-wrapper"><input required type="date" class="input-text " name="ngay_sinh" id="billing_adchair_1" placeholder="House number and street name" value="" autocomplete="adchair-line1" data-placeholder=""></span>
                                             </p>
 
 
                                             <p class="form-row form-row-wide adchair-field validate-required" id="billing_city_field" data-priority="70" data-o_class="form-row form-row-wide adchair-field validate-required">
-                                                <label for="billing_city" class="">Địa chỉ &nbsp;<abbr class="required" title="required">*</abbr></label><span class="akasha-input-wrapper"><input type="text" class="input-text " name="dia_chi" id="billing_city" placeholder="" value="" autocomplete="adchair-level2"></span>
+                                                <label for="billing_city" class="">Địa chỉ &nbsp;<abbr class="required" title="required">*</abbr></label><span class="akasha-input-wrapper">
+                                                    <input type="text" class="input-text " name="dia_chi" id="billing_city" placeholder="" value="" required></span>
                                             </p>
 
-                                            <p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field" data-priority="100"><label for="billing_phone" class="">Điện thoại &nbsp;<abbr class="required" title="required">*</abbr></label><span class="akasha-input-wrapper"><input type="tel" class="input-text " name="sdt" id="billing_phone" placeholder="" value="" autocomplete="tel"></span>
-                                            </p>
+                                            <p class="form-row form-row-wide validate-required validate-phone" id="billing_phone_field" data-priority="100"><label for="billing_phone" class="">Điện thoại &nbsp;<abbr class="required" title="required">*</abbr></label><span class="akasha-input-wrapper">
+                                                    <input type="tel" class="input-text " name="sdt" id="billing_phone" placeholder="0xxx xxx xxx" value="" autocomplete="tel" pattern="0[9|8|1|7|3|5]([0-9]|\s|-|\.){8,12}" maxlength="10" required></span>
                                             <p class="form-row form-row-wide validate-required validate-email" id="billing_email_field" data-priority="110"><label for="billing_email" class="">Email
-                                                    &nbsp;<abbr class="required" title="required">*</abbr></label><span class="akasha-input-wrapper"><input type="email" class="input-text " name="email" id="billing_email" placeholder="" value="<?= $email ?>" autocomplete="email username"></span>
+                                                    &nbsp;<abbr class="required" title="required">*</abbr></label><span class="akasha-input-wrapper">
+                                                    <input type="email" class="input-text " name="email" id="billing_email" placeholder="" value="<?= $email ?>" required></span>
+                                            <p style="color: red;"><?php echo $err ?></p>
                                             </p>
                                         </div>
                                     </div>
