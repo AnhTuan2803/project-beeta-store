@@ -18,15 +18,15 @@
                 <div class="page-main-content">
                     <div class="akasha">
                         <div class="akasha-notices-wrapper"></div>
-                      
+
                         <form name="checkout" class="checkout akasha-checkout" action="index.php?act=billcofirm" method="POST" novalidate="novalidate">
                             <div class="col2-set" id="customer_details">
                                 <div class="col-1">
                                     <div class="akasha-billing-fields">
                                         <h3>Chi tiết thanh toán</h3>
                                         <div class="akasha-billing-fields__field-wrapper">
-                                            
-                                            <p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label for="billing_company" class="">Họ & Tên&nbsp;<span style="color: red;" class="optional">*</span></label><span class="akasha-input-wrapper"><input type="text" class="input-text "  name="ho_ten" id="billing_company" placeholder="Họ Tên" value="<?= $ho_ten ?>" autocomplete="organization"></span>
+
+                                            <p class="form-row form-row-wide" id="billing_company_field" data-priority="30"><label for="billing_company" class="">Họ & Tên&nbsp;<span style="color: red;" class="optional">*</span></label><span class="akasha-input-wrapper"><input type="text" class="input-text " name="ho_ten" id="billing_company" placeholder="Họ Tên" value="<?= $ho_ten ?>" autocomplete="organization"></span>
                                             </p>
                                             <p class="form-row form-row-wide adchair-field update_totals_on_change validate-required" id="billing_country_field" data-priority="40"><label for="billing_country" class="">Giới Tính&nbsp;<abbr class="required" title="required">*</abbr></label>
                                                 <span class="akasha-input-wrapper">
@@ -151,7 +151,7 @@
                                         <li class="wc_payment_method payment_method_bacs">
                                             <input id="payment_method_bacs" type="radio" class="input-radio" name="pttt" value="1" checked="checked" data-order_button_text="">
                                             <label for="payment_method_bacs">
-                                            Thanh toán khi nhận hàng </label>
+                                                Thanh toán khi nhận hàng </label>
                                             <!-- <div class="payment_box payment_method_bacs">
                                                 <p>Make your payment directly into our bank account. Please use your
                                                     Order ID as the payment reference. Your order will not be shipped
@@ -170,7 +170,7 @@
                                         <li class="wc_payment_method payment_method_cod">
                                             <input id="payment_method_cod" type="radio" class="input-radio" name="pttt" value="2" data-order_button_text="">
                                             <label for="payment_method_cod">
-                                               Chuyển khoản trực tiếp </label>
+                                                Chuyển khoản trực tiếp </label>
                                             <div class="payment_box payment_method_cod" style="display:none;">
                                                 <p>Pay with cash upon delivery.</p>
                                             </div>
@@ -178,7 +178,7 @@
                                         <li class="wc_payment_method payment_method_paypal">
                                             <input id="payment_method_paypal" type="radio" class="input-radio" name="pttt" value="3" data-order_button_text="Proceed to PayPal">
                                             <label for="payment_method_paypal">
-                                                Thanh toán qua PayPal <img src="./assets/client/images/AM_mc_vs_ms_ae_UK.png" alt="PayPal acceptance mark"></label>
+                                                Thanh toán qua Vnpay <img style="width: 230px; padding-top: 10px;" src="./assets/client/images/vnpay_logo.png" alt="PayPal acceptance mark"></label>
                                             <div class="payment_box payment_method_paypal" style="display:none;">
                                                 <p>Pay via PayPal; you can pay with your credit card if you don’t have a
                                                     PayPal account.</p>
@@ -204,10 +204,8 @@
                                             </div>
                                         </div> -->
                                         <input type="hidden" name="gia_tien" value="<?= $cart[3] ?>">
-                                        <button type="submit" class="button alt" name="dat_hang" id="place_order" value="Place order" data-value="Place order">
-                                            Đặt hàng
+                                        <button type="submit" class="button alt" name="dat_hang" id="place_order" data-value="Place order">Đặt hàng
                                         </button>
-                                        
                                         <input type="hidden" id="akasha-process-checkout-nonce" name="akasha-process-checkout-nonce" value="634590c981"><input type="hidden" name="_wp_http_referer" value="/akasha/?akasha-ajax=update_order_review">
                                     </div>
                                 </div>

@@ -104,7 +104,7 @@ function get_pttt($n)
             $pt = 'Chuyển khoản trực tiếp!';
             break;
         case '3':
-            $pt = 'Ngân hàng liên kết!';
+            $pt = 'Thanh toán qua Vnpay!';
             break;
         default:
             $pt = 'Thanh toán khi nhận hàng!';
