@@ -2,13 +2,15 @@
 if (isset($_SESSION['email'])) {
     if (isset($_POST['update_cart']) && ($_POST['update_cart'])) {
 
-        $id = $_POST['id'];
-        $soluong = $_POST['so_luong'];
+        for ($i = 0; $i < count($_POST['id']); $i++) {
+            $id = $_POST['id'][$i];
+            $soluong = $_POST['so_luong'][$i];
 
-        if (isset($_SESSION['myCart'])) {
-            foreach ($_SESSION['myCart'] as $key => $value) {
-                if ($value[0] == $id) {
-                    $_SESSION['myCart'][$key][3] = $soluong;
+            if (isset($_SESSION['myCart'])) {
+                foreach ($_SESSION['myCart'] as $key => $value) {
+                    if ($value[0] == $id) {
+                        $_SESSION['myCart'][$key][3] = $soluong;
+                    }
                 }
             }
         }
