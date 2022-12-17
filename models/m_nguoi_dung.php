@@ -6,8 +6,6 @@ function loadone_taikhoan($id)
     return $dm;
 }
 
-
-
 function loadall_taikhoan($kyw)
 {
     if (isset($_GET['trang'])) {

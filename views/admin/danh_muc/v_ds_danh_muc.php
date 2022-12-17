@@ -54,14 +54,14 @@
           <div class="col-md-4 mb-3 mb-md-0">
             <form>
               <!-- Search -->
-              <div class="input-group input-group-merge input-group-flush">
+              <!-- <div class="input-group input-group-merge input-group-flush">
                 <div class="input-group-prepend">
                   <div class="input-group-text">
                     <i class="tio-search"></i>
                   </div>
                 </div>
                 <input id="datatableSearch" type="search" class="form-control" placeholder="Tìm kiếm danh mục" aria-label="Search users">
-              </div>
+              </div> -->
               <!-- End Search -->
             </form>
           </div>

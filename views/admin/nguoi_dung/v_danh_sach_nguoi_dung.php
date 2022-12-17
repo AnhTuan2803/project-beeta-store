@@ -124,9 +124,6 @@
               $xoa_nd = "index.php?act=xoa_nd&id=" . $id_nd;
             ?>
               <tr>
-
-
-
                 <td><?= $id_nd ?></td>
                 <td><?= $vai_tro ?></td>
                 <th><?= $ho_ten ?></th>
@@ -141,13 +138,11 @@
 
                     <!-- Unfold -->
                     <div class="hs-unfold btn-group">
-
-
                       <div style="display: flex">
                         <a style="padding-left:10px; padding-right:10px" class="dropdown-item" href="<?= $sua_nd ?>">
                           <i class="fa-solid fa-screwdriver-wrench dropdown-item-icon"></i>Sửa
                         </a>
-                        <a style="padding-left:10px; padding-right:10px" class="dropdown-item" onclick="return confirm('Bạn muốn xóa tài khoản?');" href="<?= $sua_nd ?>">
+                        <a style="padding-left:10px; padding-right:10px" class="dropdown-item" onclick="return confirm('Bạn muốn xóa tài khoản?');" href="<?= $xoa_nd ?>">
                           <i class="fa-solid fa-trash dropdown-item-icon"></i>Xóa
                         </a>
                       </div>

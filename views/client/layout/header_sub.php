@@ -208,9 +208,6 @@
                                                 <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
                                                     <a href="index.php?act=my_bill">Đơn hàng của tôi</a>
                                                 </li>
-                                                <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--orders">
-                                                    <a href="#">Sửa tài khoản</a>
-                                                </li>
                                                 <li class="menu-item akasha-MyAccount-navigation-link akasha-MyAccount-navigation-link--customer-logout">
                                                     <a href="index.php?act=logout">Đăng xuất</a>
                                                 </li>';
